@@ -85,6 +85,7 @@ class Question(Base):
     sub_parts_json: Mapped[list[dict[str, object]]] = mapped_column(JSON, default=list)
     options_json: Mapped[list[dict[str, object]] | None] = mapped_column(JSON, nullable=True)
     figure_paths_json: Mapped[list[str]] = mapped_column(JSON, default=list)
+    figure_bboxes_json: Mapped[list[dict[str, float]]] = mapped_column(JSON, default=list)
     confidence: Mapped[float] = mapped_column(Float, default=0.0)
     notes: Mapped[str | None] = mapped_column(String, nullable=True)
     embedding: Mapped[list[float] | None] = mapped_column(JSON, nullable=True)
@@ -183,6 +184,7 @@ _MIGRATIONS: list[tuple[str, str, str]] = [
     ("solutions", "judge_quality_score", "FLOAT"),
     ("solutions", "iteration_count", "INTEGER DEFAULT 1"),
     ("solutions", "final_quality_score", "FLOAT"),
+    ("questions", "figure_bboxes_json", "JSON DEFAULT '[]'"),
 ]
 
 

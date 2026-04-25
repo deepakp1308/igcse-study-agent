@@ -80,8 +80,9 @@ def test_save_questions_creates_rows_and_crops(tmp_path: Path):
     with session_scope() as s:
         rows = list(s.execute(select(Question).where(Question.paper_id == pid)).scalars())
         assert len(rows) == 1
-        assert rows[0].figure_paths_json
-        assert Path(rows[0].figure_paths_json[0]).exists()
+        # Figure crops are now deferred until the auditor passes the page.
+        assert rows[0].figure_paths_json == []
+        assert rows[0].figure_bboxes_json == [{"x": 0.1, "y": 0.1, "w": 0.3, "h": 0.3}]
 
 
 def test_save_questions_rejects_bad_schema(tmp_path: Path):

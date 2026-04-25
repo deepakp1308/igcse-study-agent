@@ -301,16 +301,8 @@ def cmd_save_questions(
         ).scalar_one_or_none()
         if page is None:
             raise typer.BadParameter(f"No page idx={page_idx} for paper_id={paper_id}")
-        page_png = Path(page.png_path)
 
-        for qi, q in enumerate(page_ext.questions):
-            fig_dir = figures_cache_dir() / f"paper-{paper_id:06d}" / f"page-{page_idx:04d}"
-            crops = crop_bboxes_to_files(
-                page_png,
-                q.figure_bboxes,
-                fig_dir,
-                basename=f"q{qi:02d}",
-            )
+        for q in page_ext.questions:
             row = Question(
                 paper_id=paper_id,
                 page_id=page.id,
@@ -320,7 +312,8 @@ def cmd_save_questions(
                 stem=q.stem,
                 sub_parts_json=[sp.model_dump() for sp in q.sub_parts],
                 options_json=[o.model_dump() for o in q.options] if q.options else None,
-                figure_paths_json=[str(p) for p in crops],
+                figure_paths_json=[],
+                figure_bboxes_json=[bb.model_dump() for bb in q.figure_bboxes],
                 confidence=q.confidence,
                 notes=q.notes,
             )
@@ -334,7 +327,10 @@ def cmd_save_questions(
                     json.dumps(q.model_dump()),
                 )
 
-    msg = f"[green]Saved {len(page_ext.questions)} questions for paper {paper_id} page {page_idx}[/]"
+    msg = (
+        f"[green]Saved {len(page_ext.questions)} questions for paper {paper_id} "
+        f"page {page_idx} (figure crops deferred until audit pass)[/]"
+    )
     if low_conf:
         msg += f" [yellow]({low_conf} flagged for review)[/]"
     console.print(msg)
@@ -1154,6 +1150,7 @@ def cmd_save_audit(
         raise typer.Exit(code=2) from e
 
     appended = 0
+    cropped = 0
     with session_scope() as s:
         existing_iters = list(
             s.execute(
@@ -1191,16 +1188,46 @@ def cmd_save_audit(
                 sub_parts_json=[sp.model_dump() for sp in mq.sub_parts],
                 options_json=[o.model_dump() for o in mq.options] if mq.options else None,
                 figure_paths_json=[],
+                figure_bboxes_json=[bb.model_dump() for bb in mq.figure_bboxes],
                 confidence=mq.confidence,
                 notes=(mq.notes or "") + " [appended by auditor]",
             )
             s.add(row)
             appended += 1
 
+        # Materialize figure crops only when the auditor declares the page complete.
+        # This is the figure-bleed-through guard from v3 Part A.
+        if audit.complete:
+            from agent.store.schemas import BoundingBox
+
+            page_png = Path(page.png_path)
+            qs_on_page = list(
+                s.execute(
+                    select(Question).where(
+                        Question.paper_id == paper_id, Question.page_id == page.id
+                    )
+                ).scalars()
+            )
+            for qi, q in enumerate(qs_on_page):
+                if q.figure_paths_json or not q.figure_bboxes_json:
+                    continue
+                fig_dir = figures_cache_dir() / f"paper-{paper_id:06d}" / f"page-{page_idx:04d}"
+                bboxes = [BoundingBox.model_validate(bb) for bb in q.figure_bboxes_json]
+                crops = crop_bboxes_to_files(
+                    page_png,
+                    bboxes,
+                    fig_dir,
+                    basename=f"q{qi:02d}",
+                )
+                if crops:
+                    q.figure_paths_json = [str(p) for p in crops]
+                    cropped += len(crops)
+
     console.print(
         f"[green]Audit saved (iteration {next_iter}): paper={paper_id} page={page_idx} "
         f"complete={audit.complete} missed={len(audit.missed_questions)} "
-        f"misextractions={len(audit.misextractions)} appended={appended}[/]"
+        f"misextractions={len(audit.misextractions)} appended={appended} "
+        f"crops_materialized={cropped}[/]"
     )
 
 
