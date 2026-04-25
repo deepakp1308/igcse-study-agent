@@ -37,6 +37,9 @@ figures_cache/
 # locally to regenerate any time.
 output/*.pdf
 
+# release/ is intentionally curated and tracked - copy any artifacts you
+# want to publish into release/ with a friendly name.
+
 # Papers and chapter materials are the user's data, not source
 # Excluded for copyright reasons (Cambridge IGCSE past papers are UCLES-copyrighted).
 papers/
