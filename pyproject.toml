@@ -1,0 +1,85 @@
+[project]
+name = "igcse-study-agent"
+version = "0.1.0"
+description = "Zero-API-key IGCSE past-paper study agent driven by a Cursor-resident Claude agent"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [{ name = "Deepak Prabhakaran" }]
+dependencies = [
+    "typer>=0.15.0",
+    "rich>=13.9.0",
+    "pydantic>=2.9.0",
+    "sqlalchemy>=2.0.35",
+    "pymupdf>=1.25.0",
+    "pillow>=11.0.0",
+    "reportlab>=4.2.5",
+    "sentence-transformers>=3.3.0",
+    "numpy>=2.1.0",
+    "pyyaml>=6.0.2",
+    "jinja2>=3.1.4",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.8.0",
+    "mypy>=1.13.0",
+    "pytest>=8.3.0",
+    "pytest-cov>=6.0.0",
+    "pre-commit>=4.0.0",
+    "types-pyyaml>=6.0.12",
+]
+
+[project.scripts]
+igcse = "agent.cli:app"
+
+[build-system]
+requires = ["setuptools>=75.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["agent*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "F",
+    "I",
+    "B",
+    "UP",
+    "N",
+    "SIM",
+    "RET",
+    "ARG",
+    "PTH",
+    "RUF",
+]
+ignore = ["E501"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["ARG", "B"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+ignore_missing_imports = true
+disallow_untyped_decorators = false
+warn_unused_ignores = false
+
+[[tool.mypy.overrides]]
+module = ["tests.*", "evals.*"]
+disallow_untyped_defs = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-ra --strict-markers"
+markers = [
+    "slow: deselect with '-m \"not slow\"'",
+    "e2e: end-to-end tests hitting the full CLI pipeline",
+]

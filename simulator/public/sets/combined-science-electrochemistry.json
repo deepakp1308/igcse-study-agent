@@ -1,0 +1,161 @@
+{
+  "subject": "combined science",
+  "chapter": "Electrochemistry",
+  "generated_at": "2026-04-25T18:43:21+00:00",
+  "questions": [
+    {
+      "question_id": "0653-q19-conductivity",
+      "source_question_db_id": 6,
+      "type": "mcq",
+      "max_marks": 1,
+      "stem": "The apparatus shown is used to test a property of compound R. A lamp is in series with a cell and two electrodes dipping into a beaker. The lamp does not light when the beaker contains pure water. When compound R is dissolved in the water, the lamp lights. Which row describes compound R?",
+      "figure_paths": [],
+      "parts": [
+        {
+          "id": "a",
+          "prompt": "Which row describes compound R?",
+          "answer_type": "mcq",
+          "max_marks": 1,
+          "mcq_options": [
+            {
+              "label": "A",
+              "text": "covalent bonding; compound R made of a metal and a non-metal"
+            },
+            {
+              "label": "B",
+              "text": "covalent bonding; compound R made of non-metals only"
+            },
+            {
+              "label": "C",
+              "text": "ionic bonding; compound R made of non-metals only"
+            },
+            {
+              "label": "D",
+              "text": "ionic bonding; compound R made of a metal and a non-metal"
+            }
+          ],
+          "mcq_correct_label": "D",
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [],
+          "required_working_concepts": [],
+          "common_mistakes": [],
+          "model_answer_html": "<p><b>D - ionic bonding; metal + non-metal.</b><br/>The lamp lights only when the dissolved substance provides free ions. Ionic compounds dissolve in water to give an electrolyte, which conducts electricity. Ionic compounds form between a metal (cation) and a non-metal (anion). Pure water alone is a non-electrolyte; covalent solutions like sugar do not conduct.</p>",
+          "chapter_refs": [
+            "Conductivity and electrolytes"
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "0653-q23-iron-extraction",
+      "source_question_db_id": 24,
+      "type": "mcq",
+      "max_marks": 1,
+      "stem": "Which row describes the extraction of iron from its ore? (name of ore / method of extraction)",
+      "figure_paths": [],
+      "parts": [
+        {
+          "id": "a",
+          "prompt": "Pick the correct ore and extraction method for iron.",
+          "answer_type": "mcq",
+          "max_marks": 1,
+          "mcq_options": [
+            {
+              "label": "A",
+              "text": "bauxite / electrolysis"
+            },
+            {
+              "label": "B",
+              "text": "bauxite / reduction in a blast furnace"
+            },
+            {
+              "label": "C",
+              "text": "hematite / electrolysis"
+            },
+            {
+              "label": "D",
+              "text": "hematite / reduction in a blast furnace"
+            }
+          ],
+          "mcq_correct_label": "D",
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [],
+          "required_working_concepts": [],
+          "common_mistakes": [],
+          "model_answer_html": "<p><b>D - hematite / reduction in a blast furnace.</b><br/>Iron's ore is hematite (Fe<sub>2</sub>O<sub>3</sub>). Bauxite is the ore of <b>aluminium</b>. From the chapter, electrolysis is used industrially for very reactive metals like aluminium, sodium and magnesium. Iron is below carbon in reactivity, so it is reduced cheaply by carbon (coke) in a blast furnace.</p>",
+          "chapter_refs": [
+            "Electrolysis of molten binary ionic compounds (industrial extraction)"
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "0653-q27-electrolysis-products",
+      "source_question_db_id": 28,
+      "type": "mcq",
+      "max_marks": 1,
+      "stem": "Which row shows an electrolyte and the products of electrolysis for this electrolyte?",
+      "figure_paths": [],
+      "parts": [
+        {
+          "id": "a",
+          "prompt": "Pick the electrolyte and its correct electrolysis products.",
+          "answer_type": "mcq",
+          "max_marks": 1,
+          "mcq_options": [
+            {
+              "label": "A",
+              "text": "concentrated aqueous sodium chloride / sodium and chlorine"
+            },
+            {
+              "label": "B",
+              "text": "molten potassium bromide / hydrogen and bromine"
+            },
+            {
+              "label": "C",
+              "text": "molten sodium chloride / sodium and chlorine"
+            },
+            {
+              "label": "D",
+              "text": "dilute sulfuric acid / hydrogen and sulfur dioxide"
+            }
+          ],
+          "mcq_correct_label": "C",
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [],
+          "required_working_concepts": [],
+          "common_mistakes": [],
+          "model_answer_html": "<p><b>C - molten sodium chloride -> sodium at cathode and chlorine at anode.</b><br/>Apply the chapter rule for molten binary ionic compounds: <b>metal at cathode</b>, <b>non-metal at anode</b>.<br/><br/><b>Why the others are wrong:</b><br/>A - concentrated NaCl(aq) gives <b>hydrogen</b> at the cathode (H<sup>+</sup> discharged over Na<sup>+</sup>), not sodium.<br/>B - molten KBr has no water, so hydrogen cannot form. Correct products would be K and Br<sub>2</sub>.<br/>D - electrolysis of dilute sulfuric acid decomposes <b>water</b>, giving H<sub>2</sub> and <b>O<sub>2</sub></b> (not SO<sub>2</sub>) in a 2:1 ratio.</p>",
+          "chapter_refs": [
+            "Electrolysis of molten binary ionic compounds",
+            "Electrolysis of concentrated sodium chloride solution",
+            "Electrolysis of dilute sulfuric acid"
+          ]
+        }
+      ]
+    }
+  ],
+  "topic_index": {
+    "Conductivity and electrolytes": [
+      "0653-q19-conductivity"
+    ],
+    "Electrolysis of molten binary ionic compounds (industrial extraction)": [
+      "0653-q23-iron-extraction"
+    ],
+    "Electrolysis of molten binary ionic compounds": [
+      "0653-q27-electrolysis-products"
+    ],
+    "Electrolysis of concentrated sodium chloride solution": [
+      "0653-q27-electrolysis-products"
+    ],
+    "Electrolysis of dilute sulfuric acid": [
+      "0653-q27-electrolysis-products"
+    ]
+  }
+}

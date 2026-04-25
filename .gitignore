@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+*.egg-info/
+dist/
+build/
+htmlcov/
+.coverage
+.coverage.*
+
+# Node
+node_modules/
+simulator/dist/
+simulator/.vite/
+simulator/*.log
+simulator/*.tsbuildinfo
+simulator/**/*.tsbuildinfo
+
+# Local agent state
+agent/db.sqlite
+agent/db.sqlite-journal
+.cache/
+pages_cache/
+figures_cache/
+
+# Generated outputs - these contain question stems from past papers.
+# Keep them OUT of public git for copyright safety. Run `igcse generate-paper`
+# locally to regenerate any time.
+output/*.pdf
+
+# Papers and chapter materials are the user's data, not source
+# Excluded for copyright reasons (Cambridge IGCSE past papers are UCLES-copyrighted).
+papers/
+papers_working/
+chapters/
+
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp

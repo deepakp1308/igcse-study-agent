@@ -1,0 +1,303 @@
+# Rubric grader agreement set.
+#
+# Each case has:
+#   - rubric: a QuestionRubric JSON (Python-side schema)
+#   - student_answers: dict keyed by part id -> StudentAnswer fields
+#   - gold_marks: what a human marker would award
+#   - tolerance: marks tolerance accepted as agreement
+#
+# The harness loads each rubric into Python and then calls the simulator's
+# grader via Node to produce marks. CI blocks deploy if agreement drops
+# below the threshold in evals/run.py.
+
+cases:
+  - id: mole-full-marks
+    rubric:
+      question_id: "2018-chem-mole-q1"
+      source_question_db_id: 1
+      type: numeric
+      max_marks: 3
+      stem: "Calculate the number of moles in 10 g of calcium. Ar(Ca) = 40."
+      figure_paths: []
+      parts:
+        - id: "a"
+          prompt: "Calculate n."
+          answer_type: numeric
+          max_marks: 3
+          numeric_answer: 0.25
+          numeric_unit: mol
+          numeric_tolerance_pct: 2
+          accepted_phrasings: []
+          required_working_concepts:
+            - concept: "uses n = m / M"
+              marks: 1
+              hints: ["n = m/M", "n=m/M", "moles = mass / molar mass"]
+            - concept: "correct molar mass (Ca = 40)"
+              marks: 1
+              hints: ["40", "Ca = 40"]
+          common_mistakes:
+            - match: { kind: keyword_absent, keyword: "mol" }
+              feedback: "You forgot the units (mol)."
+            - match: { kind: numeric_off_by, magnitude: 10 }
+              feedback: "Decimal-place slip."
+          model_answer_html: "<p>n = m / M = 10 / 40 = <b>0.25 mol</b></p>"
+          chapter_refs: ["n = m / M"]
+    student_answers:
+      a:
+        text: "n = m/M = 10 / 40 = 0.25 mol"
+    gold_marks: 3
+    tolerance: 0.5
+
+  - id: mole-missing-unit
+    rubric:
+      question_id: "2018-chem-mole-q1"
+      source_question_db_id: 1
+      type: numeric
+      max_marks: 3
+      stem: "Calculate the number of moles in 10 g of calcium. Ar(Ca) = 40."
+      figure_paths: []
+      parts:
+        - id: "a"
+          prompt: "Calculate n."
+          answer_type: numeric
+          max_marks: 3
+          numeric_answer: 0.25
+          numeric_unit: mol
+          numeric_tolerance_pct: 2
+          accepted_phrasings: []
+          required_working_concepts:
+            - concept: "uses n = m / M"
+              marks: 1
+              hints: ["n = m/M"]
+            - concept: "correct molar mass (Ca = 40)"
+              marks: 1
+              hints: ["40"]
+          common_mistakes:
+            - match: { kind: keyword_absent, keyword: "mol" }
+              feedback: "You forgot the units (mol)."
+          model_answer_html: "<p>0.25 mol</p>"
+          chapter_refs: ["n = m / M"]
+    student_answers:
+      a:
+        text: "0.25"
+    gold_marks: 0.5
+    tolerance: 0.5
+
+  - id: mole-off-by-10
+    rubric:
+      question_id: "2018-chem-mole-q1"
+      source_question_db_id: 1
+      type: numeric
+      max_marks: 3
+      stem: "Calculate the number of moles in 10 g of calcium. Ar(Ca) = 40."
+      figure_paths: []
+      parts:
+        - id: "a"
+          prompt: "Calculate n."
+          answer_type: numeric
+          max_marks: 3
+          numeric_answer: 0.25
+          numeric_unit: mol
+          numeric_tolerance_pct: 2
+          accepted_phrasings: []
+          required_working_concepts:
+            - concept: "uses n = m / M"
+              marks: 1
+              hints: ["n = m/M"]
+          common_mistakes:
+            - match: { kind: numeric_off_by, magnitude: 10 }
+              feedback: "Decimal-place slip."
+          model_answer_html: "<p>0.25 mol</p>"
+          chapter_refs: ["n = m / M"]
+    student_answers:
+      a:
+        text: "2.5 mol"
+    gold_marks: 0
+    tolerance: 0.5
+
+  - id: mcq-correct
+    rubric:
+      question_id: "mcq-1"
+      source_question_db_id: 2
+      type: mcq
+      max_marks: 1
+      stem: "Which gas is released at the cathode?"
+      figure_paths: []
+      parts:
+        - id: "a"
+          prompt: "Pick one."
+          answer_type: mcq
+          max_marks: 1
+          mcq_options:
+            - { label: "A", text: "oxygen" }
+            - { label: "B", text: "hydrogen" }
+            - { label: "C", text: "chlorine" }
+            - { label: "D", text: "nitrogen" }
+          mcq_correct_label: "B"
+          accepted_phrasings: []
+          required_working_concepts: []
+          common_mistakes: []
+          model_answer_html: "<p><b>B</b>. hydrogen</p>"
+          chapter_refs: []
+    student_answers:
+      a:
+        mcq_label: "B"
+    gold_marks: 1
+    tolerance: 0
+
+  - id: mcq-wrong
+    rubric:
+      question_id: "mcq-1"
+      source_question_db_id: 2
+      type: mcq
+      max_marks: 1
+      stem: "Which gas is released at the cathode?"
+      figure_paths: []
+      parts:
+        - id: "a"
+          prompt: "Pick one."
+          answer_type: mcq
+          max_marks: 1
+          mcq_options:
+            - { label: "A", text: "oxygen" }
+            - { label: "B", text: "hydrogen" }
+          mcq_correct_label: "B"
+          accepted_phrasings: []
+          required_working_concepts: []
+          common_mistakes: []
+          model_answer_html: "<p><b>B</b>. hydrogen</p>"
+          chapter_refs: []
+    student_answers:
+      a:
+        mcq_label: "A"
+    gold_marks: 0
+    tolerance: 0
+
+  - id: free-text-full
+    rubric:
+      question_id: "rates-1"
+      source_question_db_id: 3
+      type: long
+      max_marks: 3
+      stem: "Describe the effect on reaction rate of doubling the concentration using collision theory."
+      figure_paths: []
+      parts:
+        - id: "a"
+          prompt: "Explain."
+          answer_type: free_text
+          max_marks: 3
+          required_working_concepts:
+            - concept: "doubling concentration increases number of particles per unit volume"
+              marks: 1
+              hints: ["more particles", "particles per unit volume", "concentration increases"]
+            - concept: "more collisions per unit time"
+              marks: 1
+              hints: ["more collisions", "increase in collisions", "collision frequency"]
+            - concept: "rate approximately doubles"
+              marks: 1
+              hints: ["rate doubles", "rate approximately doubles", "rate increases"]
+          accepted_phrasings: []
+          common_mistakes: []
+          model_answer_html: "<p>Doubling concentration means more particles per unit volume, so collisions per unit time increase, and the rate approximately doubles.</p>"
+          chapter_refs: ["Collision theory"]
+    student_answers:
+      a:
+        text: "Doubling concentration means more particles per unit volume. That leads to more collisions per unit time. So the rate approximately doubles."
+    gold_marks: 3
+    tolerance: 0.5
+
+  - id: free-text-partial
+    rubric:
+      question_id: "rates-1"
+      source_question_db_id: 3
+      type: long
+      max_marks: 3
+      stem: "Describe the effect on reaction rate of doubling the concentration using collision theory."
+      figure_paths: []
+      parts:
+        - id: "a"
+          prompt: "Explain."
+          answer_type: free_text
+          max_marks: 3
+          required_working_concepts:
+            - concept: "doubling concentration increases number of particles"
+              marks: 1
+              hints: ["more particles", "particles per unit volume"]
+            - concept: "more collisions per unit time"
+              marks: 1
+              hints: ["more collisions", "collisions per unit time"]
+            - concept: "rate approximately doubles"
+              marks: 1
+              hints: ["rate doubles", "rate approximately doubles"]
+          accepted_phrasings: []
+          common_mistakes: []
+          model_answer_html: "<p>...</p>"
+          chapter_refs: ["Collision theory"]
+    student_answers:
+      a:
+        text: "The rate doubles because there are more particles."
+    gold_marks: 2
+    tolerance: 0.5
+
+  - id: free-text-none
+    rubric:
+      question_id: "rates-1"
+      source_question_db_id: 3
+      type: long
+      max_marks: 3
+      stem: "Describe the effect on reaction rate of doubling the concentration using collision theory."
+      figure_paths: []
+      parts:
+        - id: "a"
+          prompt: "Explain."
+          answer_type: free_text
+          max_marks: 3
+          required_working_concepts:
+            - concept: "doubling concentration increases number of particles"
+              marks: 1
+              hints: ["more particles"]
+            - concept: "more collisions per unit time"
+              marks: 1
+              hints: ["more collisions"]
+            - concept: "rate approximately doubles"
+              marks: 1
+              hints: ["rate doubles"]
+          accepted_phrasings: []
+          common_mistakes: []
+          model_answer_html: "<p>...</p>"
+          chapter_refs: ["Collision theory"]
+    student_answers:
+      a:
+        text: "I don't know."
+    gold_marks: 0
+    tolerance: 0.5
+
+  - id: short-text-accepted-phrasing
+    rubric:
+      question_id: "electrolysis-def"
+      source_question_db_id: 4
+      type: short
+      max_marks: 1
+      stem: "State what is meant by electrolysis."
+      figure_paths: []
+      parts:
+        - id: "a"
+          prompt: "Define."
+          answer_type: short_text
+          max_marks: 1
+          accepted_phrasings:
+            - "decomposition of a compound by an electric current"
+            - "breaking down an ionic compound using electricity"
+            - "use of electricity to break down an ionic compound"
+          required_working_concepts:
+            - concept: "electricity breaks down an ionic compound"
+              marks: 1
+              hints: ["electric current", "electricity", "ionic"]
+          common_mistakes: []
+          model_answer_html: "<p>The decomposition of an ionic compound by an electric current.</p>"
+          chapter_refs: ["Definition of electrolysis"]
+    student_answers:
+      a:
+        text: "Breaking down an ionic compound using electricity."
+    gold_marks: 1
+    tolerance: 0

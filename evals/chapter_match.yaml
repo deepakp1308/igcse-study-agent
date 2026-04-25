@@ -1,0 +1,34 @@
+cases:
+  - id: mole-calcium-positive
+    subject: chemistry
+    chapter: The Mole
+    question_stem: "Calculate the number of moles in 10 g of calcium. Relative atomic mass Ca = 40."
+    should_match: true
+    notes: "Classic mole calculation; chapter covers n = m/M and molar masses."
+
+  - id: mole-limiting-reagent-negative
+    subject: chemistry
+    chapter: The Mole
+    question_stem: "A reaction between 1 mol of A and 2 mol of B produces product C. Determine the limiting reagent."
+    should_match: false
+    notes: "Limiting reagents are a separate chapter."
+
+  - id: electrolysis-negative
+    subject: chemistry
+    chapter: The Mole
+    question_stem: "Describe the electrolysis of molten lead bromide."
+    should_match: false
+    notes: "Electrolysis is not taught under The Mole."
+
+  - id: rates-positive
+    subject: chemistry
+    chapter: Rates of Reaction
+    question_stem: "Sketch a graph showing the rate of reaction when the concentration of reactant X is doubled."
+    should_match: true
+
+  - id: rates-subject-mismatch
+    subject: physics
+    chapter: Rates of Reaction
+    question_stem: "Calculate the resistance of a 2A circuit with 10V applied."
+    should_match: false
+    notes: "Subject mismatch; chapter is Chemistry, question is Physics."

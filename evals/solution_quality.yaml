@@ -1,0 +1,27 @@
+cases:
+  - id: mole-calcium
+    subject: chemistry
+    chapter: The Mole
+    question_stem: "Calculate the number of moles in 10 g of calcium. Ar(Ca) = 40."
+    gold_final_answer: "0.25 mol"
+    gold_chapter_refs:
+      - "n = m / M"
+      - "relative atomic mass"
+    gold_steps:
+      - "State the formula n = m / M"
+      - "Substitute m = 10 g and M = 40 g/mol"
+      - "Calculate n = 10 / 40 = 0.25"
+      - "Report the answer with units: 0.25 mol"
+
+  - id: rates-doubled-concentration
+    subject: chemistry
+    chapter: Rates of Reaction
+    question_stem: "A student doubles the concentration of a reactant. Describe the expected effect on the rate of reaction and explain it using collision theory."
+    gold_final_answer: "Rate approximately doubles."
+    gold_chapter_refs:
+      - "Collision theory"
+      - "Effect of concentration on rate"
+    gold_steps:
+      - "State that doubling concentration increases number of particles per unit volume"
+      - "Apply collision theory: more collisions per unit time"
+      - "Conclude rate approximately doubles (assuming first-order behaviour)"
