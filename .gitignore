@@ -37,14 +37,16 @@ figures_cache/
 # locally to regenerate any time.
 output/*.pdf
 
-# release/ is intentionally curated and tracked - copy any artifacts you
-# want to publish into release/ with a friendly name.
+# PDFs published via GitHub Pages live under simulator/public/papers/ and are
+# tracked in git. They are auto-baked by `igcse build-simulator` from the
+# latest output/*.pdf for each chapter set.
 
 # Papers and chapter materials are the user's data, not source
 # Excluded for copyright reasons (Cambridge IGCSE past papers are UCLES-copyrighted).
-papers/
-papers_working/
-chapters/
+# Root-level only - keep `simulator/public/papers/` tracked for Pages distribution.
+/papers/
+/papers_working/
+/chapters/
 
 
 # OS

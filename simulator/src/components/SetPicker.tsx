@@ -50,29 +50,61 @@ export function SetPicker({ onPick }: Props) {
         leaves this page.
       </p>
       <ul className="mt-6 space-y-3">
-        {index.sets.map((s) => (
-          <li key={s.file}>
-            <button
-              type="button"
-              onClick={() => onPick(s.file)}
-              className="w-full rounded-lg border border-slate-200 bg-white p-4 text-left shadow-sm transition hover:border-chapter hover:shadow"
-            >
-              <div className="flex items-baseline justify-between">
-                <div>
-                  <p className="font-semibold capitalize text-chapter">
-                    {s.subject}: {s.chapter}
-                  </p>
-                  <p className="text-sm text-slate-500">
-                    {s.question_count} questions &middot; generated {s.generated_at}
-                  </p>
+        {index.sets.map((s) => {
+          const base = (import.meta.env.BASE_URL ?? "/").replace(/\/$/, "");
+          const pdfPractice = s.pdfs?.practice ? `${base}/${s.pdfs.practice}` : null;
+          const pdfSolutions = s.pdfs?.solutions ? `${base}/${s.pdfs.solutions}` : null;
+          return (
+            <li key={s.file}>
+              <div className="rounded-lg border border-slate-200 bg-white p-4 shadow-sm transition hover:border-chapter hover:shadow">
+                <div className="flex items-baseline justify-between gap-3">
+                  <div className="min-w-0">
+                    <p className="font-semibold capitalize text-chapter">
+                      {s.subject}: {s.chapter}
+                    </p>
+                    <p className="text-sm text-slate-500">
+                      {s.question_count} question{s.question_count === 1 ? "" : "s"} &middot;
+                      generated {s.generated_at}
+                    </p>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => onPick(s.file)}
+                    className="shrink-0 rounded-md bg-chapter px-3 py-1.5 text-sm font-medium text-white shadow-sm hover:bg-slate-700"
+                  >
+                    Start &rarr;
+                  </button>
                 </div>
-                <span className="text-chapter" aria-hidden="true">
-                  Start &rarr;
-                </span>
+                {(pdfPractice || pdfSolutions) && (
+                  <div className="mt-3 flex flex-wrap gap-2 text-sm">
+                    {pdfPractice && (
+                      <a
+                        href={pdfPractice}
+                        target="_blank"
+                        rel="noopener"
+                        download
+                        className="rounded-md border border-slate-300 bg-white px-3 py-1.5 text-chapter hover:border-chapter hover:bg-slate-50"
+                      >
+                        Download practice paper (PDF)
+                      </a>
+                    )}
+                    {pdfSolutions && (
+                      <a
+                        href={pdfSolutions}
+                        target="_blank"
+                        rel="noopener"
+                        download
+                        className="rounded-md border border-slate-300 bg-white px-3 py-1.5 text-chapter hover:border-chapter hover:bg-slate-50"
+                      >
+                        Download worked solutions (PDF)
+                      </a>
+                    )}
+                  </div>
+                )}
               </div>
-            </button>
-          </li>
-        ))}
+            </li>
+          );
+        })}
       </ul>
     </div>
   );

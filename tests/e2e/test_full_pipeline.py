@@ -135,6 +135,25 @@ def test_full_pipeline(tmp_path: Path):
             select(Question.id).where(Question.number == "2")
         ).scalar_one()
 
+    # 4b. Seed chapter priming (the test doesn't exercise the priming turn,
+    # but the downstream commands now require it).
+    from datetime import UTC, datetime as _dt
+    with session_scope() as s:
+        chapter_row = s.execute(
+            select(Chapter).where(Chapter.id == chapter_id)
+        ).scalar_one()
+        chapter_row.priming_json = {
+            "subject": "chemistry",
+            "chapter_name": "The Mole",
+            "slide_count_read": 1,
+            "slide_paths": ["/test/slide1.png"],
+            "topics_covered": ["Moles"],
+            "formulas_observed": ["n = m / M"],
+            "priming_notes": "test seeded",
+            "confirms_no_slides_skipped": True,
+        }
+        chapter_row.primed_at = _dt.now(UTC)
+
     # 5. Save match decisions (agent judgment).
     for qid, fit, score, rationale in [
         (q1_id, "full", 0.95, "Uses n = m/M straight from chapter"),

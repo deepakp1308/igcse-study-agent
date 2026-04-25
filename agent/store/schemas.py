@@ -223,6 +223,14 @@ class QuestionRubric(BaseModel):
     parts: list[RubricPart]
 
 
+class SetPDFs(BaseModel):
+    """Public URLs (relative to BASE_URL) of the printable artifacts for a set."""
+
+    model_config = ConfigDict(extra="forbid")
+    practice: str | None = None
+    solutions: str | None = None
+
+
 class SimulatorSet(BaseModel):
     """File baked into ``simulator/public/sets/<subject>-<chapter>.json``."""
 
@@ -235,3 +243,121 @@ class SimulatorSet(BaseModel):
         default_factory=dict,
         description="topic -> list of question_ids; powers per-topic score breakdown",
     )
+    pdfs: SetPDFs | None = None
+
+
+# ---------------------------------------------------------------------------
+# Step 0: Chapter priming (mandatory pre-step)
+# ---------------------------------------------------------------------------
+
+
+class ChapterPriming(BaseModel):
+    """Audit log proving the agent has read every slide before any downstream work."""
+
+    model_config = ConfigDict(extra="forbid")
+    subject: str
+    chapter_name: str
+    slide_count_read: int = Field(ge=1)
+    slide_paths: list[str] = Field(min_length=1)
+    topics_covered: list[str] = Field(min_length=1)
+    formulas_observed: list[str] = Field(default_factory=list)
+    priming_notes: str
+    confirms_no_slides_skipped: bool
+
+    @field_validator("confirms_no_slides_skipped")
+    @classmethod
+    def _must_confirm(cls, v: bool) -> bool:
+        if not v:
+            raise ValueError(
+                "confirms_no_slides_skipped must be True; re-prime by reading every slide"
+            )
+        return v
+
+
+# ---------------------------------------------------------------------------
+# Step 3.5: Extraction Auditor
+# ---------------------------------------------------------------------------
+
+
+class MissedQuestion(BaseModel):
+    """A question the auditor sub-agent says the main agent skipped."""
+
+    model_config = ConfigDict(extra="forbid")
+    number: str
+    type: QuestionType
+    marks: int = Field(ge=0, le=50)
+    stem: str
+    sub_parts: list[SubPart] = Field(default_factory=list)
+    options: list[MCQOption] | None = None
+    figure_bboxes: list[BoundingBox] = Field(default_factory=list)
+    confidence: float = Field(ge=0.0, le=1.0)
+    notes: str | None = None
+
+
+class Misextraction(BaseModel):
+    """An issue with an already-saved question that the auditor wants corrected."""
+
+    model_config = ConfigDict(extra="forbid")
+    question_db_id: int
+    issue: str
+    suggested_fix: str
+
+
+class ExtractionAudit(BaseModel):
+    """Independent auditor's verdict on a single extracted page."""
+
+    model_config = ConfigDict(extra="forbid")
+    paper_id: int
+    page_idx: int = Field(ge=0)
+    complete: bool
+    missed_questions: list[MissedQuestion] = Field(default_factory=list)
+    misextractions: list[Misextraction] = Field(default_factory=list)
+    rationale: str
+    audit_confidence: float = Field(ge=0.0, le=1.0)
+
+
+# ---------------------------------------------------------------------------
+# Step 5.5: Solution Judge + Improve loop
+# ---------------------------------------------------------------------------
+
+
+class JudgeDimensions(BaseModel):
+    """Five dimensions, each scored 1..5 by the judge."""
+
+    model_config = ConfigDict(extra="forbid")
+    correctness: int = Field(ge=1, le=5)
+    clarity: int = Field(ge=1, le=5)
+    age_appropriateness: int = Field(ge=1, le=5)
+    mark_scheme_alignment: int = Field(ge=1, le=5)
+    completeness: int = Field(ge=1, le=5)
+
+
+class JudgeIssue(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+    kind: Literal[
+        "factual_error",
+        "unclear_step",
+        "vocabulary_too_advanced",
+        "missing_step",
+        "missing_chapter_reference",
+        "off_topic",
+        "formatting",
+        "other",
+    ]
+    severity: Literal["low", "medium", "high"]
+    description: str
+    suggested_fix: str
+
+
+class JudgeReport(BaseModel):
+    """Pedagogical evaluation of a worked solution for a 15-year-old IGCSE student."""
+
+    model_config = ConfigDict(extra="forbid")
+    question_id: int
+    chapter_id: int
+    iteration: int = Field(ge=1)
+    quality_score: float = Field(ge=0.0, le=1.0)
+    dimensions: JudgeDimensions
+    issues: list[JudgeIssue] = Field(default_factory=list)
+    rewrite_required: bool
+    improvement_brief: str

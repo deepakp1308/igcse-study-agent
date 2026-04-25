@@ -14,6 +14,27 @@ response in `review_queue` automatically and exits non-zero. Retry once
 with the validation error appended to the prompt; on a second failure,
 move on and ask the user to open `igcse review`.
 
+## Quality architecture (v2)
+
+The pipeline now has two extra agents in addition to the main agent + critic:
+
+- **Extraction auditor** (Cursor Task subagent, `explore` type, readonly):
+  runs after every per-page extraction. Independently re-reads the page PNG
+  and verifies no questions were missed. Up to 2 iterations per page.
+- **Solution judge** (in-session turn): scores every solver+critic answer
+  on five dimensions (correctness, clarity, age-appropriateness for a
+  15-year-old, mark-scheme alignment, completeness). Drives an
+  improve-loop until `quality_score >= 0.85`. Max 2 improve cycles.
+
+Hard preconditions:
+
+1. **No matching, no solving, no rubric, no PDF, no simulator build for any
+   chapter that has not been primed first.** `igcse match`,
+   `igcse generate-solutions`, and `igcse build-simulator` exit code 4
+   if priming is missing or stale.
+2. **No PDF or simulator deploy if any included solution has
+   `final_quality_score < 0.75`.**
+
 ---
 
 ## Conventions
@@ -30,6 +51,37 @@ move on and ask the user to open `igcse review`.
   coffee on it, use `>=0.85`. If you'd only bet a low-stakes guess, use
   `0.5`. Anything `<0.75` routes the question to `igcse review` for a
   human sanity check.
+
+---
+
+## Step 0 — Chapter priming (mandatory before everything)
+
+Driver: `igcse chapter-prime --subject <S> --chapter <C>`
+
+The CLI prints the absolute path of every screenshot in the chapter folder.
+You then run **one turn** that:
+
+- **Input**: every path printed by the CLI. Read each one with the Read
+  tool, in order. Do NOT skip any.
+- **Prompt**: `prompts/chapter_priming.md`
+- **Schema**: `ChapterPriming`
+- **Save**:
+
+  ```sh
+  igcse save-priming --subject <S> --chapter <C> - <<'JSON'
+  { ... ChapterPriming JSON ... }
+  JSON
+  ```
+
+The CLI rejects the payload if `slide_count_read != folder count` or if
+any expected slide path is missing from your `slide_paths` list. It also
+rejects `confirms_no_slides_skipped: false`. Re-prime if rejected.
+
+After priming, `igcse match`, `igcse generate-solutions` and
+`igcse build-simulator` will run; before priming, they exit 4.
+
+Re-priming is required if any slide file's mtime changes after the stored
+`primed_at`.
 
 ---
 
@@ -76,6 +128,35 @@ Notes:
 - Figure bboxes are cropped to disk by the CLI; you do **not** need to
   describe the figures in the stem. The student sees the original crop.
 - MCQ options go in `options`, not in `stem`.
+
+### 1c. Audit per page (Cursor Task subagent)
+
+Immediately after each `save-questions` call, run the auditor sub-agent:
+
+1. `igcse audit-page --paper-id <ID> --page-idx <N>` — prints the saved
+   questions JSON, the page PNG path, and an "AGENT INSTRUCTIONS" block.
+2. Invoke the Cursor `Task` tool:
+   - `subagent_type`: `explore`
+   - `readonly`: `true`
+   - `description`: `"Audit page <ID>/<N>"`
+   - `prompt`: contents of [prompts/audit_extraction.md](prompts/audit_extraction.md)
+     plus the `page_png_path` and `saved_questions_json` printed by the CLI.
+3. The subagent's final message is an `ExtractionAudit` JSON. Save it:
+
+   ```sh
+   igcse save-audit --paper-id <ID> --page-idx <N> - <<'JSON'
+   { ... ExtractionAudit JSON ... }
+   JSON
+   ```
+
+   The CLI appends any `missed_questions` to the page automatically.
+4. If the audit appended questions, run audit-page once more (a single
+   re-audit). Stop after 2 iterations regardless. The `extraction_audits`
+   table records every iteration.
+
+Run audits in parallel batches of 5 to keep wall time manageable on large
+corpora. The Task subagent is intentionally sandboxed: it has no memory of
+how the main agent reasoned, which is the whole point.
 
 ---
 
@@ -162,6 +243,36 @@ unset. Run one more turn using `prompts/reconcile.md`, again saving with
 `save-solution` (which resets the critic slot) and then a fresh
 `save-critic` turn. If disagreement persists, leave it for human review.
 
+### 4c. Judge + improve loop (mandatory)
+
+After `save-critic` returns `agreed=true` (or after reconciliation), run
+the judge in a **fresh** turn:
+
+- **Input**: question, chapter profile, reconciled `SolverOutput`.
+- **Prompt**: `prompts/judge.md`
+- **Schema**: `JudgeReport`
+- **Save**: `igcse save-judge -`
+
+If the judge sets `rewrite_required: true` (any dimension < 4 OR
+`quality_score < 0.85`), run an improve turn:
+
+- **Prompt**: `prompts/improve_solution.md`
+- **Schema**: `SolverOutput` (revised)
+- **Save**: `igcse save-improvement -`
+
+`save-improvement` clears the critic + judge slots so the loop continues:
+critic → judge → (improve if needed) → critic → judge → ...
+
+Hard rules:
+
+- **Max 2 improve cycles per question.** If the judge still flags
+  `rewrite_required: true` after 2 improvements, accept the highest
+  `quality_score` seen and surface it in the dashboard.
+- **Quality gate**: `igcse generate-solutions` and
+  `igcse build-simulator` reject any included question with
+  `final_quality_score < 0.75`. The PDF and simulator simply don't ship
+  with low-quality content.
+
 Re-run `generate-solutions` once all pending items are saved; it will
 assemble the PDF.
 
@@ -216,3 +327,12 @@ URL is `https://<your-github-user>.github.io/igcse-study-agent/?set=<subject>-<c
   (by re-running `save-questions` for that page).
 - **Out-of-scope question in match shortlist**: set `fit: "none"` with a
   rationale. It will not enter the paper or solutions.
+- **Priming missing or stale**: `igcse match` / `generate-solutions` /
+  `build-simulator` exit code 4. Run `igcse chapter-prime` again — read
+  every slide before resuming.
+- **Audit incomplete after 2 iterations**: the row stays
+  `complete=false`. Surface the page in `igcse audit-status` and ask a
+  human to inspect the page PNG.
+- **Judge keeps flagging rewrite_required after 2 improvements**: stop the
+  loop. Store the highest `quality_score` seen. The simulator/PDF will
+  refuse to ship the question if `final_quality_score < 0.75`.

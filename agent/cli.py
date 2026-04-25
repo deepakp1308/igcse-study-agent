@@ -54,6 +54,7 @@ from agent.match import dedup_questions, shortlist_candidates
 from agent.review.queue import add_review, list_pending, resolve
 from agent.store.db import (
     Chapter,
+    ExtractionAuditRow,
     Match,
     Page,
     Paper,
@@ -64,8 +65,11 @@ from agent.store.db import (
     session_scope,
 )
 from agent.store.schemas import (
+    ChapterPriming,
     ChapterProfile,
     CriticOutput,
+    ExtractionAudit,
+    JudgeReport,
     MatchDecision,
     PageExtraction,
     PaperMetadata,
@@ -118,6 +122,66 @@ def _read_json_payload(payload: str | None) -> dict[str, object] | list[dict[str
 
 def _slug(s: str) -> str:
     return "".join(c.lower() if c.isalnum() else "-" for c in s).strip("-")
+
+
+def _list_chapter_slides(subject: str, chapter: str) -> list[Path]:
+    """Return slide paths for a chapter folder.
+
+    Looks up by stored screenshot_paths first; falls back to scanning
+    ``chapters/<subject>/<chapter>/`` under the repo root.
+    """
+    init_db()
+    with session_scope() as s:
+        chapter_row = s.execute(
+            select(Chapter).where(Chapter.subject == subject, Chapter.name == chapter)
+        ).scalar_one_or_none()
+        stored: list[str] = (
+            list(chapter_row.screenshot_paths_json or [])
+            if chapter_row is not None
+            else []
+        )
+    if stored:
+        return [Path(p) for p in stored if Path(p).exists()]
+    fallback = (
+        Path(__file__).resolve().parent.parent
+        / "chapters"
+        / subject.replace(" ", "_")
+        / chapter
+    )
+    if fallback.is_dir():
+        return sorted(
+            [
+                *fallback.glob("*.png"),
+                *fallback.glob("*.jpg"),
+                *fallback.glob("*.jpeg"),
+            ]
+        )
+    return []
+
+
+def _ensure_primed(subject: str, chapter: str) -> None:
+    """Hard precondition for downstream steps."""
+    init_db()
+    with session_scope() as s:
+        row = s.execute(
+            select(Chapter).where(Chapter.subject == subject, Chapter.name == chapter)
+        ).scalar_one_or_none()
+        if row is None:
+            raise typer.BadParameter(
+                f"Chapter not found: {subject}/{chapter}. "
+                "Run `igcse save-chapter` first."
+            )
+        if row.primed_at is None:
+            console.print(
+                Panel.fit(
+                    f"Chapter {subject}/{chapter} has NOT been primed.\n"
+                    f"Run `igcse chapter-prime --subject \"{subject}\" --chapter \"{chapter}\"` "
+                    "and complete the priming turn first.",
+                    title="[red]PRIMING REQUIRED[/]",
+                    border_style="red",
+                )
+            )
+            raise typer.Exit(code=4)
 
 
 def _print_agent_instructions(title: str, body: str) -> None:
@@ -404,6 +468,7 @@ def cmd_match(
     """Produce a ranked candidate shortlist and print agent instructions."""
 
     init_db()
+    _ensure_primed(subject, chapter)
     candidates = shortlist_candidates(
         subject=subject, chapter_name=chapter, top_k=top_k, similarity_floor=similarity_floor
     )
@@ -605,6 +670,7 @@ def cmd_generate_solutions(
     """Assemble the worked-solutions PDF from the agent's reconciled solver output."""
 
     init_db()
+    _ensure_primed(subject, chapter)
     chapter_id, ids = _select_question_ids(subject, chapter, match_threshold, include_partial)
     if not ids:
         console.print("[yellow]No matched questions.[/]")
@@ -837,6 +903,7 @@ def cmd_build_simulator(
     """Bake per-chapter JSON and (optionally) build the simulator."""
 
     init_db()
+    _ensure_primed(subject, chapter)
     path = bake_simulator_set(subject, chapter)
     console.print(f"[green]Wrote simulator set: {path}[/]")
 
@@ -883,6 +950,415 @@ def cmd_deploy(
             border_style="cyan",
         )
     )
+
+
+# ---------------------------------------------------------------------------
+# Step 0: chapter-prime / save-priming
+# ---------------------------------------------------------------------------
+
+
+@app.command("chapter-prime")
+def cmd_chapter_prime(
+    subject: Annotated[str, typer.Option("--subject")],
+    chapter: Annotated[str, typer.Option("--chapter")],
+) -> None:
+    """Print the slide manifest and instruct the agent to read every slide."""
+
+    init_db()
+    slides = _list_chapter_slides(subject, chapter)
+    if not slides:
+        raise typer.BadParameter(
+            f"No slides found for {subject}/{chapter}. "
+            "Save the chapter (igcse save-chapter --screenshots-dir ...) first or "
+            "drop screenshots into chapters/<subject>/<chapter>/."
+        )
+
+    body = [
+        f"Chapter: {subject} / {chapter}",
+        f"Slide count: {len(slides)}",
+        "",
+        "You MUST read EVERY slide below in order using the Read tool",
+        "BEFORE producing the chapter profile or any downstream output.",
+        "",
+        "After reading the last slide, return JSON matching `ChapterPriming`",
+        "and save via:",
+        f'  igcse save-priming --subject "{subject}" --chapter "{chapter}" -',
+        "(use prompt: prompts/chapter_priming.md).",
+        "",
+        "Slides to read:",
+    ]
+    body.extend(f"  {i + 1:2d}. {p}" for i, p in enumerate(slides))
+    _print_agent_instructions("Step 0 - chapter priming", "\n".join(body))
+
+
+@app.command("save-priming")
+def cmd_save_priming(
+    subject: Annotated[str, typer.Option("--subject")],
+    chapter: Annotated[str, typer.Option("--chapter")],
+    payload: Annotated[
+        str | None,
+        typer.Argument(help="JSON file path, '-' for stdin, or inline JSON"),
+    ] = "-",
+) -> None:
+    """Persist a ChapterPriming for subject/chapter (gates downstream commands)."""
+
+    init_db()
+    raw = _read_json_payload(payload)
+    expected_slides = _list_chapter_slides(subject, chapter)
+    expected_count = len(expected_slides)
+    try:
+        priming = ChapterPriming.model_validate(raw)
+    except ValidationError as e:
+        add_review("chapter_priming", f"{subject}/{chapter}", f"schema: {e}", json.dumps(raw))
+        raise typer.Exit(code=2) from e
+
+    if priming.slide_count_read != expected_count:
+        add_review(
+            "chapter_priming",
+            f"{subject}/{chapter}",
+            f"count mismatch: agent claims {priming.slide_count_read} but folder has {expected_count}",
+            json.dumps(raw),
+        )
+        console.print(
+            f"[red]slide count mismatch (agent={priming.slide_count_read}, folder={expected_count}); "
+            f"re-prime with all slides[/]"
+        )
+        raise typer.Exit(code=2)
+
+    expected_set = {str(p.resolve()) for p in expected_slides}
+    claimed_set = {str(Path(p).resolve()) for p in priming.slide_paths}
+    missing = sorted(expected_set - claimed_set)
+    if missing:
+        add_review(
+            "chapter_priming",
+            f"{subject}/{chapter}",
+            f"missing slides in priming: {missing[:3]}",
+            json.dumps(raw),
+        )
+        console.print(f"[red]priming did not include {len(missing)} expected slides[/]")
+        for m in missing[:5]:
+            console.print(f"  missing: {m}")
+        raise typer.Exit(code=2)
+
+    with session_scope() as s:
+        chapter_row = s.execute(
+            select(Chapter).where(Chapter.subject == subject, Chapter.name == chapter)
+        ).scalar_one_or_none()
+        if chapter_row is None:
+            raise typer.BadParameter(
+                f"Chapter row not found for {subject}/{chapter}. Save chapter profile first."
+            )
+        chapter_row.priming_json = priming.model_dump()
+        chapter_row.primed_at = datetime.now(UTC)
+    console.print(
+        f"[green]Primed {subject}/{chapter}: read {priming.slide_count_read} slides, "
+        f"{len(priming.topics_covered)} topics covered[/]"
+    )
+
+
+# ---------------------------------------------------------------------------
+# Step 3.5: audit-page / save-audit / audit-status
+# ---------------------------------------------------------------------------
+
+
+@app.command("audit-page")
+def cmd_audit_page(
+    paper_id: Annotated[int, typer.Option("--paper-id")],
+    page_idx: Annotated[int, typer.Option("--page-idx")],
+) -> None:
+    """Print the auditor sub-agent prompt + saved questions for one page.
+
+    The main agent then invokes the Cursor Task tool with subagent_type='explore',
+    readonly=true, and the prompt below. The subagent's final message is the
+    ExtractionAudit JSON which the main agent passes to `igcse save-audit -`.
+    """
+
+    init_db()
+    with session_scope() as s:
+        page = s.execute(
+            select(Page).where(Page.paper_id == paper_id, Page.idx == page_idx)
+        ).scalar_one_or_none()
+        if page is None:
+            raise typer.BadParameter(f"No page idx={page_idx} for paper_id={paper_id}")
+        questions = list(
+            s.execute(
+                select(Question).where(
+                    Question.paper_id == paper_id, Question.page_id == page.id
+                )
+            ).scalars()
+        )
+        saved_payload = {
+            "paper_id": paper_id,
+            "page_idx": page_idx,
+            "saved_questions": [
+                {
+                    "question_db_id": q.id,
+                    "number": q.number,
+                    "type": q.type,
+                    "marks": q.marks,
+                    "stem": q.stem,
+                    "sub_parts": q.sub_parts_json or [],
+                    "options": q.options_json,
+                    "confidence": q.confidence,
+                }
+                for q in questions
+            ],
+        }
+        png_path = page.png_path
+
+    body_lines = [
+        f"Auditor task for paper_id={paper_id} page_idx={page_idx}",
+        "",
+        "Invoke a Cursor Task subagent:",
+        '  subagent_type: "explore"',
+        "  readonly: true",
+        f"  description: \"Audit page {paper_id}/{page_idx}\"",
+        "  prompt: contents of prompts/audit_extraction.md, plus:",
+        f"    page_png_path = {png_path}",
+        f"    saved_questions_json = (the JSON below; {len(questions)} questions saved)",
+        "",
+        "After the subagent returns, save its ExtractionAudit JSON via:",
+        f"  igcse save-audit --paper-id {paper_id} --page-idx {page_idx} -",
+        "",
+        "saved_questions_json:",
+        json.dumps(saved_payload, indent=2),
+    ]
+    _print_agent_instructions("Step 3.5 - audit page", "\n".join(body_lines))
+
+
+@app.command("save-audit")
+def cmd_save_audit(
+    paper_id: Annotated[int, typer.Option("--paper-id")],
+    page_idx: Annotated[int, typer.Option("--page-idx")],
+    payload: Annotated[
+        str | None,
+        typer.Argument(help="JSON file path, '-' for stdin, or inline JSON"),
+    ] = "-",
+) -> None:
+    """Persist an ExtractionAudit; appends any missed questions to the page."""
+
+    init_db()
+    raw = _read_json_payload(payload)
+    if isinstance(raw, dict):
+        raw.setdefault("paper_id", paper_id)
+        raw.setdefault("page_idx", page_idx)
+    try:
+        audit = ExtractionAudit.model_validate(raw)
+    except ValidationError as e:
+        add_review(
+            "extraction_audit",
+            f"paper_id={paper_id} page_idx={page_idx}",
+            f"schema: {e}",
+            json.dumps(raw),
+        )
+        raise typer.Exit(code=2) from e
+
+    appended = 0
+    with session_scope() as s:
+        existing_iters = list(
+            s.execute(
+                select(ExtractionAuditRow).where(
+                    ExtractionAuditRow.paper_id == paper_id,
+                    ExtractionAuditRow.page_idx == page_idx,
+                )
+            ).scalars()
+        )
+        next_iter = (max((r.iteration for r in existing_iters), default=0)) + 1
+        s.add(
+            ExtractionAuditRow(
+                paper_id=paper_id,
+                page_idx=page_idx,
+                iteration=next_iter,
+                audit_json=audit.model_dump(),
+                complete=audit.complete,
+            )
+        )
+        page = s.execute(
+            select(Page).where(Page.paper_id == paper_id, Page.idx == page_idx)
+        ).scalar_one_or_none()
+        if page is None:
+            raise typer.BadParameter(
+                f"page idx={page_idx} for paper_id={paper_id} not found"
+            )
+        for mq in audit.missed_questions:
+            row = Question(
+                paper_id=paper_id,
+                page_id=page.id,
+                number=mq.number,
+                type=mq.type.value,
+                marks=mq.marks,
+                stem=mq.stem,
+                sub_parts_json=[sp.model_dump() for sp in mq.sub_parts],
+                options_json=[o.model_dump() for o in mq.options] if mq.options else None,
+                figure_paths_json=[],
+                confidence=mq.confidence,
+                notes=(mq.notes or "") + " [appended by auditor]",
+            )
+            s.add(row)
+            appended += 1
+
+    console.print(
+        f"[green]Audit saved (iteration {next_iter}): paper={paper_id} page={page_idx} "
+        f"complete={audit.complete} missed={len(audit.missed_questions)} "
+        f"misextractions={len(audit.misextractions)} appended={appended}[/]"
+    )
+
+
+@app.command("audit-status")
+def cmd_audit_status(
+    paper_id: Annotated[int | None, typer.Option("--paper-id")] = None,
+) -> None:
+    """Show audit coverage per page (paper-id optional filter)."""
+
+    init_db()
+    with session_scope() as s:
+        if paper_id is None:
+            rows = list(s.execute(select(ExtractionAuditRow)).scalars())
+        else:
+            rows = list(
+                s.execute(
+                    select(ExtractionAuditRow).where(ExtractionAuditRow.paper_id == paper_id)
+                ).scalars()
+            )
+    t = RichTable(title=f"Audit coverage{f' (paper {paper_id})' if paper_id else ''}")
+    t.add_column("paper")
+    t.add_column("page")
+    t.add_column("iter")
+    t.add_column("complete")
+    t.add_column("missed")
+    t.add_column("misextract")
+    for r in sorted(rows, key=lambda x: (x.paper_id, x.page_idx, x.iteration)):
+        a = r.audit_json or {}
+        missed_raw = a.get("missed_questions", [])
+        misex_raw = a.get("misextractions", [])
+        missed_n = len(missed_raw) if isinstance(missed_raw, list) else 0
+        misex_n = len(misex_raw) if isinstance(misex_raw, list) else 0
+        t.add_row(
+            str(r.paper_id),
+            str(r.page_idx),
+            str(r.iteration),
+            "yes" if r.complete else "no",
+            str(missed_n),
+            str(misex_n),
+        )
+    console.print(t)
+
+
+# ---------------------------------------------------------------------------
+# Step 5.5: save-judge / save-improvement / solution-status
+# ---------------------------------------------------------------------------
+
+
+@app.command("save-judge")
+def cmd_save_judge(
+    payload: Annotated[
+        str | None,
+        typer.Argument(help="JSON file path, '-' for stdin, or inline JSON"),
+    ] = "-",
+) -> None:
+    """Persist a JudgeReport for one solution; updates final_quality_score."""
+
+    init_db()
+    raw = _read_json_payload(payload)
+    try:
+        judge = JudgeReport.model_validate(raw)
+    except ValidationError as e:
+        add_review("judge", "", f"schema: {e}", json.dumps(raw))
+        raise typer.Exit(code=2) from e
+
+    with session_scope() as s:
+        sol = s.get(Solution, (judge.question_id, judge.chapter_id))
+        if sol is None:
+            raise typer.BadParameter(
+                f"No solution for q={judge.question_id} ch={judge.chapter_id}"
+            )
+        sol.judge_json = judge.model_dump()
+        sol.judge_quality_score = judge.quality_score
+        sol.iteration_count = judge.iteration
+        prior = sol.final_quality_score or 0.0
+        sol.final_quality_score = max(prior, judge.quality_score)
+    msg = (
+        f"q={judge.question_id} ch={judge.chapter_id} "
+        f"iter={judge.iteration} score={judge.quality_score:.2f} "
+        f"rewrite={'yes' if judge.rewrite_required else 'no'}"
+    )
+    if judge.rewrite_required:
+        console.print(f"[yellow]Judge requests rewrite: {msg}[/]")
+    else:
+        console.print(f"[green]Judge approved: {msg}[/]")
+
+
+@app.command("save-improvement")
+def cmd_save_improvement(
+    payload: Annotated[
+        str | None,
+        typer.Argument(help="JSON file path, '-' for stdin, or inline JSON"),
+    ] = "-",
+) -> None:
+    """Replace solver output with an improved version; clears critic & judge."""
+
+    init_db()
+    raw = _read_json_payload(payload)
+    try:
+        solver = SolverOutput.model_validate(raw)
+    except ValidationError as e:
+        add_review("improved_solver", "", f"schema: {e}", json.dumps(raw))
+        raise typer.Exit(code=2) from e
+    with session_scope() as s:
+        sol = s.get(Solution, (solver.question_id, solver.chapter_id))
+        if sol is None:
+            raise typer.BadParameter(
+                f"No solution for q={solver.question_id} ch={solver.chapter_id}"
+            )
+        sol.solver_json = solver.model_dump()
+        sol.out_of_scope = solver.out_of_scope
+        sol.critic_json = None
+        sol.reconciled_json = None
+        sol.critic_agrees = True
+        sol.judge_json = None
+        sol.judge_quality_score = None
+        sol.iteration_count = (sol.iteration_count or 1) + 1
+    console.print(
+        f"[cyan]Improvement saved: q={solver.question_id} ch={solver.chapter_id} "
+        f"iter={sol.iteration_count}; rerun critic + judge[/]"
+    )
+
+
+@app.command("solution-status")
+def cmd_solution_status(
+    chapter_id: Annotated[int | None, typer.Option("--chapter-id")] = None,
+) -> None:
+    """Print the iteration history & quality score for solutions in a chapter."""
+
+    init_db()
+    with session_scope() as s:
+        if chapter_id is None:
+            sols = list(s.execute(select(Solution)).scalars())
+        else:
+            sols = list(
+                s.execute(
+                    select(Solution).where(Solution.chapter_id == chapter_id)
+                ).scalars()
+            )
+    t = RichTable(title=f"Solution status{f' (chapter {chapter_id})' if chapter_id else ''}")
+    t.add_column("q")
+    t.add_column("ch")
+    t.add_column("iter")
+    t.add_column("critic")
+    t.add_column("judge_q")
+    t.add_column("final_q")
+    t.add_column("oos")
+    for sol in sols:
+        t.add_row(
+            str(sol.question_id),
+            str(sol.chapter_id),
+            str(sol.iteration_count or 1),
+            "ok" if sol.critic_agrees else "disagree",
+            f"{sol.judge_quality_score:.2f}" if sol.judge_quality_score is not None else "-",
+            f"{sol.final_quality_score:.2f}" if sol.final_quality_score is not None else "-",
+            "yes" if sol.out_of_scope else "no",
+        )
+    console.print(t)
 
 
 # ---------------------------------------------------------------------------

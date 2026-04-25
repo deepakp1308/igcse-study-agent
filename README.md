@@ -18,21 +18,42 @@ For a given chapter (e.g. _Chemistry / The Mole_), the agent produces:
 
 ## How it splits work
 
-- **Cursor agent (LLM work)**: reads past-paper PNGs and chapter
+- **Main agent** (Cursor session): reads past-paper PNGs and chapter
   screenshots, extracts questions, builds chapter profiles, judges matches,
-  writes solutions (+independent critic), and produces grading rubrics.
-- **Python CLI (deterministic work)**: renders PDFs to page PNGs, crops
+  writes solutions, and produces grading rubrics.
+- **Independent critic** (in-session turn): re-derives every solution from
+  scratch and disagrees if the main agent's working has errors.
+- **Extraction auditor** (Cursor `Task` subagent, `explore` type, readonly):
+  runs after every per-page extraction. Independently re-reads the page PNG
+  and verifies no questions or sub-parts were missed. Up to 2 iterations.
+- **Solution judge** (in-session turn): scores every solver+critic answer on
+  five dimensions (correctness, clarity, age-appropriateness for a
+  15-year-old, IGCSE mark-scheme alignment, completeness). Drives an
+  improve-loop until `quality_score >= 0.85`. Max 2 improve cycles.
+- **Python CLI** (deterministic work): renders PDFs to page PNGs, crops
   figures, stores everything in SQLite, runs local embeddings for
   dedup/recall, lays out the practice-paper and solutions PDFs, bakes the
-  simulator's rubric JSON, builds the Vite React frontend.
-- **Static simulator (browser)**: loads the rubric JSON, grades MCQ exactly,
+  simulator's rubric JSON + copies the latest PDFs into the public folder,
+  builds the Vite React frontend.
+- **Static simulator** (browser): loads the rubric JSON, grades MCQ exactly,
   grades numeric with tolerance, grades free-text by concept coverage
   (optional in-browser MiniLM embeddings via
   [`@xenova/transformers`](https://github.com/xenova/transformers.js)), and
-  always shows the model answer + chapter references.
+  always shows the model answer + chapter references. Practice paper and
+  worked solutions PDFs are downloadable directly from the landing page.
 
-See `[AGENT_SOP.md](AGENT_SOP.md)` for the step-by-step runbook the Cursor
-agent follows, and `[prompts/](prompts/)` for the prompt templates.
+Hard preconditions:
+
+1. **No matching, no solving, no rubric, no PDF, no simulator build for any
+   chapter that has not been primed.** `igcse chapter-prime` requires the
+   agent to read EVERY slide before downstream work runs.
+2. **No PDF or simulator deploy if any included solution has
+   `final_quality_score < 0.75`** after the judge loop.
+
+See `[AGENT_SOP.md](AGENT_SOP.md)` for the full step-by-step runbook
+(Steps 0 priming, 1 ingest, 1c audit, 2 chapter profile, 3 match,
+4 solver+critic, 4c judge+improve, 5 paper PDF, 6 solutions PDF,
+7 simulator build) and `[prompts/](prompts/)` for the prompt templates.
 
 ## Quickstart (macOS)
 

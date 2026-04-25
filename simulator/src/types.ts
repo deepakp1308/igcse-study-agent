@@ -60,22 +60,31 @@ export interface QuestionRubric {
   parts: RubricPart[];
 }
 
+export interface SetPDFs {
+  practice?: string | null;
+  solutions?: string | null;
+}
+
 export interface SimulatorSet {
   subject: string;
   chapter: string;
   generated_at: string;
   questions: QuestionRubric[];
   topic_index: Record<string, string[]>;
+  pdfs?: SetPDFs | null;
+}
+
+export interface SetsIndexEntry {
+  file: string;
+  subject: string;
+  chapter: string;
+  question_count: number;
+  generated_at: string;
+  pdfs?: SetPDFs | null;
 }
 
 export interface SetsIndex {
-  sets: Array<{
-    file: string;
-    subject: string;
-    chapter: string;
-    question_count: number;
-    generated_at: string;
-  }>;
+  sets: SetsIndexEntry[];
 }
 
 // Runtime grading artifacts

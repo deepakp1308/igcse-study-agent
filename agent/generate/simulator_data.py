@@ -3,7 +3,9 @@
 Reads agent-produced ``QuestionRubric`` rows from SQLite, assembles them into
 a ``SimulatorSet``, and writes ``simulator/public/sets/<subject>-<chapter>.json``.
 Figure PNGs referenced by the rubric are copied to
-``simulator/public/sets/figures/`` so they ship with the static site.
+``simulator/public/sets/figures/``. Practice + solutions PDFs (latest by
+modification time) are copied to ``simulator/public/papers/<slug>/`` so they
+are downloadable directly from the deployed GitHub Pages site.
 """
 
 from __future__ import annotations
@@ -15,13 +17,53 @@ from pathlib import Path
 
 from sqlalchemy import select
 
-from agent.config import simulator_sets_dir
+from agent.config import output_dir, simulator_sets_dir
 from agent.store.db import Chapter, Rubric, session_scope
-from agent.store.schemas import QuestionRubric, SimulatorSet
+from agent.store.schemas import QuestionRubric, SetPDFs, SimulatorSet
 
 
 def _slug(s: str) -> str:
     return "".join(c.lower() if c.isalnum() else "-" for c in s).strip("-")
+
+
+def _papers_public_dir() -> Path:
+    return simulator_sets_dir().parent / "papers"
+
+
+def _copy_latest_pdfs(subject: str, chapter_name: str) -> SetPDFs | None:
+    """Copy the most recent practice + solutions PDFs into ``public/papers/<slug>/``.
+
+    Returns relative URLs (without leading slash) suitable for the simulator
+    fetch, or None when no PDFs exist yet for the chapter.
+    """
+    src = output_dir()
+    if not src.exists():
+        return None
+    s_slug = _slug(subject)
+    c_slug = _slug(chapter_name)
+    slug = f"{s_slug}-{c_slug}"
+    practice_glob = sorted(
+        src.glob(f"practice_paper_{s_slug}_{c_slug}_*.pdf"),
+        key=lambda p: p.stat().st_mtime,
+    )
+    solutions_glob = sorted(
+        src.glob(f"solutions_{s_slug}_{c_slug}_*.pdf"),
+        key=lambda p: p.stat().st_mtime,
+    )
+    if not practice_glob and not solutions_glob:
+        return None
+    dst = _papers_public_dir() / slug
+    dst.mkdir(parents=True, exist_ok=True)
+    pdfs = SetPDFs()
+    if practice_glob:
+        out = dst / "practice.pdf"
+        shutil.copy2(practice_glob[-1], out)
+        pdfs.practice = f"papers/{slug}/practice.pdf"
+    if solutions_glob:
+        out = dst / "solutions.pdf"
+        shutil.copy2(solutions_glob[-1], out)
+        pdfs.solutions = f"papers/{slug}/solutions.pdf"
+    return pdfs
 
 
 def bake_simulator_set(subject: str, chapter_name: str) -> Path:
@@ -65,12 +107,15 @@ def bake_simulator_set(subject: str, chapter_name: str) -> Path:
                 for cref in part.chapter_refs:
                     topic_index.setdefault(cref, []).append(r.question_id)
 
+        pdfs = _copy_latest_pdfs(subject, chapter_name)
+
         baked = SimulatorSet(
             subject=subject,
             chapter=chapter_name,
             generated_at=datetime.now(UTC).isoformat(timespec="seconds"),
             questions=rubrics,
             topic_index=topic_index,
+            pdfs=pdfs,
         )
 
     out_path = sets_dir / f"{_slug(subject)}-{_slug(chapter_name)}.json"
@@ -89,6 +134,7 @@ def _update_index(sets_dir: Path) -> None:
             continue
         try:
             data = json.loads(p.read_text(encoding="utf-8"))
+            pdfs = data.get("pdfs") or {}
             entries.append(
                 {
                     "file": p.name,
@@ -96,6 +142,10 @@ def _update_index(sets_dir: Path) -> None:
                     "chapter": data.get("chapter"),
                     "question_count": len(data.get("questions", [])),
                     "generated_at": data.get("generated_at"),
+                    "pdfs": {
+                        "practice": pdfs.get("practice"),
+                        "solutions": pdfs.get("solutions"),
+                    },
                 }
             )
         except (OSError, json.JSONDecodeError):

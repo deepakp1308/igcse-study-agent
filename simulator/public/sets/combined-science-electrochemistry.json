@@ -1,7 +1,7 @@
 {
   "subject": "combined science",
   "chapter": "Electrochemistry",
-  "generated_at": "2026-04-25T18:43:21+00:00",
+  "generated_at": "2026-04-25T19:27:13+00:00",
   "questions": [
     {
       "question_id": "0653-q19-conductivity",
@@ -41,9 +41,10 @@
           "accepted_phrasings": [],
           "required_working_concepts": [],
           "common_mistakes": [],
-          "model_answer_html": "<p><b>D - ionic bonding; metal + non-metal.</b><br/>The lamp lights only when the dissolved substance provides free ions. Ionic compounds dissolve in water to give an electrolyte, which conducts electricity. Ionic compounds form between a metal (cation) and a non-metal (anion). Pure water alone is a non-electrolyte; covalent solutions like sugar do not conduct.</p>",
+          "model_answer_html": "<p><b>D - ionic bonding; metal + non-metal.</b></p><p>The lamp lights only when the circuit is complete through the liquid - that means charged particles (ions) must be moving. A liquid that lets electricity through this way is an <b>electrolyte</b>. Pure water alone is a <b>non-electrolyte</b> (almost no free ions), so the dissolved compound R must be supplying the ions.</p><p>Solutions that are electrolytes come from <b>ionic compounds</b>, which form between a <b>metal</b> (loses electrons -> positive ion) and a <b>non-metal</b> (gains electrons -> negative ion). Covalent compounds (e.g. ethanol, sugar) do not conduct in solution. So R has ionic bonding and is made of a metal + non-metal -> <b>D</b>.</p>",
           "chapter_refs": [
-            "Conductivity and electrolytes"
+            "Conductivity and electrolytes",
+            "Electrolytes vs non-electrolytes"
           ]
         }
       ]
@@ -145,6 +146,9 @@
     "Conductivity and electrolytes": [
       "0653-q19-conductivity"
     ],
+    "Electrolytes vs non-electrolytes": [
+      "0653-q19-conductivity"
+    ],
     "Electrolysis of molten binary ionic compounds (industrial extraction)": [
       "0653-q23-iron-extraction"
     ],
@@ -157,5 +161,9 @@
     "Electrolysis of dilute sulfuric acid": [
       "0653-q27-electrolysis-products"
     ]
+  },
+  "pdfs": {
+    "practice": "papers/combined-science-electrochemistry/practice.pdf",
+    "solutions": "papers/combined-science-electrochemistry/solutions.pdf"
   }
 }
