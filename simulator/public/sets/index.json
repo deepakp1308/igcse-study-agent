@@ -12,6 +12,17 @@
       }
     },
     {
+      "file": "combined-science-chemical-reactions.json",
+      "subject": "combined science",
+      "chapter": "Chemical Reactions",
+      "question_count": 34,
+      "generated_at": "2026-04-25T23:27:24+00:00",
+      "pdfs": {
+        "practice": "papers/combined-science-chemical-reactions/practice.pdf",
+        "solutions": "papers/combined-science-chemical-reactions/solutions.pdf"
+      }
+    },
+    {
       "file": "combined-science-electrochemistry.json",
       "subject": "combined science",
       "chapter": "Electrochemistry",
