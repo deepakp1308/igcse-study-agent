@@ -1,128 +1,37 @@
 {
   "subject": "combined science",
   "chapter": "Electrochemistry",
-  "generated_at": "2026-04-25T19:27:13+00:00",
+  "generated_at": "2026-04-25T20:26:35+00:00",
   "questions": [
     {
-      "question_id": "0653-q19-conductivity",
-      "source_question_db_id": 6,
+      "question_id": "chem-electrolysis-apparatus-q17",
+      "source_question_db_id": 89,
       "type": "mcq",
       "max_marks": 1,
-      "stem": "The apparatus shown is used to test a property of compound R. A lamp is in series with a cell and two electrodes dipping into a beaker. The lamp does not light when the beaker contains pure water. When compound R is dissolved in the water, the lamp lights. Which row describes compound R?",
+      "stem": "The diagram shows the apparatus for electrolysis with two electrodes labelled W (left, connected to the negative terminal) and X (right, connected to the positive terminal) dipping into a solution labelled Y. Which row identifies W, X and Y?",
       "figure_paths": [],
       "parts": [
         {
           "id": "a",
-          "prompt": "Which row describes compound R?",
+          "prompt": "Which row correctly identifies W (electrode on the negative terminal), X (electrode on the positive terminal), and Y (the liquid the electrodes dip into)?",
           "answer_type": "mcq",
           "max_marks": 1,
           "mcq_options": [
             {
               "label": "A",
-              "text": "covalent bonding; compound R made of a metal and a non-metal"
+              "text": "anode; cathode; electrolyte"
             },
             {
               "label": "B",
-              "text": "covalent bonding; compound R made of non-metals only"
+              "text": "anode; cathode; power supply"
             },
             {
               "label": "C",
-              "text": "ionic bonding; compound R made of non-metals only"
+              "text": "cathode; anode; electrolyte"
             },
             {
               "label": "D",
-              "text": "ionic bonding; compound R made of a metal and a non-metal"
-            }
-          ],
-          "mcq_correct_label": "D",
-          "numeric_answer": null,
-          "numeric_unit": null,
-          "numeric_tolerance_pct": null,
-          "accepted_phrasings": [],
-          "required_working_concepts": [],
-          "common_mistakes": [],
-          "model_answer_html": "<p><b>D - ionic bonding; metal + non-metal.</b></p><p>The lamp lights only when the circuit is complete through the liquid - that means charged particles (ions) must be moving. A liquid that lets electricity through this way is an <b>electrolyte</b>. Pure water alone is a <b>non-electrolyte</b> (almost no free ions), so the dissolved compound R must be supplying the ions.</p><p>Solutions that are electrolytes come from <b>ionic compounds</b>, which form between a <b>metal</b> (loses electrons -> positive ion) and a <b>non-metal</b> (gains electrons -> negative ion). Covalent compounds (e.g. ethanol, sugar) do not conduct in solution. So R has ionic bonding and is made of a metal + non-metal -> <b>D</b>.</p>",
-          "chapter_refs": [
-            "Conductivity and electrolytes",
-            "Electrolytes vs non-electrolytes"
-          ]
-        }
-      ]
-    },
-    {
-      "question_id": "0653-q23-iron-extraction",
-      "source_question_db_id": 24,
-      "type": "mcq",
-      "max_marks": 1,
-      "stem": "Which row describes the extraction of iron from its ore? (name of ore / method of extraction)",
-      "figure_paths": [],
-      "parts": [
-        {
-          "id": "a",
-          "prompt": "Pick the correct ore and extraction method for iron.",
-          "answer_type": "mcq",
-          "max_marks": 1,
-          "mcq_options": [
-            {
-              "label": "A",
-              "text": "bauxite / electrolysis"
-            },
-            {
-              "label": "B",
-              "text": "bauxite / reduction in a blast furnace"
-            },
-            {
-              "label": "C",
-              "text": "hematite / electrolysis"
-            },
-            {
-              "label": "D",
-              "text": "hematite / reduction in a blast furnace"
-            }
-          ],
-          "mcq_correct_label": "D",
-          "numeric_answer": null,
-          "numeric_unit": null,
-          "numeric_tolerance_pct": null,
-          "accepted_phrasings": [],
-          "required_working_concepts": [],
-          "common_mistakes": [],
-          "model_answer_html": "<p><b>D - hematite / reduction in a blast furnace.</b><br/>Iron's ore is hematite (Fe<sub>2</sub>O<sub>3</sub>). Bauxite is the ore of <b>aluminium</b>. From the chapter, electrolysis is used industrially for very reactive metals like aluminium, sodium and magnesium. Iron is below carbon in reactivity, so it is reduced cheaply by carbon (coke) in a blast furnace.</p>",
-          "chapter_refs": [
-            "Electrolysis of molten binary ionic compounds (industrial extraction)"
-          ]
-        }
-      ]
-    },
-    {
-      "question_id": "0653-q27-electrolysis-products",
-      "source_question_db_id": 28,
-      "type": "mcq",
-      "max_marks": 1,
-      "stem": "Which row shows an electrolyte and the products of electrolysis for this electrolyte?",
-      "figure_paths": [],
-      "parts": [
-        {
-          "id": "a",
-          "prompt": "Pick the electrolyte and its correct electrolysis products.",
-          "answer_type": "mcq",
-          "max_marks": 1,
-          "mcq_options": [
-            {
-              "label": "A",
-              "text": "concentrated aqueous sodium chloride / sodium and chlorine"
-            },
-            {
-              "label": "B",
-              "text": "molten potassium bromide / hydrogen and bromine"
-            },
-            {
-              "label": "C",
-              "text": "molten sodium chloride / sodium and chlorine"
-            },
-            {
-              "label": "D",
-              "text": "dilute sulfuric acid / hydrogen and sulfur dioxide"
+              "text": "cathode; anode; power supply"
             }
           ],
           "mcq_correct_label": "C",
@@ -131,35 +40,3737 @@
           "numeric_tolerance_pct": null,
           "accepted_phrasings": [],
           "required_working_concepts": [],
-          "common_mistakes": [],
-          "model_answer_html": "<p><b>C - molten sodium chloride -> sodium at cathode and chlorine at anode.</b><br/>Apply the chapter rule for molten binary ionic compounds: <b>metal at cathode</b>, <b>non-metal at anode</b>.<br/><br/><b>Why the others are wrong:</b><br/>A - concentrated NaCl(aq) gives <b>hydrogen</b> at the cathode (H<sup>+</sup> discharged over Na<sup>+</sup>), not sodium.<br/>B - molten KBr has no water, so hydrogen cannot form. Correct products would be K and Br<sub>2</sub>.<br/>D - electrolysis of dilute sulfuric acid decomposes <b>water</b>, giving H<sub>2</sub> and <b>O<sub>2</sub></b> (not SO<sub>2</sub>) in a 2:1 ratio.</p>",
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "A",
+                "magnitude": null
+              },
+              "feedback": "You swapped the electrodes. The cathode is the electrode connected to the NEGATIVE terminal of the battery, and the anode is the one connected to the POSITIVE terminal. W is on the negative side, so W is the cathode; X is on the positive side, so X is the anode. A useful memory trick: 'cathode = Connected to the Negative' / 'anode = Attached to the positive'."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "B",
+                "magnitude": null
+              },
+              "feedback": "Two things went wrong here. First, the electrodes are swapped: the negative electrode (W) is the cathode, and the positive electrode (X) is the anode. Second, Y is the liquid that the electrodes dip into, not the battery. The liquid is the electrolyte, a molten ionic compound or an aqueous solution of ions that conducts electricity and is broken down by the current."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "D",
+                "magnitude": null
+              },
+              "feedback": "You got W and X right (W = cathode at the negative terminal, X = anode at the positive terminal), but Y is not the power supply. The power supply is the battery that is drawn separately in the circuit; Y is the liquid in the beaker that the electrodes dip into, and that liquid is the electrolyte."
+            }
+          ],
+          "model_answer_html": "<b>Answer: C</b> &mdash; W = cathode, X = anode, Y = electrolyte.<br/><br/>W is connected to the <b>negative</b> terminal, so W is the <b>cathode</b> (the negative electrode in an electrolytic cell).<br/>X is connected to the <b>positive</b> terminal, so X is the <b>anode</b> (the positive electrode).<br/>Y is the liquid that both electrodes dip into. A liquid that conducts electricity by the movement of ions and is decomposed by the current is called an <b>electrolyte</b> &mdash; it is not the power supply, because the power supply is the battery that pushes the current around the circuit.",
+          "chapter_refs": [
+            "Electrolytic cells and electrodes",
+            "Cathode: the negative electrode in an electrolytic cell; site of reduction; cations are discharged here.",
+            "Anode: the positive electrode in an electrolytic cell; site of oxidation; anions are discharged here.",
+            "Electrolyte: a liquid (molten ionic compound or aqueous solution of ions) that conducts electricity by the movement of ions and is decomposed in the process.",
+            "Electrolytic cell: apparatus in which electrolysis is carried out; comprises a DC source, two electrodes (anode and cathode) and an electrolyte."
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "db-55-electrochem-al-extraction",
+      "source_question_db_id": 55,
+      "type": "mcq",
+      "max_marks": 1,
+      "stem": "Which statement explains why aluminium is extracted from its ore by electrolysis and not by heating with carbon?",
+      "figure_paths": [],
+      "parts": [
+        {
+          "id": "a",
+          "prompt": "Which statement explains why aluminium is extracted from its ore by electrolysis and not by heating with carbon?",
+          "answer_type": "mcq",
+          "max_marks": 1,
+          "mcq_options": [
+            {
+              "label": "A",
+              "text": "Aluminium is more reactive than carbon."
+            },
+            {
+              "label": "B",
+              "text": "Aluminium is more reactive than hydrogen."
+            },
+            {
+              "label": "C",
+              "text": "Aluminium melts at 660 \u00b0C."
+            },
+            {
+              "label": "D",
+              "text": "Aluminium resists corrosion."
+            }
+          ],
+          "mcq_correct_label": "A",
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [],
+          "required_working_concepts": [],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "B",
+                "magnitude": null
+              },
+              "feedback": "Option B compares aluminium to hydrogen, but the alternative extraction method in this question is heating with carbon, not hydrogen. The correct comparison is with carbon. Because aluminium is more reactive than carbon, carbon cannot pull oxygen away from aluminium oxide, so electrolysis must be used."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "C",
+                "magnitude": null
+              },
+              "feedback": "Option C gives the melting point of aluminium (660 \u00b0C), which is a physical property of the finished metal. Melting point does not decide whether carbon can reduce the ore. The deciding factor is reactivity: aluminium is more reactive than carbon, so carbon cannot reduce aluminium oxide. That is why electrolysis is used."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "D",
+                "magnitude": null
+              },
+              "feedback": "Option D talks about corrosion resistance, which is a useful property of the finished metal (why we use aluminium for drink cans and window frames), but it has nothing to do with how the metal is extracted from its ore. The extraction method is chosen because aluminium is more reactive than carbon, so electrolysis is needed instead of reduction with carbon."
+            }
+          ],
+          "model_answer_html": "<b>Answer: A \u2014 Aluminium is more reactive than carbon.</b><br/><br/>Aluminium is a reactive metal. In the chapter we saw that electrolysis of molten ionic compounds is used industrially to extract reactive metals such as sodium, magnesium and <b>aluminium</b>.<br/><br/>Iron is less reactive than carbon, so iron can be extracted by heating its ore with carbon in a blast furnace. Aluminium, however, is <b>more reactive than carbon</b>, so carbon cannot pull the oxygen away from aluminium oxide. This means heating with carbon would not work \u2014 electrolysis of molten aluminium compounds (dissolved in cryolite) has to be used instead.<br/><br/>That is why statement <b>A</b> is the reason, and the other options (comparing to hydrogen, melting point, corrosion resistance) do not explain the choice of extraction method.",
+          "chapter_refs": [
+            "Electrolysis of molten binary ionic compounds"
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "2018-combsci-p2-q19",
+      "source_question_db_id": 154,
+      "type": "mcq",
+      "max_marks": 1,
+      "stem": "The apparatus shown (lamp connected to electrodes dipped in a beaker of pure water) is used to test a property of compound R. The lamp does not light when the beaker contains pure water. When compound R is dissolved in the water, the lamp lights. Which row describes compound R?",
+      "figure_paths": [],
+      "parts": [
+        {
+          "id": "a",
+          "prompt": "Which row describes compound R? A: covalent, a metal and a non-metal; B: covalent, non-metals only; C: ionic, non-metals only; D: ionic, a metal and a non-metal.",
+          "answer_type": "mcq",
+          "max_marks": 1,
+          "mcq_options": [
+            {
+              "label": "A",
+              "text": "type of bonding: covalent; elements of compound R: a metal and a non-metal"
+            },
+            {
+              "label": "B",
+              "text": "type of bonding: covalent; elements of compound R: non-metals only"
+            },
+            {
+              "label": "C",
+              "text": "type of bonding: ionic; elements of compound R: non-metals only"
+            },
+            {
+              "label": "D",
+              "text": "type of bonding: ionic; elements of compound R: a metal and a non-metal"
+            }
+          ],
+          "mcq_correct_label": "D",
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [],
+          "required_working_concepts": [],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "A",
+                "magnitude": null
+              },
+              "feedback": "You picked covalent + (metal and non-metal). Covalent compounds do not release ions when they dissolve, so the lamp would stay off. Also, bonding between a metal and a non-metal is ionic, not covalent. The fact that the lamp lights tells you R must be ionic."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "B",
+                "magnitude": null
+              },
+              "feedback": "You picked covalent + non-metals only. Most covalent compounds dissolve as whole molecules, not ions, so the solution would not conduct and the lamp would stay off. Because the lamp lights, R must release ions in water, which means it is ionic."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "C",
+                "magnitude": null
+              },
+              "feedback": "You spotted correctly that R is ionic (because the solution conducts), but ionic compounds are made of a metal combined with a non-metal, not of non-metals only. A non-metal and non-metal combination gives covalent bonding. The correct row is D."
+            }
+          ],
+          "model_answer_html": "<b>Answer: D</b> \u2014 ionic, made of a metal and a non-metal.<br/><br/>Pure water does not light the lamp, so pure water is a <b>non-electrolyte</b> (no free-moving charged particles).<br/><br/>When R dissolves the lamp lights, so the solution now conducts electricity. A liquid that conducts electricity by the movement of ions is an <b>electrolyte</b>.<br/><br/>For the solution to conduct, R must release <b>ions that are free to move</b> when it dissolves. Covalent compounds dissolve as neutral molecules, so they cannot do this \u2014 only <b>ionic</b> compounds can. So R is ionic.<br/><br/><b>Ionic bonding</b> happens between a <b>metal</b> (which loses electrons to form a positive ion) and a <b>non-metal</b> (which gains electrons to form a negative ion). So R must be made of a metal and a non-metal. That is row <b>D</b>.",
+          "chapter_refs": [
+            "Conductivity and electrolytes",
+            "Electrolyte: a liquid (molten ionic compound or aqueous solution of ions) that conducts electricity by the movement of ions and is decomposed in the process.",
+            "ionic bonding"
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "2025-cs-p11-q17",
+      "source_question_db_id": 26,
+      "type": "mcq",
+      "max_marks": 1,
+      "stem": "The diagram shows electrolysis apparatus. Which label shows the cathode?",
+      "figure_paths": [],
+      "parts": [
+        {
+          "id": "a",
+          "prompt": "The diagram shows electrolysis apparatus. Which label shows the cathode?",
+          "answer_type": "mcq",
+          "max_marks": 1,
+          "mcq_options": [
+            {
+              "label": "A",
+              "text": "A (the battery/cell)"
+            },
+            {
+              "label": "B",
+              "text": "B (the electrode connected to the negative terminal)"
+            },
+            {
+              "label": "C",
+              "text": "C (the electrolyte)"
+            },
+            {
+              "label": "D",
+              "text": "D (the electrode connected to the positive terminal)"
+            }
+          ],
+          "mcq_correct_label": "B",
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [],
+          "required_working_concepts": [],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "D",
+                "magnitude": null
+              },
+              "feedback": "D is the electrode connected to the POSITIVE terminal, which is the anode, not the cathode. Remember: cathode = negative (Cations go here); anode = positive (Anions go here)."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "A",
+                "magnitude": null
+              },
+              "feedback": "A is the battery (the DC power source) \u2014 it is not an electrode at all. The cathode must be one of the two electrodes dipped into the electrolyte."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "C",
+                "magnitude": null
+              },
+              "feedback": "C is the electrolyte (the liquid that conducts electricity). The electrolyte is not an electrode \u2014 the cathode is the negative electrode dipped into it."
+            }
+          ],
+          "model_answer_html": "<p><b>Answer: B</b></p><p>The <b>cathode</b> is defined as the <b>negative electrode</b> in an electrolytic cell \u2014 the electrode connected to the negative terminal of the battery. Cations (positive ions) move towards it and gain electrons there.</p><ul><li>A = the battery (not an electrode).</li><li>B = the electrode connected to the negative terminal = <b>cathode</b>.</li><li>C = the electrolyte (the liquid, not an electrode).</li><li>D = the electrode connected to the positive terminal = anode.</li></ul>",
+          "chapter_refs": [
+            "Electrolytic cells and electrodes",
+            "Cathode: the negative electrode in an electrolytic cell; site of reduction; cations are discharged here.",
+            "Anode: the positive electrode in an electrolytic cell; site of oxidation; anions are discharged here."
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "chem-p8-q18-electrolysis-pbbr2-anode",
+      "source_question_db_id": 163,
+      "type": "mcq",
+      "max_marks": 1,
+      "stem": "What is produced at the anode during the electrolysis of molten lead(II) bromide?",
+      "figure_paths": [],
+      "parts": [
+        {
+          "id": "a",
+          "prompt": "What is produced at the anode during the electrolysis of molten lead(II) bromide?",
+          "answer_type": "mcq",
+          "max_marks": 1,
+          "mcq_options": [
+            {
+              "label": "A",
+              "text": "bromide ions"
+            },
+            {
+              "label": "B",
+              "text": "bromine"
+            },
+            {
+              "label": "C",
+              "text": "lead"
+            },
+            {
+              "label": "D",
+              "text": "lead(II) ions"
+            }
+          ],
+          "mcq_correct_label": "B",
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [],
+          "required_working_concepts": [],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "bromide ions",
+                "magnitude": null
+              },
+              "feedback": "Bromide ions (Br-) are what you START with in the molten liquid; they are not the product at the anode. At the anode, each Br- ion LOSES an electron (oxidation) and two Br- ions pair up to form Br2 (bromine). So the product is bromine, not bromide ions."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "lead",
+                "magnitude": null
+              },
+              "feedback": "Lead (Pb) is the metal and is formed at the CATHODE (the negative electrode), not the anode. Remember the rule for molten binary ionic compounds: metal at the cathode, non-metal at the anode. Bromine (the non-metal) is produced at the anode."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "lead(II) ions",
+                "magnitude": null
+              },
+              "feedback": "Lead(II) ions (Pb^2+) are positive ions (cations). Positive ions are attracted to the NEGATIVE electrode (cathode), not the anode. At the cathode they GAIN electrons to form lead metal. At the anode we need a product from the NEGATIVE ions (Br-), which becomes bromine."
+            }
+          ],
+          "model_answer_html": "<b>Answer: B &mdash; bromine</b><br/><br/>Molten lead(II) bromide, <b>PbBr<sub>2</sub>(l)</b>, is a molten binary ionic compound containing Pb<sup>2+</sup> and Br<sup>-</sup> ions that are now free to move.<br/><br/>At the <b>anode</b> (the positive electrode), the negative bromide ions (Br<sup>-</sup>) are attracted and each loses one electron (oxidation). Two bromide ions pair up to form a bromine molecule:<br/><br/><code>2Br<sup>-</sup> &rarr; Br<sub>2</sub> + 2e<sup>-</sup></code><br/><br/>Overall the cell reaction is <code>PbBr<sub>2</sub>(l) &rarr; Pb(l) + Br<sub>2</sub>(g)</code>. So the product at the anode is <b>bromine (Br<sub>2</sub>)</b>. Lead is formed at the cathode instead.",
+          "chapter_refs": [
+            "Electrolysis of molten binary ionic compounds",
+            "Movement of ions and charge transfer",
+            "Ionic half-equations",
+            "2Br- -> Br2 + 2e-",
+            "PbBr2(l) -> Pb(l) + Br2(g)"
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "p10-q19-electrolysis-aqueous",
+      "source_question_db_id": 256,
+      "type": "mcq",
+      "max_marks": 1,
+      "stem": "Which row shows what forms at the electrodes during electrolysis of an aqueous compound? Columns: anode, cathode.",
+      "figure_paths": [],
+      "parts": [
+        {
+          "id": "a",
+          "prompt": "Which row shows what forms at the electrodes during electrolysis of an aqueous compound? Columns: anode, cathode.",
+          "answer_type": "mcq",
+          "max_marks": 1,
+          "mcq_options": [
+            {
+              "label": "A",
+              "text": "anode metal, cathode non-metal"
+            },
+            {
+              "label": "B",
+              "text": "anode non-metal, cathode metal"
+            },
+            {
+              "label": "C",
+              "text": "anode hydrogen, cathode metal"
+            },
+            {
+              "label": "D",
+              "text": "anode hydrogen, cathode oxygen"
+            }
+          ],
+          "mcq_correct_label": "B",
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [],
+          "required_working_concepts": [],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "A",
+                "magnitude": null
+              },
+              "feedback": "A flips the electrodes. The anode is the positive electrode, so it attracts negative ions (non-metal ions and OH-), not positive metal ions. Metals are never produced at the anode. Remember: positive ions (cations, including metal ions) go to the cathode."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "C",
+                "magnitude": null
+              },
+              "feedback": "Hydrogen ions (H+) are positive, so they are discharged at the cathode (the negative electrode), not at the anode. Think of electrolysis of concentrated NaCl(aq): hydrogen appears at the cathode and chlorine (a non-metal) at the anode."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "D",
+                "magnitude": null
+              },
+              "feedback": "This swaps both products. Hydrogen comes from H+ (a positive ion) so it is released at the cathode, and oxygen comes from OH- (a negative ion) so it is released at the anode. Option D has them the wrong way round."
+            }
+          ],
+          "model_answer_html": "The correct row is <b>B: anode = non-metal, cathode = metal</b>.<br/><br/>During electrolysis of an aqueous compound:<br/>- Positive ions (cations, including metal ions and H<sup>+</sup>) move to the <b>cathode</b> (negative electrode) and gain electrons (reduction).<br/>- Negative ions (anions, such as Cl<sup>-</sup> or OH<sup>-</sup>) move to the <b>anode</b> (positive electrode) and lose electrons (oxidation).<br/><br/>So at the anode, a <b>non-metal</b> is always released (e.g. Cl<sub>2</sub> from concentrated NaCl(aq), or O<sub>2</sub> from CuSO<sub>4</sub>(aq) and dilute H<sub>2</sub>SO<sub>4</sub>). At the cathode, a <b>metal</b> can form when the metal is less reactive than hydrogen, as in CuSO<sub>4</sub>(aq): <b>Cu<sup>2+</sup> + 2e<sup>-</sup> &rarr; Cu</b>.<br/><br/>Options A, C and D all put a product at the wrong electrode (either a metal at the anode or hydrogen at the anode), so only B fits the rules.",
+          "chapter_refs": [
+            "Movement of ions and charge transfer",
+            "Electrolysis of aqueous copper(II) sulfate",
+            "Electrolysis of concentrated sodium chloride solution",
+            "Electrolytic cells and electrodes"
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "electrochem-molten-pbbr2-electrolysis-apparatus-q174",
+      "source_question_db_id": 174,
+      "type": "mcq",
+      "max_marks": 1,
+      "stem": "Apparatus used to electrolyse molten lead(II) bromide is shown (d.c. power supply connected to two electrodes in molten lead(II) bromide; electrodes labelled P at top, Q at bottom/electrolyte). Which row identifies P and Q?",
+      "figure_paths": [],
+      "parts": [
+        {
+          "id": "a",
+          "prompt": "Which row identifies P and Q?",
+          "answer_type": "mcq",
+          "max_marks": 1,
+          "mcq_options": [
+            {
+              "label": "A",
+              "text": "P = cathode; Q = electrolyte"
+            },
+            {
+              "label": "B",
+              "text": "P = anode; Q = electrode"
+            },
+            {
+              "label": "C",
+              "text": "P = anode; Q = electrolyte"
+            },
+            {
+              "label": "D",
+              "text": "P = cathode; Q = electrode"
+            }
+          ],
+          "mcq_correct_label": "C",
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [],
+          "required_working_concepts": [],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "A",
+                "magnitude": null
+              },
+              "feedback": "You put P as the cathode. Check the circuit: P is wired to the positive (+) side of the d.c. power supply, so P is the anode (positive electrode). Q (the molten lead(II) bromide) is correctly the electrolyte, but the label on P is the wrong electrode."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "B",
+                "magnitude": null
+              },
+              "feedback": "You called Q an electrode. An electrode is a solid rod (graphite or platinum) that dips into the liquid; Q points to the molten lead(II) bromide itself, which is the electrolyte. From your chapter: an electrolyte is a liquid that conducts electricity because its ions are free to move."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "D",
+                "magnitude": null
+              },
+              "feedback": "Both labels are wrong. P is connected to the + terminal of the battery, so P is the anode (not the cathode). Q is the molten lead(II) bromide, which is a liquid carrying ions \u2014 that makes it the electrolyte, not an electrode."
+            }
+          ],
+          "model_answer_html": "<b>Answer: C</b> &mdash; P = anode; Q = electrolyte.<br/><br/><b>Why:</b><br/>An electrolytic cell has three parts: a d.c. power supply, two <i>electrodes</i> (solid rods, usually graphite or platinum), and an <i>electrolyte</i> (the liquid being broken down).<br/><br/>&bull; <b>P</b> labels the electrode wired to the <b>positive (+)</b> terminal of the d.c. supply &rarr; <b>anode</b>.<br/>&bull; <b>Q</b> labels the molten lead(II) bromide, <b>PbBr<sub>2</sub>(l)</b>. It is a liquid whose ions (Pb<sup>2+</sup> and Br<sup>&minus;</sup>) are free to move and carry charge &rarr; <b>electrolyte</b>.<br/><br/>So the correct row is <b>P = anode; Q = electrolyte</b>, which is option <b>C</b>.",
+          "chapter_refs": [
+            "Electrolytic cells and electrodes",
+            "Conductivity and electrolytes",
+            "Electrolyte: a liquid (molten ionic compound or aqueous solution of ions) that conducts electricity by the movement of ions and is decomposed in the process.",
+            "Anode: the positive electrode in an electrolytic cell; site of oxidation; anions are discharged here.",
+            "Cathode: the negative electrode in an electrolytic cell; site of reduction; cations are discharged here."
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "paper-11-q27-electrolyte-products",
+      "source_question_db_id": 450,
+      "type": "mcq",
+      "max_marks": 1,
+      "stem": "Which row shows an electrolyte and the products of electrolysis for this electrolyte?",
+      "figure_paths": [],
+      "parts": [
+        {
+          "id": "whole",
+          "prompt": "Which row shows an electrolyte and the products of electrolysis for this electrolyte?",
+          "answer_type": "mcq",
+          "max_marks": 1,
+          "mcq_options": [
+            {
+              "label": "A",
+              "text": "concentrated aqueous sodium chloride \u2192 sodium and chlorine"
+            },
+            {
+              "label": "B",
+              "text": "molten potassium bromide \u2192 hydrogen and bromine"
+            },
+            {
+              "label": "C",
+              "text": "molten sodium chloride \u2192 sodium and chlorine"
+            },
+            {
+              "label": "D",
+              "text": "dilute sulfuric acid \u2192 hydrogen and sulfur dioxide"
+            }
+          ],
+          "mcq_correct_label": "C",
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [],
+          "required_working_concepts": [],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "A",
+                "magnitude": null
+              },
+              "feedback": "A is a trap. Concentrated aqueous NaCl (brine) contains H+ ions from water, and H+ is preferentially discharged at the cathode instead of Na+. So you get hydrogen (not sodium) and chlorine. Molten NaCl is the version that gives sodium."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "B",
+                "magnitude": null
+              },
+              "feedback": "B mixes up the rules. A molten binary ionic compound has no water and no H+ ions, so hydrogen cannot be produced. At the cathode you get the metal (potassium), and at the anode you get the non-metal (bromine)."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "D",
+                "magnitude": null
+              },
+              "feedback": "D is wrong because electrolysing dilute sulfuric acid really just splits water: hydrogen at the cathode and oxygen at the anode (2:1 by volume). Sulfur dioxide is never a product here \u2013 the sulfate ions stay in solution."
+            }
+          ],
+          "model_answer_html": "<b>Answer: C</b> \u2013 molten sodium chloride \u2192 sodium and chlorine.<br/>For a molten binary ionic compound, the <b>metal</b> forms at the <b>cathode</b> (negative electrode) and the <b>non-metal</b> forms at the <b>anode</b> (positive electrode).<br/>So molten NaCl \u2192 <b>Na</b> at the cathode + <b>Cl<sub>2</sub></b> at the anode.<br/>Why not the others? <br/>\u2022 <b>A</b>: concentrated aqueous NaCl gives <b>hydrogen</b> (H<sup>+</sup> is preferentially discharged over Na<sup>+</sup>) and chlorine, not sodium.<br/>\u2022 <b>B</b>: molten KBr has no H<sup>+</sup>, so you get <b>potassium</b> and bromine, not hydrogen.<br/>\u2022 <b>D</b>: dilute H<sub>2</sub>SO<sub>4</sub> electrolysis splits water into <b>hydrogen + oxygen</b> (2:1), never sulfur dioxide.",
           "chapter_refs": [
             "Electrolysis of molten binary ionic compounds",
             "Electrolysis of concentrated sodium chloride solution",
+            "Electrolysis of dilute sulfuric acid",
+            "Movement of ions and charge transfer"
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "q625-mcq-aluminium-extraction",
+      "source_question_db_id": 625,
+      "type": "mcq",
+      "max_marks": 1,
+      "stem": "Which statement describes the extraction of aluminium?",
+      "figure_paths": [],
+      "parts": [
+        {
+          "id": "a",
+          "prompt": "Which statement describes the extraction of aluminium?",
+          "answer_type": "mcq",
+          "max_marks": 1,
+          "mcq_options": [
+            {
+              "label": "A",
+              "text": "It is extracted from bauxite using electrolysis."
+            },
+            {
+              "label": "B",
+              "text": "It is extracted from bauxite using carbon."
+            },
+            {
+              "label": "C",
+              "text": "It is extracted from hematite using electrolysis."
+            },
+            {
+              "label": "D",
+              "text": "It is extracted from hematite using carbon."
+            }
+          ],
+          "mcq_correct_label": "A",
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [],
+          "required_working_concepts": [],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "B",
+                "magnitude": null
+              },
+              "feedback": "You picked the right ore (bauxite), but carbon cannot be used to extract aluminium. Aluminium is too reactive, so heating its oxide with carbon will not work. Reactive metals like aluminium, sodium and magnesium are extracted by electrolysis."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "C",
+                "magnitude": null
+              },
+              "feedback": "Electrolysis is correct, but the ore is wrong. Hematite is an ore of iron, not aluminium. Aluminium is extracted from bauxite (aluminium oxide, usually mixed with cryolite to lower the melting point)."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "D",
+                "magnitude": null
+              },
+              "feedback": "Both parts are wrong. Hematite is an iron ore (iron is extracted from it using carbon in a blast furnace). Aluminium comes from bauxite and is too reactive for carbon extraction, so electrolysis is used instead."
+            }
+          ],
+          "model_answer_html": "<b>A</b> \u2014 Aluminium is extracted from <b>bauxite</b> (its main ore, aluminium oxide) by <b>electrolysis</b> of the molten oxide mixed with <b>cryolite</b> to lower the melting point. Aluminium is too reactive to be reduced by carbon, so electrolysis is used industrially for reactive metals such as aluminium, sodium and magnesium. Hematite is an ore of iron, not aluminium.",
+          "chapter_refs": [
+            "Electrolysis of molten binary ionic compounds",
+            "aluminium extraction",
+            "cryolite",
+            "industrial extraction"
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "0653-q22-reduction-definition",
+      "source_question_db_id": 52,
+      "type": "mcq",
+      "max_marks": 1,
+      "stem": "Which statement describes what happens during reduction?",
+      "figure_paths": [],
+      "parts": [
+        {
+          "id": "a",
+          "prompt": "Which statement describes what happens during reduction?",
+          "answer_type": "mcq",
+          "max_marks": 1,
+          "mcq_options": [
+            {
+              "label": "A",
+              "text": "An element gains oxygen."
+            },
+            {
+              "label": "B",
+              "text": "A compound gains oxygen."
+            },
+            {
+              "label": "C",
+              "text": "A compound loses oxygen."
+            },
+            {
+              "label": "D",
+              "text": "A mixture of elements loses oxygen."
+            }
+          ],
+          "mcq_correct_label": "C",
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [],
+          "required_working_concepts": [],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "gains oxygen",
+                "magnitude": null
+              },
+              "feedback": "Gaining oxygen is the opposite - that is OXIDATION. Reduction means a substance LOSES oxygen (or, in electrolysis, gains electrons at the cathode). A useful memory aid: OIL RIG - Oxidation Is Loss, Reduction Is Gain (of electrons); equivalently, reduction is loss of oxygen."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "mixture",
+                "magnitude": null
+              },
+              "feedback": "Reduction is defined on a COMPOUND, not a mixture. A compound has oxygen chemically bonded inside it (e.g. copper(II) oxide, CuO), and reduction removes that bonded oxygen. A mixture is just substances mingled together without bonds, so 'losing oxygen' doesn't describe a chemical change of a mixture."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "element gains",
+                "magnitude": null
+              },
+              "feedback": "Two problems with this one: (i) gaining oxygen is OXIDATION, not reduction; and (ii) the oxygen-transfer definition is normally applied to a COMPOUND (the thing that already contains, or comes to contain, oxygen). The correct answer is 'A compound loses oxygen'."
+            }
+          ],
+          "model_answer_html": "<p><b>C - A compound loses oxygen.</b></p><p>Two equivalent ways to describe reduction at IGCSE:</p><ul><li><b>Oxygen transfer:</b> a compound is reduced when it <b>loses oxygen</b> (e.g. CuO + H<sub>2</sub> -> Cu + H<sub>2</sub>O; the copper oxide has been reduced to copper).</li><li><b>Electron transfer (this chapter):</b> reduction happens at the <b>cathode</b> of an electrolytic cell, where a positive ion <b>gains electrons</b> (e.g. Cu<sup>2+</sup> + 2e<sup>-</sup> -> Cu).</li></ul><p><b>Why the other options are wrong:</b><br/>A - 'element gains oxygen' is oxidation, not reduction.<br/>B - 'compound gains oxygen' is also oxidation.<br/>D - reduction is defined on a <b>compound</b> (which holds oxygen in chemical bonds), not on a mixture.</p><p>Tip: remember <b>OIL RIG</b> - <b>O</b>xidation <b>I</b>s <b>L</b>oss, <b>R</b>eduction <b>I</b>s <b>G</b>ain (of electrons). The oxygen version is the flip side of the same idea.</p>",
+          "chapter_refs": [
+            "Movement of ions and charge transfer",
+            "reduction at cathode",
+            "oxidation at anode"
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "igcse-combsci-ch2-q224",
+      "source_question_db_id": 224,
+      "type": "structured",
+      "max_marks": 5,
+      "stem": "Iron is extracted from iron(III) oxide in a blast furnace (Fe2O3 + 3CO -> 2Fe + 3CO2). Aluminium is extracted by electrolysis. Part of the reactivity series is shown (sodium, magnesium, carbon, zinc, hydrogen, copper).",
+      "figure_paths": [],
+      "parts": [
+        {
+          "id": "d",
+          "prompt": "Iron is extracted from iron(III) oxide in a blast furnace: Fe2O3 + 3CO -> 2Fe + 3CO2. Circle the type of reaction when iron(III) oxide forms iron. Options: combustion, oxidation, reduction, separation.",
+          "answer_type": "mcq",
+          "max_marks": 1,
+          "mcq_options": [
+            {
+              "label": "A",
+              "text": "combustion"
+            },
+            {
+              "label": "B",
+              "text": "oxidation"
+            },
+            {
+              "label": "C",
+              "text": "reduction"
+            },
+            {
+              "label": "D",
+              "text": "separation"
+            }
+          ],
+          "mcq_correct_label": "C",
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [],
+          "required_working_concepts": [],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "oxidation",
+                "magnitude": null
+              },
+              "feedback": "Careful \u2014 the iron(III) oxide is LOSING oxygen to become iron. Losing oxygen is reduction, not oxidation. Oxidation would be the opposite (gaining oxygen, like the CO that turns into CO2)."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "combustion",
+                "magnitude": null
+              },
+              "feedback": "Combustion means burning in oxygen and would need a flame and O2. Inside the blast furnace the iron oxide is having its oxygen taken AWAY by CO, so the correct word is reduction."
+            }
+          ],
+          "model_answer_html": "<b>reduction</b><br/>Iron(III) oxide (Fe<sub>2</sub>O<sub>3</sub>) loses its oxygen to form iron. In this chapter, loss of oxygen (or gain of electrons, like at a cathode) is called <b>reduction</b>.",
+          "chapter_refs": [
+            "Movement of ions and charge transfer",
+            "out_of_scope_notes: Extraction of iron is by reduction in a blast furnace, NOT electrolysis."
+          ]
+        },
+        {
+          "id": "e",
+          "prompt": "Aluminium is extracted by electrolysis. Name the main ore of aluminium.",
+          "answer_type": "short_text",
+          "max_marks": 1,
+          "mcq_options": null,
+          "mcq_correct_label": null,
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [
+            "bauxite",
+            "Bauxite",
+            "BAUXITE",
+            "bauxite ore"
+          ],
+          "required_working_concepts": [],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "cryolite",
+                "magnitude": null
+              },
+              "feedback": "Cryolite is added during electrolysis to lower the melting point, but it is NOT the ore. The ore (the rock that the aluminium compound is mined from) is called bauxite."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "hematite",
+                "magnitude": null
+              },
+              "feedback": "Hematite is an ore of iron, not aluminium. The main ore of aluminium is bauxite."
+            },
+            {
+              "match": {
+                "kind": "keyword_absent",
+                "keyword": "bauxite",
+                "magnitude": null
+              },
+              "feedback": "The answer the exam wants is the single word 'bauxite' \u2014 the rock that contains the aluminium compound (aluminium oxide) that is electrolysed."
+            }
+          ],
+          "model_answer_html": "<b>bauxite</b><br/>Bauxite is the rock that contains aluminium oxide. In industry the aluminium oxide from bauxite is mixed with cryolite and then <b>electrolysed</b> to give aluminium.",
+          "chapter_refs": [
+            "Electrolysis of molten binary ionic compounds",
+            "Electrolysis: the breakdown of an ionic compound, when molten or in solution, by the passage of an electric current."
+          ]
+        },
+        {
+          "id": "f_i",
+          "prompt": "Use the reactivity series (sodium, magnesium, carbon, zinc, hydrogen, copper) to name: one metal that must be extracted by electrolysis; one metal that is extracted by heating with carbon.",
+          "answer_type": "free_text",
+          "max_marks": 2,
+          "mcq_options": null,
+          "mcq_correct_label": null,
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [],
+          "required_working_concepts": [
+            {
+              "concept": "Names a metal ABOVE carbon in the reactivity series (sodium or magnesium) as the one extracted by electrolysis.",
+              "marks": 1,
+              "hints": [
+                "sodium",
+                "Na",
+                "magnesium",
+                "Mg",
+                "above carbon",
+                "more reactive than carbon",
+                "electrolysis"
+              ]
+            },
+            {
+              "concept": "Names a metal BELOW carbon in the reactivity series (zinc or copper) as the one extracted by heating with carbon.",
+              "marks": 1,
+              "hints": [
+                "zinc",
+                "Zn",
+                "copper",
+                "Cu",
+                "below carbon",
+                "less reactive than carbon",
+                "heat with carbon"
+              ]
+            }
+          ],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "iron",
+                "magnitude": null
+              },
+              "feedback": "Iron is not in the reactivity series shown in this question \u2014 the question says to pick from sodium, magnesium, carbon, zinc, hydrogen, copper. Iron would actually fit the 'heating with carbon' side, but you must choose from the list given."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "hydrogen",
+                "magnitude": null
+              },
+              "feedback": "Hydrogen is in the reactivity series for comparison only \u2014 it is not a metal, so it is not 'extracted' in this sense. Pick a real metal: sodium or magnesium for electrolysis; zinc or copper for heating with carbon."
+            },
+            {
+              "match": {
+                "kind": "formula_inverted",
+                "keyword": null,
+                "magnitude": null
+              },
+              "feedback": "You may have swapped them round. Remember: metals ABOVE carbon (more reactive than carbon) must use electrolysis. Metals BELOW carbon (less reactive) can be reduced by heating with carbon."
+            },
+            {
+              "match": {
+                "kind": "keyword_absent",
+                "keyword": "carbon",
+                "magnitude": null
+              },
+              "feedback": "Compare each metal to CARBON in the list. The dividing line is carbon \u2014 above it needs electrolysis, below it can be heated with carbon."
+            }
+          ],
+          "model_answer_html": "<b>Electrolysis:</b> sodium (or magnesium)<br/><b>Heating with carbon:</b> zinc (or copper)<br/>The chapter tells us electrolysis is used to extract the more reactive metals \u2014 sodium, magnesium and aluminium. These all sit ABOVE carbon in the reactivity series. The metals BELOW carbon (zinc, copper) are less reactive than carbon, so carbon can be used to take the oxygen away from their oxides.",
+          "chapter_refs": [
+            "Electrolysis of molten binary ionic compounds",
+            "out_of_scope_notes: electrolysis is used for extracting more reactive metals such as aluminium, sodium, magnesium"
+          ]
+        },
+        {
+          "id": "f_ii",
+          "prompt": "Explain why different methods of extraction are needed for the two metals in (f)(i).",
+          "answer_type": "free_text",
+          "max_marks": 1,
+          "mcq_options": null,
+          "mcq_correct_label": null,
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [],
+          "required_working_concepts": [
+            {
+              "concept": "Identifies that the two metals have different reactivities compared to carbon (one is more reactive than carbon, the other is less reactive).",
+              "marks": 1,
+              "hints": [
+                "more reactive than carbon",
+                "less reactive than carbon",
+                "above carbon",
+                "below carbon",
+                "different reactivity",
+                "cannot be reduced by carbon",
+                "can be reduced by carbon"
+              ]
+            }
+          ],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_absent",
+                "keyword": "carbon",
+                "magnitude": null
+              },
+              "feedback": "The mark is for comparing the two metals to CARBON. The examiner wants to see that one metal is more reactive than carbon (so carbon cannot reduce it, meaning electrolysis is needed) and the other is less reactive (so heating with carbon works)."
+            },
+            {
+              "match": {
+                "kind": "keyword_absent",
+                "keyword": "reactiv",
+                "magnitude": null
+              },
+              "feedback": "Use the word 'reactive' or 'reactivity' in your answer. The method of extraction depends on how reactive the metal is compared with carbon."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "cost",
+                "magnitude": null
+              },
+              "feedback": "Electrolysis is indeed more expensive, but the mark here is for chemistry reasoning, not economics. The key point is that carbon cannot reduce metals that are MORE reactive than itself."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "oxidation",
+                "magnitude": null
+              },
+              "feedback": "This is about REDUCTION, not oxidation \u2014 the metal's oxide is having oxygen taken away. Explain in terms of reactivity: can carbon remove the oxygen from this particular metal's oxide or not?"
+            }
+          ],
+          "model_answer_html": "<b>Because the two metals sit on different sides of carbon in the reactivity series.</b><br/>Sodium is more reactive than carbon, so carbon cannot take the oxygen away from sodium's compound \u2014 the only way to split it is <b>electrolysis</b>.<br/>Zinc is less reactive than carbon, so carbon IS reactive enough to pull the oxygen off zinc oxide \u2014 heating with carbon works.<br/>So the choice of method depends on whether the metal is above or below carbon in the reactivity series.",
+          "chapter_refs": [
+            "Electrolysis of molten binary ionic compounds",
+            "out_of_scope_notes: electrolysis is used for extracting more reactive metals such as aluminium, sodium, magnesium",
+            "out_of_scope_notes: Extraction of iron is by reduction in a blast furnace, NOT electrolysis."
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "2018-chem-p2-q27-cacl2-electrolysis",
+      "source_question_db_id": 675,
+      "type": "mcq",
+      "max_marks": 1,
+      "stem": "An electric current is passed through molten calcium chloride using graphite electrodes. Which row shows the electrode products (anode product / cathode product)?",
+      "figure_paths": [],
+      "parts": [
+        {
+          "id": "a",
+          "prompt": "An electric current is passed through molten calcium chloride using graphite electrodes. Which row shows the electrode products (anode product / cathode product)?",
+          "answer_type": "mcq",
+          "max_marks": 1,
+          "mcq_options": [
+            {
+              "label": "A",
+              "text": "calcium / chlorine"
+            },
+            {
+              "label": "B",
+              "text": "chlorine / calcium"
+            },
+            {
+              "label": "C",
+              "text": "chlorine / hydrogen"
+            },
+            {
+              "label": "D",
+              "text": "hydrogen / chlorine"
+            }
+          ],
+          "mcq_correct_label": "B",
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [],
+          "required_working_concepts": [],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "A",
+                "magnitude": null
+              },
+              "feedback": "You have swapped the electrodes. The cathode is the NEGATIVE electrode, so positive calcium ions (Ca2+) are attracted there and form calcium metal. Chlorine is made at the anode (positive electrode) from Cl- ions. The question asks for anode / cathode, so the correct order is chlorine / calcium."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "C",
+                "magnitude": null
+              },
+              "feedback": "Hydrogen is only produced when water is present (aqueous solutions or dilute acids). Here the calcium chloride is MOLTEN, so the only ions are Ca2+ and Cl-. Calcium is formed at the cathode, not hydrogen."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "D",
+                "magnitude": null
+              },
+              "feedback": "Two problems. First, hydrogen only comes from water (aqueous NaCl gives hydrogen), but molten CaCl2 has no water. Second, the electrodes are also swapped: the metal (calcium) always forms at the cathode and the non-metal (chlorine) at the anode. Correct order (anode / cathode) is chlorine / calcium."
+            }
+          ],
+          "model_answer_html": "<b>Answer: B &mdash; chlorine at the anode, calcium at the cathode.</b><br/><br/>Molten CaCl<sub>2</sub> is a <i>molten binary ionic compound</i>. When melted, the Ca<sup>2+</sup> and Cl<sup>-</sup> ions are free to move, so it conducts electricity and is electrolysed.<br/><br/><b>At the cathode</b> (negative electrode): Ca<sup>2+</sup> ions move there, gain electrons and become calcium metal.<br/>Half-equation: <code>Ca<sup>2+</sup> + 2e<sup>-</sup> &rarr; Ca</code><br/><br/><b>At the anode</b> (positive electrode): Cl<sup>-</sup> ions move there, lose electrons and become chlorine gas.<br/>Half-equation: <code>2Cl<sup>-</sup> &rarr; Cl<sub>2</sub> + 2e<sup>-</sup></code><br/><br/>The graphite electrodes are <i>inert</i>, so they do not react. Because the question asks for <b>anode / cathode</b>, the correct order is <b>chlorine / calcium</b>.",
+          "chapter_refs": [
+            "Electrolysis of molten binary ionic compounds",
+            "Electrolytic cells and electrodes",
+            "Movement of ions and charge transfer",
+            "Ionic half-equations"
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "q521-ch2-thermite-redox",
+      "source_question_db_id": 521,
+      "type": "structured",
+      "max_marks": 6,
+      "stem": "The reaction between aluminium and iron(III) oxide is used to join iron railway lines together. 2Al(s) + Fe2O3(s) -> 2Fe(l) + Al2O3(s). Molten iron is produced in the reaction. Molten iron becomes solid when it cools.",
+      "figure_paths": [],
+      "parts": [
+        {
+          "id": "a(i)",
+          "prompt": "State how the equation shows that molten iron is produced.",
+          "answer_type": "short_text",
+          "max_marks": 1,
+          "mcq_options": null,
+          "mcq_correct_label": null,
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [
+            "the state symbol (l) after Fe means liquid",
+            "Fe(l) shows iron is a liquid",
+            "(l) means liquid / molten",
+            "state symbol l indicates molten iron",
+            "the l in brackets next to Fe means it is liquid"
+          ],
+          "required_working_concepts": [
+            {
+              "concept": "Identifies the state symbol (l) next to Fe as meaning liquid/molten",
+              "marks": 1,
+              "hints": [
+                "(l)",
+                "state symbol",
+                "liquid",
+                "molten",
+                "l means liquid"
+              ]
+            }
+          ],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_absent",
+                "keyword": "(l)",
+                "magnitude": null
+              },
+              "feedback": "Look at the letters in brackets after each formula in the equation. These are called state symbols. (s) = solid, (l) = liquid (molten), (g) = gas, (aq) = dissolved in water. Find the one next to Fe and quote it."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "high temperature",
+                "magnitude": null
+              },
+              "feedback": "The equation itself doesn't mention temperature - it shows states with letters in brackets. Focus on what the symbol (l) tells you about the iron that is produced."
+            }
+          ],
+          "model_answer_html": "The state symbol <b>(l)</b> written after <b>Fe</b> in the equation means the iron is a <b>liquid</b> (molten).",
+          "chapter_refs": [
+            "Electrolysis of molten binary ionic compounds",
+            "PbBr2(l) -> Pb(l) + Br2(g)"
+          ]
+        },
+        {
+          "id": "a(ii)",
+          "prompt": "Use the equation to explain why this reaction is a redox reaction.",
+          "answer_type": "free_text",
+          "max_marks": 2,
+          "mcq_options": null,
+          "mcq_correct_label": null,
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [],
+          "required_working_concepts": [
+            {
+              "concept": "Aluminium is oxidised: Al atoms lose electrons (or gain oxygen) to form Al^3+ in Al2O3",
+              "marks": 1,
+              "hints": [
+                "Al loses electrons",
+                "Al is oxidised",
+                "Al gains oxygen",
+                "Al becomes Al3+",
+                "oxidation of aluminium"
+              ]
+            },
+            {
+              "concept": "Iron is reduced: Fe^3+ ions in Fe2O3 gain electrons (or lose oxygen) to form Fe atoms",
+              "marks": 1,
+              "hints": [
+                "Fe3+ gains electrons",
+                "Fe is reduced",
+                "Fe2O3 loses oxygen",
+                "iron is reduced",
+                "reduction of iron"
+              ]
+            }
+          ],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "formula_inverted",
+                "keyword": null,
+                "magnitude": null
+              },
+              "feedback": "Check which substance is oxidised and which is reduced. Aluminium starts with no charge and ends up as Al^3+, so it loses electrons (oxidation). Iron starts as Fe^3+ in Fe2O3 and ends with no charge, so it gains electrons (reduction). A helpful memory aid: OIL RIG (Oxidation Is Loss, Reduction Is Gain of electrons)."
+            },
+            {
+              "match": {
+                "kind": "keyword_absent",
+                "keyword": "electrons",
+                "magnitude": null
+              },
+              "feedback": "For full marks, explain in terms of electrons (or oxygen). A redox reaction involves both oxidation (loss of electrons / gain of oxygen) AND reduction (gain of electrons / loss of oxygen) happening in the same reaction. Name which species does each."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "both happen",
+                "magnitude": null
+              },
+              "feedback": "Saying 'both oxidation and reduction happen' only gets part of the marks. You also need to SAY which species is oxidised (Al) and which is reduced (Fe^3+ / Fe2O3), with reference to electrons or oxygen."
+            }
+          ],
+          "model_answer_html": "A redox reaction is one in which <b>oxidation</b> (loss of electrons) and <b>reduction</b> (gain of electrons) both happen.<br/><br/><b>Al is oxidised:</b> each Al atom has no charge on the left but becomes Al<sup>3+</sup> in Al<sub>2</sub>O<sub>3</sub>, so it has <b>lost 3 electrons</b> (it also gains oxygen).<br/><b>Fe<sup>3+</sup> is reduced:</b> each iron ion in Fe<sub>2</sub>O<sub>3</sub> starts as Fe<sup>3+</sup> and ends as an Fe atom with no charge, so it has <b>gained 3 electrons</b> (it also loses oxygen).<br/><br/>Both happen together, so the reaction is <b>redox</b>.",
+          "chapter_refs": [
+            "Movement of ions and charge transfer",
+            "Ionic half-equations"
+          ]
+        },
+        {
+          "id": "a(iii)",
+          "prompt": "Complete the ionic equation for this reaction. Al + Fe^3+ -> ___ + ___",
+          "answer_type": "short_text",
+          "max_marks": 2,
+          "mcq_options": null,
+          "mcq_correct_label": null,
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [
+            "Al^3+ + Fe",
+            "Al3+ + Fe",
+            "Fe + Al^3+",
+            "Fe + Al3+",
+            "Al + Fe^3+ -> Al^3+ + Fe",
+            "Al + Fe3+ -> Al3+ + Fe"
+          ],
+          "required_working_concepts": [
+            {
+              "concept": "Correct aluminium product Al^3+ (with 3+ charge)",
+              "marks": 1,
+              "hints": [
+                "Al3+",
+                "Al^3+",
+                "aluminium ion 3+"
+              ]
+            },
+            {
+              "concept": "Correct iron product Fe (neutral iron atom, no charge)",
+              "marks": 1,
+              "hints": [
+                "Fe",
+                "iron atom",
+                "Fe with no charge"
+              ]
+            }
+          ],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "Al^+",
+                "magnitude": null
+              },
+              "feedback": "Aluminium forms Al^3+, not Al^+. You can see this from the half-equation Al -> Al^3+ + 3e-. Each aluminium atom loses 3 electrons, giving a 3+ charge."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "Fe^3+",
+                "magnitude": null
+              },
+              "feedback": "Look again at the right-hand side of the ionic equation. The Fe^3+ on the left GAINS 3 electrons and becomes a neutral iron atom Fe on the right. Don't leave the 3+ charge on the product."
+            },
+            {
+              "match": {
+                "kind": "keyword_absent",
+                "keyword": "Al",
+                "magnitude": null
+              },
+              "feedback": "Remember to balance charges. Write the two half-equations: Al -> Al^3+ + 3e- (oxidation) and Fe^3+ + 3e- -> Fe (reduction). Adding them gives Al + Fe^3+ -> Al^3+ + Fe (the 3 electrons cancel)."
+            }
+          ],
+          "model_answer_html": "Split the reaction into two half-equations:<br/>Oxidation: <b>Al &rarr; Al<sup>3+</sup> + 3e<sup>-</sup></b><br/>Reduction: <b>Fe<sup>3+</sup> + 3e<sup>-</sup> &rarr; Fe</b><br/><br/>Add them (the 3 electrons on each side cancel):<br/><b>Al + Fe<sup>3+</sup> &rarr; Al<sup>3+</sup> + Fe</b><br/><br/>Check: 1 Al and 1 Fe on each side, total charge +3 on each side. Balanced.",
+          "chapter_refs": [
+            "Ionic half-equations",
+            "Movement of ions and charge transfer"
+          ]
+        },
+        {
+          "id": "b",
+          "prompt": "Explain the meaning of the symbol (III) in iron(III) oxide.",
+          "answer_type": "short_text",
+          "max_marks": 1,
+          "mcq_options": null,
+          "mcq_correct_label": null,
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [
+            "the charge on each iron ion is 3+",
+            "iron has a charge of 3+",
+            "each iron ion is Fe^3+",
+            "the iron ion has a 3+ charge",
+            "it shows iron is present as Fe^3+",
+            "iron has a valency of 3",
+            "the oxidation number of iron is +3"
+          ],
+          "required_working_concepts": [
+            {
+              "concept": "States that (III) gives the charge / oxidation state of the iron ion as 3+ (i.e. iron is present as Fe^3+)",
+              "marks": 1,
+              "hints": [
+                "3+",
+                "charge",
+                "Fe3+",
+                "oxidation state",
+                "valency",
+                "iron ion charge"
+              ]
+            }
+          ],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "3 iron",
+                "magnitude": null
+              },
+              "feedback": "The (III) does NOT mean there are 3 iron atoms - that information would be shown by a subscript number like Fe2 or Fe3 in the formula. The Roman numeral tells you the CHARGE on each iron ion."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "3 oxygen",
+                "magnitude": null
+              },
+              "feedback": "The (III) in the name is about iron, not oxygen. It tells you the charge on the iron ion is 3+ (i.e. Fe^3+). The number of oxygens in the formula is determined by balancing charges."
+            },
+            {
+              "match": {
+                "kind": "keyword_absent",
+                "keyword": "charge",
+                "magnitude": null
+              },
+              "feedback": "Aim for the word 'charge' (or 'valency' / 'oxidation state'). The Roman numeral (III) tells you the charge on each iron ion is 3+. This is needed because iron can form more than one ion (Fe^2+ or Fe^3+), so the name must specify which one."
+            }
+          ],
+          "model_answer_html": "Iron can form more than one ion, for example Fe<sup>2+</sup> or Fe<sup>3+</sup>. The Roman numeral <b>(III)</b> in the name <i>iron(III) oxide</i> tells you the <b>charge on each iron ion is 3+</b>, i.e. the compound contains <b>Fe<sup>3+</sup></b> ions (which matches the ionic equation in part (a)(iii)).",
+          "chapter_refs": [
+            "Movement of ions and charge transfer",
+            "Cation: a positively charged ion that moves towards the cathode.",
+            "Cu^2+ + 2e- -> Cu"
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "2025-combined-p42-q4-387",
+      "source_question_db_id": 387,
+      "type": "structured",
+      "max_marks": 5,
+      "stem": "Continuation of Question 4 on sodium fluoride: Fig. 4.2 shows inert electrodes dipped in molten sodium fluoride connected to a power supply. Then aqueous sodium fluoride is reacted with aqueous silver nitrate.",
+      "figure_paths": [],
+      "parts": [
+        {
+          "id": "c(i)",
+          "prompt": "Define electrolysis.",
+          "answer_type": "free_text",
+          "max_marks": 2,
+          "mcq_options": null,
+          "mcq_correct_label": null,
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [],
+          "required_working_concepts": [
+            {
+              "concept": "Electrolysis involves the breakdown (decomposition / splitting up) of an ionic compound that is either molten or dissolved in water (in solution).",
+              "marks": 1,
+              "hints": [
+                "breakdown of an ionic compound",
+                "decomposition of ionic compound",
+                "splitting up an ionic compound",
+                "when molten",
+                "when in solution",
+                "when dissolved in water",
+                "when aqueous"
+              ]
+            },
+            {
+              "concept": "The breakdown is caused by passing an electric current (a DC current from a battery) through the liquid.",
+              "marks": 1,
+              "hints": [
+                "by passing an electric current",
+                "using electricity",
+                "by a direct current",
+                "DC current",
+                "passage of an electric current"
+              ]
+            }
+          ],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_absent",
+                "keyword": "ionic",
+                "magnitude": null
+              },
+              "feedback": "You need to say that electrolysis breaks down an *ionic* compound. Without that word, the definition could describe any decomposition. Try: 'Electrolysis is the breakdown of an ionic compound...'"
+            },
+            {
+              "match": {
+                "kind": "keyword_absent",
+                "keyword": "molten",
+                "magnitude": null
+              },
+              "feedback": "The definition must say the compound is either *molten* or in (aqueous) *solution* - that is, the ions must be free to move. If you only say 'solution' you are half right; include 'molten or in solution' for the full mark."
+            },
+            {
+              "match": {
+                "kind": "keyword_absent",
+                "keyword": "current",
+                "magnitude": null
+              },
+              "feedback": "Remember the second half of the definition: the breakdown is caused 'by the passage of an electric current'. Without the current there is no electrolysis."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "solid",
+                "magnitude": null
+              },
+              "feedback": "Solid ionic compounds do NOT undergo electrolysis - their ions are locked in the lattice and cannot move. The compound must be molten or dissolved."
+            }
+          ],
+          "model_answer_html": "<b>Electrolysis</b> is the breakdown of an <b>ionic compound</b>, when it is <b>molten</b> or <b>in solution</b>, by the <b>passage of an electric current</b> through it. <br/>[1 mark for 'breakdown of ionic compound when molten / in solution'] <br/>[1 mark for 'by passing an electric current / using electricity']",
+          "chapter_refs": [
+            "Electrolysis: the breakdown of an ionic compound, when molten or in solution, by the passage of an electric current.",
+            "Conductivity and electrolytes",
+            "Electrolytic cells and electrodes"
+          ]
+        },
+        {
+          "id": "c(ii)",
+          "prompt": "Predict the product formed at the positive electrode and at the negative electrode during the electrolysis of molten sodium fluoride.",
+          "answer_type": "free_text",
+          "max_marks": 2,
+          "mcq_options": null,
+          "mcq_correct_label": null,
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [],
+          "required_working_concepts": [
+            {
+              "concept": "Positive electrode (anode): fluorine (F2) is produced. Fluoride ions (F-) move to the anode and lose electrons (oxidation) to form fluorine gas.",
+              "marks": 1,
+              "hints": [
+                "fluorine",
+                "F2",
+                "F\u2082",
+                "non-metal at positive electrode",
+                "non-metal at anode",
+                "anode fluorine"
+              ]
+            },
+            {
+              "concept": "Negative electrode (cathode): sodium (Na) is produced. Sodium ions (Na+) move to the cathode and gain electrons (reduction) to form sodium metal.",
+              "marks": 1,
+              "hints": [
+                "sodium",
+                "Na",
+                "metal at negative electrode",
+                "metal at cathode",
+                "cathode sodium"
+              ]
+            }
+          ],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "hydrogen",
+                "magnitude": null
+              },
+              "feedback": "The sodium fluoride is MOLTEN, not in aqueous solution - there are no H+ or OH- ions present, so hydrogen cannot form. At the cathode you discharge the metal ion (Na+) to give sodium."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "oxygen",
+                "magnitude": null
+              },
+              "feedback": "Oxygen is produced when OH- ions (from water) are discharged. In molten NaF there is no water and no OH-, so oxygen is not formed. The anode product is the non-metal from the compound: fluorine."
+            },
+            {
+              "match": {
+                "kind": "formula_inverted",
+                "keyword": null,
+                "magnitude": null
+              },
+              "feedback": "You have the electrodes swapped. In a molten binary ionic compound the METAL always forms at the CATHODE (negative electrode) and the NON-METAL always forms at the ANODE (positive electrode)."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "fluoride",
+                "magnitude": null
+              },
+              "feedback": "The product at the anode is fluorine (F2), not fluoride. 'Fluoride' is the name of the F- ion; once it loses its electron it becomes fluorine gas."
+            }
+          ],
+          "model_answer_html": "<b>Positive electrode (anode):</b> fluorine, <b>F<sub>2</sub></b> (gas). <br/><b>Negative electrode (cathode):</b> sodium, <b>Na</b> (liquid metal). <br/>Reasoning: molten NaF is a molten binary ionic compound. The metal (Na) always forms at the cathode; the non-metal (F<sub>2</sub>) always forms at the anode.",
+          "chapter_refs": [
+            "Electrolysis of molten binary ionic compounds",
+            "Movement of ions and charge transfer",
+            "Ionic half-equations"
+          ]
+        },
+        {
+          "id": "d",
+          "prompt": "Aqueous sodium fluoride reacts with aqueous silver nitrate to form aqueous sodium nitrate and one other product. Write the balanced symbol equation.",
+          "answer_type": "short_text",
+          "max_marks": 1,
+          "mcq_options": null,
+          "mcq_correct_label": null,
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [
+            "NaF + AgNO3 -> NaNO3 + AgF",
+            "NaF(aq) + AgNO3(aq) -> NaNO3(aq) + AgF",
+            "NaF(aq) + AgNO3(aq) -> NaNO3(aq) + AgF(aq)",
+            "NaF (aq) + AgNO3 (aq) -> NaNO3 (aq) + AgF (aq)",
+            "AgNO3 + NaF -> AgF + NaNO3",
+            "AgNO3(aq) + NaF(aq) -> AgF(aq) + NaNO3(aq)"
+          ],
+          "required_working_concepts": [
+            {
+              "concept": "Correct balanced symbol equation with the fourth product identified as silver fluoride (AgF) and 1:1:1:1 coefficients.",
+              "marks": 1,
+              "hints": [
+                "NaF + AgNO3",
+                "NaNO3 + AgF",
+                "AgF",
+                "silver fluoride"
+              ]
+            }
+          ],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "AgF2",
+                "magnitude": null
+              },
+              "feedback": "The formula for silver fluoride is AgF, not AgF2. Silver forms Ag+ (1+) and fluoride is F- (1-), so one of each gives a neutral compound: AgF."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "Ag2F",
+                "magnitude": null
+              },
+              "feedback": "The formula for silver fluoride is AgF, not Ag2F. Ag+ and F- combine in a 1:1 ratio because their charges cancel with one of each."
+            },
+            {
+              "match": {
+                "kind": "keyword_absent",
+                "keyword": "AgF",
+                "magnitude": null
+              },
+              "feedback": "You need to identify the 'other product' as silver fluoride (AgF). The Na+ swaps places with Ag+: Ag+ joins F- to give AgF; Na+ joins NO3- to give NaNO3."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "2NaF",
+                "magnitude": null
+              },
+              "feedback": "No coefficients of 2 are needed. Every species already has 1 Na, 1 Ag, 1 F and 1 NO3, so the equation balances with 1 of each: NaF + AgNO3 -> NaNO3 + AgF."
+            }
+          ],
+          "model_answer_html": "<b>NaF(aq) + AgNO<sub>3</sub>(aq) \u2192 NaNO<sub>3</sub>(aq) + AgF(aq)</b> <br/>The Na<sup>+</sup> and Ag<sup>+</sup> ions swap partners: Ag<sup>+</sup> pairs with F<sup>-</sup> (1:1) to give AgF. Since all ions appear once, coefficients of 1 on every species balance the equation. <br/><i>Note: unlike AgCl, AgBr, AgI, silver fluoride is soluble, so (aq) is appropriate; IGCSE also accepts the equation without state symbols.</i>",
+          "chapter_refs": [
+            "Binary compound",
+            "Electrolysis of molten binary ionic compounds"
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "igcse-q903-electrolysis-gas-volumes",
+      "source_question_db_id": 903,
+      "type": "structured",
+      "max_marks": 2,
+      "stem": "Continuation of Question 5 (part c). The volume of gas formed at each electrode is measured every 30 s for 2 min. Table 5.1 shows: time 0 s -> 0/0 cm^3 (negative/positive electrode); 30 s -> 18/9; 60 s -> 36/18; 90 s -> 54/27; 120 s -> ?/36.",
+      "figure_paths": [],
+      "parts": [
+        {
+          "id": "c_i",
+          "prompt": "Use Table 5.1 to predict the volume of gas given off at the negative electrode at 120 s.",
+          "answer_type": "numeric",
+          "max_marks": 1,
+          "mcq_options": null,
+          "mcq_correct_label": null,
+          "numeric_answer": 72.0,
+          "numeric_unit": "cm^3",
+          "numeric_tolerance_pct": 2.0,
+          "accepted_phrasings": [],
+          "required_working_concepts": [
+            {
+              "concept": "Spot that the negative-electrode volume increases by 18 cm^3 every 30 s (0, 18, 36, 54)",
+              "marks": 0,
+              "hints": [
+                "18 each 30 s",
+                "goes up by 18",
+                "same amount every 30 seconds",
+                "constant rate",
+                "linear"
+              ]
+            },
+            {
+              "concept": "Extend the pattern by one step: 54 + 18 = 72 cm^3 at 120 s",
+              "marks": 1,
+              "hints": [
+                "54 + 18",
+                "= 72",
+                "72 cm^3",
+                "next 30 seconds"
+              ]
+            }
+          ],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "numeric_off_by",
+                "keyword": null,
+                "magnitude": 2.0
+              },
+              "feedback": "You probably doubled 36 or halved 72 by mistake. The gas at the negative electrode adds 18 cm^3 every 30 s, so at 120 s you add one more 18 to the 90 s value: 54 + 18 = 72 cm^3."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "36",
+                "magnitude": null
+              },
+              "feedback": "36 cm^3 is the volume at the POSITIVE electrode at 120 s (from the table), not the negative. At the negative electrode the gas builds up twice as fast (2:1 H2:O2 ratio in the electrolysis of water), so the answer is 72 cm^3."
+            },
+            {
+              "match": {
+                "kind": "numeric_off_by",
+                "keyword": null,
+                "magnitude": 1.125
+              },
+              "feedback": "Close, but check your arithmetic: 54 + 18 = 72, not 81. The step size is 18 cm^3 every 30 s, and you only need one more step past 90 s."
+            }
+          ],
+          "model_answer_html": "<b>Volume at 120 s = 72 cm<sup>3</sup></b><br/>The negative-electrode volumes in Table 5.1 go up by the same amount every 30 s:<br/>0 &rarr; 18 &rarr; 36 &rarr; 54 (each +18 cm<sup>3</sup>).<br/>So after the next 30 s: <b>54 + 18 = 72 cm<sup>3</sup></b>.",
+          "chapter_refs": [
+            "Electrolysis of dilute sulfuric acid",
+            "4H+ + 4e- -> 2H2"
+          ]
+        },
+        {
+          "id": "c_ii",
+          "prompt": "Use Table 5.1 to calculate the volume of gas formed per second at the positive electrode.",
+          "answer_type": "numeric",
+          "max_marks": 1,
+          "mcq_options": null,
+          "mcq_correct_label": null,
+          "numeric_answer": 0.3,
+          "numeric_unit": "cm^3/s",
+          "numeric_tolerance_pct": 3.0,
+          "accepted_phrasings": [],
+          "required_working_concepts": [
+            {
+              "concept": "Use rate = volume / time with the final row of Table 5.1 (36 cm^3 at 120 s)",
+              "marks": 0,
+              "hints": [
+                "36 / 120",
+                "volume divided by time",
+                "rate = V / t",
+                "per second"
+              ]
+            },
+            {
+              "concept": "Correct arithmetic: 36 / 120 = 0.30 cm^3/s (unit cm^3/s)",
+              "marks": 1,
+              "hints": [
+                "0.30",
+                "0.3 cm^3/s",
+                "0.30 cm^3/s",
+                "cm3/s"
+              ]
+            }
+          ],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "numeric_off_by",
+                "keyword": null,
+                "magnitude": 60.0
+              },
+              "feedback": "Looks like you divided by 2 minutes instead of by 120 seconds (36 / 2 = 18). The question asks for cm^3 per SECOND, so divide by the time in seconds: 36 / 120 = 0.30 cm^3/s."
+            },
+            {
+              "match": {
+                "kind": "numeric_off_by",
+                "keyword": null,
+                "magnitude": 2.0
+              },
+              "feedback": "You probably used the negative-electrode total (72 cm^3) instead of the positive electrode (36 cm^3). The question is about the positive electrode, so: 36 / 120 = 0.30 cm^3/s."
+            },
+            {
+              "match": {
+                "kind": "keyword_absent",
+                "keyword": "/s",
+                "magnitude": null
+              },
+              "feedback": "Don't forget the units. Rate of gas production has units of cm^3 per second, written cm^3/s. Your number is right if you got 0.30 \u2014 just add the unit."
+            },
+            {
+              "match": {
+                "kind": "formula_inverted",
+                "keyword": "time / volume",
+                "magnitude": null
+              },
+              "feedback": "Rate per second is volume divided by time, not the other way round. So it's 36 cm^3 / 120 s = 0.30 cm^3/s, not 120 / 36."
+            }
+          ],
+          "model_answer_html": "<b>Volume of gas per second = 0.30 cm<sup>3</sup>/s</b><br/>Use <b>rate = volume &divide; time</b>.<br/>Positive-electrode total at 120 s = 36 cm<sup>3</sup>.<br/><b>36 &divide; 120 = 0.30 cm<sup>3</sup>/s</b>.",
+          "chapter_refs": [
+            "Electrolysis of dilute sulfuric acid",
+            "2O^2- -> O2 + 4e-"
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "ch2-electrolysis-molten-zncl2-q605",
+      "source_question_db_id": 605,
+      "type": "structured",
+      "max_marks": 3,
+      "stem": "Fig. 5.1 shows the electrolysis of molten zinc chloride, ZnCl2, using inert electrodes (apparatus: battery connected to two inert electrodes dipping into molten ZnCl2 in a crucible, heated by a Bunsen burner).",
+      "figure_paths": [],
+      "parts": [
+        {
+          "id": "a(i)",
+          "prompt": "The switch is closed. Describe the observation at the positive electrode.",
+          "answer_type": "short_text",
+          "max_marks": 1,
+          "mcq_options": null,
+          "mcq_correct_label": null,
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [
+            "Bubbles of pale yellow-green gas are given off",
+            "A yellow-green (or green) gas is produced at the positive electrode",
+            "Chlorine gas is released / bubbles of chlorine gas form",
+            "Pale green gas bubbles at the anode",
+            "Greenish-yellow gas evolved"
+          ],
+          "required_working_concepts": [
+            {
+              "concept": "State that a gas is produced (bubbles given off) at the positive electrode",
+              "marks": 1,
+              "hints": [
+                "gas given off",
+                "bubbles",
+                "bubbles of gas",
+                "pale yellow-green",
+                "greenish-yellow",
+                "green gas",
+                "yellow-green gas",
+                "chlorine"
+              ]
+            }
+          ],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "zinc",
+                "magnitude": null
+              },
+              "feedback": "Zinc is the METAL and is formed at the negative electrode (cathode), not the positive electrode. The positive electrode (anode) attracts negative chloride ions, so chlorine is released there."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "oxygen",
+                "magnitude": null
+              },
+              "feedback": "Oxygen is only produced in the electrolysis of AQUEOUS solutions (where OH- ions are present). This is MOLTEN zinc chloride, so only Zn^2+ and Cl- ions are in the melt. The product at the positive electrode is chlorine."
+            },
+            {
+              "match": {
+                "kind": "keyword_absent",
+                "keyword": "gas",
+                "magnitude": null
+              },
+              "feedback": "The question asks you to 'describe the observation' - you need to say what you would SEE. Chlorine is a pale yellow-green gas, so say 'bubbles of pale yellow-green gas are given off'."
+            },
+            {
+              "match": {
+                "kind": "keyword_absent",
+                "keyword": "yellow",
+                "magnitude": null
+              },
+              "feedback": "Colour is the key observation clue here. Chlorine gas is pale yellow-green - mention the colour (yellow-green or greenish-yellow) to score the mark."
+            }
+          ],
+          "model_answer_html": "<b>Bubbles of a pale yellow-green gas</b> (chlorine) are given off at the positive electrode.<br/><br/><i>Why:</i> The positive electrode is the anode. Molten ZnCl<sub>2</sub> contains Zn<sup>2+</sup> and Cl<sup>-</sup> ions. The negative Cl<sup>-</sup> ions move to the anode, lose electrons, and form chlorine gas (Cl<sub>2</sub>), which is pale yellow-green.",
+          "chapter_refs": [
+            "Movement of ions and charge transfer",
+            "Electrolysis of molten binary ionic compounds",
+            "Anode: the positive electrode in an electrolytic cell; site of oxidation; anions are discharged here."
+          ]
+        },
+        {
+          "id": "a(ii)",
+          "prompt": "Write the ionic equation for the formation of zinc. Include state symbols in your equation.",
+          "answer_type": "free_text",
+          "max_marks": 2,
+          "mcq_options": null,
+          "mcq_correct_label": null,
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [
+            "Zn^2+(l) + 2e- -> Zn(l)",
+            "Zn2+(l) + 2e- -> Zn(l)",
+            "Zn^{2+}(l) + 2e^- -> Zn(l)"
+          ],
+          "required_working_concepts": [
+            {
+              "concept": "Correct balanced half-equation showing Zn^2+ gaining 2 electrons to form Zn",
+              "marks": 1,
+              "hints": [
+                "Zn2+ + 2e- -> Zn",
+                "Zn^2+ + 2e- = Zn",
+                "Zn2+ + 2e = Zn",
+                "Zn2+ plus 2 electrons makes Zn",
+                "zinc ion gains 2 electrons"
+              ]
+            },
+            {
+              "concept": "Correct state symbols: (l) on Zn^2+ (from molten ZnCl2) and (l) on Zn metal",
+              "marks": 1,
+              "hints": [
+                "Zn2+(l)",
+                "Zn(l)",
+                "(l) + 2e- -> Zn(l)",
+                "liquid state",
+                "molten",
+                "both (l)"
+              ]
+            }
+          ],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "formula_inverted",
+                "keyword": null,
+                "magnitude": null
+              },
+              "feedback": "You have written the wrong way round (oxidation instead of reduction). Zinc is FORMED at the cathode, so Zn^2+ ions GAIN electrons to become Zn atoms. Write it as: Zn^2+(l) + 2e- -> Zn(l), with electrons on the LEFT and zinc metal on the RIGHT."
+            },
+            {
+              "match": {
+                "kind": "keyword_absent",
+                "keyword": "2e",
+                "magnitude": null
+              },
+              "feedback": "Each Zn^2+ ion carries a 2+ charge, so it must gain TWO electrons to become a neutral Zn atom. Don't forget the '2e-' on the reactant side: Zn^2+(l) + 2e- -> Zn(l)."
+            },
+            {
+              "match": {
+                "kind": "keyword_absent",
+                "keyword": "(l)",
+                "magnitude": null
+              },
+              "feedback": "The question asks you to INCLUDE STATE SYMBOLS - this is worth 1 of the 2 marks. Zinc chloride is MOLTEN, so the Zn^2+ ion is (l), and the zinc metal formed in the molten electrolyte is also (l). Full answer: Zn^2+(l) + 2e- -> Zn(l)."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "(aq)",
+                "magnitude": null
+              },
+              "feedback": "(aq) means 'aqueous' = dissolved in water. The zinc chloride here is MOLTEN (heated so it melts), not dissolved in water, so you should write (l) for liquid, not (aq). Correct: Zn^2+(l) + 2e- -> Zn(l)."
+            }
+          ],
+          "model_answer_html": "<b>Zn<sup>2+</sup>(l) + 2e<sup>-</sup> &rarr; Zn(l)</b><br/><br/><i>How to build it:</i><br/>1. Zinc forms at the cathode (negative electrode), so Zn<sup>2+</sup> ions GAIN electrons (reduction).<br/>2. A Zn<sup>2+</sup> ion has a 2+ charge, so it gains <b>2 electrons</b> to become a neutral Zn atom.<br/>3. State symbols: the ZnCl<sub>2</sub> is <b>molten</b>, so Zn<sup>2+</sup> is <b>(l)</b>; the zinc metal formed in the molten cell is also written as <b>(l)</b> (same convention as Pb(l) from molten PbBr<sub>2</sub>).",
+          "chapter_refs": [
+            "Ionic half-equations",
+            "Electrolysis of molten binary ionic compounds",
+            "Movement of ions and charge transfer",
+            "PbBr2(l) -> Pb(l) + Br2(g)",
+            "Cathode: the negative electrode in an electrolytic cell; site of reduction; cations are discharged here."
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "db-915-p3-q6g",
+      "source_question_db_id": 915,
+      "type": "structured",
+      "max_marks": 3,
+      "stem": "Draw one straight line from each description to the correct substance.",
+      "figure_paths": [],
+      "parts": [
+        {
+          "id": "g",
+          "prompt": "Draw one straight line from each description (salt that contains ionic bonds; compound with a pH less than 7; Group VII element) to the correct substance from the list: chlorine, dilute sulfuric acid, hydrogen, lead, lead(II) bromide.",
+          "answer_type": "self_check",
+          "max_marks": 3,
+          "mcq_options": null,
+          "mcq_correct_label": null,
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [],
+          "required_working_concepts": [
+            {
+              "concept": "Match 'salt that contains ionic bonds' to lead(II) bromide, because PbBr2 is a binary ionic compound made of Pb^2+ and Br- ions held together by ionic bonding.",
+              "marks": 1,
+              "hints": [
+                "lead(II) bromide",
+                "PbBr2",
+                "ionic bonds",
+                "Pb2+ and Br-",
+                "binary ionic compound"
+              ]
+            },
+            {
+              "concept": "Match 'compound with a pH less than 7' to dilute sulfuric acid, because it is an acid that releases H+ ions in water, giving a pH below 7.",
+              "marks": 1,
+              "hints": [
+                "dilute sulfuric acid",
+                "H2SO4",
+                "acid",
+                "H+ ions",
+                "pH less than 7",
+                "acidic"
+              ]
+            },
+            {
+              "concept": "Match 'Group VII element' to chlorine, because chlorine is a halogen in Group VII of the Periodic Table.",
+              "marks": 1,
+              "hints": [
+                "chlorine",
+                "Cl2",
+                "Group VII",
+                "halogen",
+                "non-metal element"
+              ]
+            }
+          ],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "lead",
+                "magnitude": null
+              },
+              "feedback": "Careful: lead on its own is a pure metal, not a salt. A salt with ionic bonds must be a compound made of a positive ion and a negative ion, so the correct match here is lead(II) bromide (PbBr2), not the element lead."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "hydrogen",
+                "magnitude": null
+              },
+              "feedback": "Hydrogen is a non-metal element, not a compound, so it cannot have a pH and it is not in Group VII (Group VII is the halogens: F, Cl, Br, I). Match the acid description to dilute sulfuric acid, and match Group VII to chlorine."
+            },
+            {
+              "match": {
+                "kind": "keyword_absent",
+                "keyword": "lead(II) bromide",
+                "magnitude": null
+              },
+              "feedback": "One mark goes to identifying the ionic salt. Lead(II) bromide (PbBr2) is the only salt in the list \u2014 it is made of Pb^2+ and Br- ions held by ionic bonds. Draw the first line from 'salt that contains ionic bonds' to lead(II) bromide."
+            },
+            {
+              "match": {
+                "kind": "keyword_absent",
+                "keyword": "chlorine",
+                "magnitude": null
+              },
+              "feedback": "Group VII of the Periodic Table is the halogen family. Chlorine (Cl2) is the halogen in the list, so draw the 'Group VII element' line to chlorine."
+            }
+          ],
+          "model_answer_html": "<b>Three matches (1 mark each):</b><br/>1. salt that contains ionic bonds &rarr; <b>lead(II) bromide</b> (PbBr<sub>2</sub> is a binary ionic compound of Pb<sup>2+</sup> and Br<sup>-</sup> ions).<br/>2. compound with a pH less than 7 &rarr; <b>dilute sulfuric acid</b> (an acid, releases H<sup>+</sup> ions in water, so pH &lt; 7).<br/>3. Group VII element &rarr; <b>chlorine</b> (Cl<sub>2</sub>, a halogen in Group VII of the Periodic Table).<br/><i>Distractors: lead is a pure metal (metallic bonding), hydrogen is a non-metal element in Group I (not Group VII).</i>",
+          "chapter_refs": [
+            "Electrolysis of molten binary ionic compounds",
+            "Electrolysis of dilute sulfuric acid",
+            "Electrolysis of concentrated sodium chloride solution",
+            "Binary compound: a compound containing only two different elements (e.g. PbBr2, NaCl).",
+            "ionic bonding"
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "combined-sci-electrochem-q902-electrolysis-dilute-h2so4",
+      "source_question_db_id": 902,
+      "type": "structured",
+      "max_marks": 6,
+      "stem": "Dilute sulfuric acid is used in an electrolysis experiment. Fig. 5.1 shows the electrolysis apparatus: a beaker of dilute sulfuric acid with a negative electrode and a positive electrode dipping into it, both connected to a power supply.",
+      "figure_paths": [],
+      "parts": [
+        {
+          "id": "a",
+          "prompt": "Universal indicator is used to measure the pH of the dilute sulfuric acid. Describe how to use universal indicator to measure pH. [2]",
+          "answer_type": "free_text",
+          "max_marks": 2,
+          "mcq_options": null,
+          "mcq_correct_label": null,
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [],
+          "required_working_concepts": [
+            {
+              "concept": "Add universal indicator to the acid (drop the solution into the acid, or dip universal indicator paper into the acid)",
+              "marks": 1,
+              "hints": [
+                "add universal indicator",
+                "drop indicator",
+                "dip indicator paper",
+                "put indicator in",
+                "universal indicator paper",
+                "universal indicator solution"
+              ]
+            },
+            {
+              "concept": "Compare the colour produced to a pH colour chart (the reference scale) to read off the pH",
+              "marks": 1,
+              "hints": [
+                "compare the colour",
+                "colour chart",
+                "pH chart",
+                "pH colour chart",
+                "match the colour",
+                "read off the pH",
+                "colour scale",
+                "reference chart"
+              ]
+            }
+          ],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_absent",
+                "keyword": "chart",
+                "magnitude": null
+              },
+              "feedback": "You need to say that the colour is compared to a pH colour chart (or colour scale). Just writing 'the indicator changes colour' does not say HOW you decide the pH."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "litmus",
+                "magnitude": null
+              },
+              "feedback": "The question asks about universal indicator, not litmus. Litmus only tells you acid or alkali (red/blue); universal indicator shows a range of colours that match a pH number."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "pH meter",
+                "magnitude": null
+              },
+              "feedback": "The question asks specifically about universal indicator. A pH meter is a different method and won't score these marks."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "probe",
+                "magnitude": null
+              },
+              "feedback": "A probe or meter is a different method. The question asks how you use universal indicator \u2014 so you need to talk about adding the indicator and matching the colour to a pH chart."
+            }
+          ],
+          "model_answer_html": "<b>1.</b> Add a few drops of universal indicator solution to a sample of the dilute sulfuric acid (or dip a piece of universal indicator paper into it).<br/><b>2.</b> Compare the colour it turns to the pH colour chart (the reference scale printed on the bottle or paper) and read off the matching pH number.<br/><i>Dilute sulfuric acid is acidic, so expect a red/orange colour and a pH of about 1-2.</i>",
+          "chapter_refs": [
+            "Electrolyte"
+          ]
+        },
+        {
+          "id": "b(i)",
+          "prompt": "Fig. 5.1 shows the electrolysis apparatus for dilute sulfuric acid. Identify the gas formed at each electrode. negative electrode: ............ ; positive electrode: ............ [2]",
+          "answer_type": "free_text",
+          "max_marks": 2,
+          "mcq_options": null,
+          "mcq_correct_label": null,
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [],
+          "required_working_concepts": [
+            {
+              "concept": "Hydrogen gas is formed at the negative electrode (cathode)",
+              "marks": 1,
+              "hints": [
+                "hydrogen at negative",
+                "hydrogen at cathode",
+                "H2 at negative",
+                "hydrogen gas",
+                "negative electrode: hydrogen"
+              ]
+            },
+            {
+              "concept": "Oxygen gas is formed at the positive electrode (anode)",
+              "marks": 1,
+              "hints": [
+                "oxygen at positive",
+                "oxygen at anode",
+                "O2 at positive",
+                "oxygen gas",
+                "positive electrode: oxygen"
+              ]
+            }
+          ],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "chlorine",
+                "magnitude": null
+              },
+              "feedback": "Chlorine is the product you would get from electrolysing concentrated sodium chloride (brine), not dilute sulfuric acid. The gases here are hydrogen (negative) and oxygen (positive)."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "sulfur",
+                "magnitude": null
+              },
+              "feedback": "The SO4^2- ions stay in solution \u2014 they are not discharged. Instead water is broken down: hydrogen at the negative electrode, oxygen at the positive electrode."
+            },
+            {
+              "match": {
+                "kind": "keyword_absent",
+                "keyword": "hydrogen",
+                "magnitude": null
+              },
+              "feedback": "H+ ions are attracted to the negative electrode and gain electrons to form hydrogen gas (4H+ + 4e- -> 2H2). Remember: dilute H2SO4 effectively electrolyses water to give H2 at the negative electrode and O2 at the positive electrode."
+            },
+            {
+              "match": {
+                "kind": "keyword_absent",
+                "keyword": "oxygen",
+                "magnitude": null
+              },
+              "feedback": "At the positive electrode, OH- ions (from the water) lose electrons to form oxygen gas. The overall reaction is 2H2O -> 2H2 + O2."
+            }
+          ],
+          "model_answer_html": "<b>Negative electrode (cathode): hydrogen</b> \u2014 H+ ions are attracted to the negative electrode and gain electrons: <b>4H<sup>+</sup> + 4e<sup>-</sup> &rarr; 2H<sub>2</sub></b>.<br/><b>Positive electrode (anode): oxygen</b> \u2014 OH<sup>-</sup> ions lose electrons to form oxygen gas.<br/>Overall: <b>2H<sub>2</sub>O(l) &rarr; 2H<sub>2</sub>(g) + O<sub>2</sub>(g)</b> \u2014 hydrogen and oxygen are made in a 2:1 volume ratio.",
+          "chapter_refs": [
+            "Electrolysis of dilute sulfuric acid",
+            "4H+ + 4e- -> 2H2",
+            "2H2O(l) -> 2H2(g) + O2(g)"
+          ]
+        },
+        {
+          "id": "b(ii)",
+          "prompt": "State the name of the positive electrode. [1]",
+          "answer_type": "short_text",
+          "max_marks": 1,
+          "mcq_options": null,
+          "mcq_correct_label": null,
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [
+            "anode",
+            "the anode",
+            "Anode"
+          ],
+          "required_working_concepts": [
+            {
+              "concept": "The positive electrode is called the anode",
+              "marks": 1,
+              "hints": [
+                "anode"
+              ]
+            }
+          ],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "cathode",
+                "magnitude": null
+              },
+              "feedback": "The cathode is the NEGATIVE electrode, not the positive one. The positive electrode is the anode. A memory trick: 'AN+ODE' \u2014 the anode carries the + sign."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "positive terminal",
+                "magnitude": null
+              },
+              "feedback": "'Positive terminal' refers to the battery, not the electrode. The positive ELECTRODE in an electrolytic cell is called the anode."
+            }
+          ],
+          "model_answer_html": "<b>Anode</b> \u2014 the positive electrode in an electrolytic cell is always called the anode. (The negative electrode is the cathode.)",
+          "chapter_refs": [
+            "Electrolytic cells and electrodes",
+            "Anode: the positive electrode in an electrolytic cell; site of oxidation; anions are discharged here."
+          ]
+        },
+        {
+          "id": "b(iii)",
+          "prompt": "Identify the electrolyte in this electrolysis. [1]",
+          "answer_type": "short_text",
+          "max_marks": 1,
+          "mcq_options": null,
+          "mcq_correct_label": null,
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [
+            "dilute sulfuric acid",
+            "sulfuric acid",
+            "H2SO4",
+            "H2SO4(aq)",
+            "dilute H2SO4",
+            "aqueous sulfuric acid",
+            "dilute sulphuric acid"
+          ],
+          "required_working_concepts": [
+            {
+              "concept": "The electrolyte is the dilute sulfuric acid",
+              "marks": 1,
+              "hints": [
+                "dilute sulfuric acid",
+                "sulfuric acid",
+                "H2SO4"
+              ]
+            }
+          ],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "water",
+                "magnitude": null
+              },
+              "feedback": "Pure water is a non-electrolyte \u2014 it barely conducts at all. The electrolyte here is the dilute sulfuric acid, because the H+, OH- and SO4^2- ions in it carry the charge."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "hydrogen",
+                "magnitude": null
+              },
+              "feedback": "Hydrogen is a PRODUCT made at the negative electrode; it is not the electrolyte. The electrolyte is the liquid being electrolysed \u2014 dilute sulfuric acid."
+            },
+            {
+              "match": {
+                "kind": "keyword_absent",
+                "keyword": "sulfuric",
+                "magnitude": null
+              },
+              "feedback": "The electrolyte is the liquid that conducts electricity by ion movement and is broken down in the process. In this experiment that is the dilute sulfuric acid."
+            }
+          ],
+          "model_answer_html": "<b>Dilute sulfuric acid</b> (<b>H<sub>2</sub>SO<sub>4</sub>(aq)</b>) is the electrolyte. It contains H<sup>+</sup>, OH<sup>-</sup> and SO<sub>4</sub><sup>2-</sup> ions that move and carry charge, and it is decomposed during the electrolysis.",
+          "chapter_refs": [
+            "Electrolyte",
+            "Electrolysis of dilute sulfuric acid",
+            "Electrolyte: a liquid (molten ionic compound or aqueous solution of ions) that conducts electricity by the movement of ions and is decomposed in the process."
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "paper18-q4-struct",
+      "source_question_db_id": 297,
+      "type": "structured",
+      "max_marks": 5,
+      "stem": "(continued) Properties of compound A.",
+      "figure_paths": [],
+      "parts": [
+        {
+          "id": "b",
+          "prompt": "The temperature of compound A is increased from 800 C to 802 C. Describe how the arrangement, energy and motion of the particles in compound A change with this increase in temperature.",
+          "answer_type": "free_text",
+          "max_marks": 3,
+          "mcq_options": null,
+          "mcq_correct_label": null,
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [],
+          "required_working_concepts": [
+            {
+              "concept": "Arrangement change: ions go from a regular, fixed ionic lattice (solid) to a random / disordered arrangement in the liquid (still close together).",
+              "marks": 1,
+              "hints": [
+                "regular lattice",
+                "fixed positions",
+                "ordered arrangement",
+                "disordered",
+                "random arrangement",
+                "no longer in a lattice",
+                "ions still close together"
+              ]
+            },
+            {
+              "concept": "Energy change: the ions gain (more) energy as the temperature rises, enough to break free from the lattice.",
+              "marks": 1,
+              "hints": [
+                "ions gain energy",
+                "particles gain energy",
+                "more energy",
+                "energy increases",
+                "enough energy to break free",
+                "overcome ionic bonding",
+                "break out of the lattice"
+              ]
+            },
+            {
+              "concept": "Motion change: ions stop being held in fixed positions and become free to move through the liquid.",
+              "marks": 1,
+              "hints": [
+                "ions become free to move",
+                "no longer fixed in place",
+                "move around each other",
+                "move throughout the liquid",
+                "free to move",
+                "ions can flow"
+              ]
+            }
+          ],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "formula_inverted",
+                "keyword": "energy decreases",
+                "magnitude": null
+              },
+              "feedback": "Energy goes UP, not down. Heating the compound gives the ions more energy \u2014 that is why they can break free of the lattice and start to move. If the energy dropped, the compound would freeze further, not melt."
+            },
+            {
+              "match": {
+                "kind": "keyword_absent",
+                "keyword": "free to move",
+                "magnitude": null
+              },
+              "feedback": "The key idea about motion is that the ions become free to move in the liquid. In the solid they could only vibrate in fixed positions \u2014 in the molten state they can move through the whole liquid. This is also why molten ionic compounds can conduct electricity."
+            },
+            {
+              "match": {
+                "kind": "keyword_absent",
+                "keyword": "lattice",
+                "magnitude": null
+              },
+              "feedback": "Describe the starting arrangement. In the solid, the ions sit in a regular ionic lattice (a fixed, ordered pattern). When the compound melts, this lattice breaks down into a random/disordered arrangement."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "particles spread out",
+                "magnitude": null
+              },
+              "feedback": "Careful: melting is solid to LIQUID, not solid to gas. In the liquid the ions are still close together \u2014 they just lose the regular lattice order and can move around each other. They do not spread far apart like gas particles."
+            }
+          ],
+          "model_answer_html": "<b>Arrangement:</b> at 800 &deg;C the ions sit in a regular, fixed ionic lattice (solid). At 802 &deg;C the compound has melted, so the ions are in a random, disordered arrangement (still close together).<br/><b>Energy:</b> the ions gain more energy as the temperature rises - enough energy to break out of the lattice.<br/><b>Motion:</b> in the solid the ions could only vibrate in fixed positions; in the liquid they are <i>free to move</i> through the whole liquid.",
+          "chapter_refs": [
+            "Conductivity and electrolytes",
+            "Electrolysis of molten binary ionic compounds"
+          ]
+        },
+        {
+          "id": "c",
+          "prompt": "An electric current is passed through an aqueous solution of compound A. A chemical change occurs. Explain why this is a chemical change.",
+          "answer_type": "free_text",
+          "max_marks": 2,
+          "mcq_options": null,
+          "mcq_correct_label": null,
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [],
+          "required_working_concepts": [
+            {
+              "concept": "The process is electrolysis: the electric current breaks down / decomposes compound A in the solution.",
+              "marks": 1,
+              "hints": [
+                "electrolysis",
+                "breaks down the compound",
+                "decomposes the compound",
+                "compound is broken down",
+                "passage of electric current breaks down",
+                "ionic compound is broken down"
+              ]
+            },
+            {
+              "concept": "New substances (different from compound A) are formed at the electrodes (cathode and/or anode), which is the definition of a chemical change.",
+              "marks": 1,
+              "hints": [
+                "new substances are formed",
+                "new products at the electrodes",
+                "different substances are made",
+                "products at the cathode",
+                "products at the anode",
+                "not the same as the starting compound",
+                "new product formed"
+              ]
+            }
+          ],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "physical change",
+                "magnitude": null
+              },
+              "feedback": "It is a CHEMICAL change, not a physical one. A physical change (like dissolving or melting) can be reversed and makes no new substances. Electrolysis makes brand new substances at the electrodes, so the starting compound has been changed into something different."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "current flows",
+                "magnitude": null
+              },
+              "feedback": "A current flowing on its own is not a chemical change - metal wires carry current without changing. What makes this a chemical change is that the current breaks down the ionic compound and forms NEW substances (new products at the cathode and anode)."
+            },
+            {
+              "match": {
+                "kind": "keyword_absent",
+                "keyword": "new",
+                "magnitude": null
+              },
+              "feedback": "The key idea is that NEW substances are formed - different from compound A. At the cathode (the negative electrode) a new product forms from the positive ions, and at the anode (the positive electrode) a new product forms from the negative ions. New substances = chemical change."
+            },
+            {
+              "match": {
+                "kind": "keyword_absent",
+                "keyword": "electrolysis",
+                "magnitude": null
+              },
+              "feedback": "Name the process: electrolysis. Electrolysis is defined as 'the breakdown of an ionic compound, when molten or in solution, by the passage of an electric current' - the word 'breakdown' is why this is a chemical change, not a physical one."
+            }
+          ],
+          "model_answer_html": "Passing an electric current through an aqueous solution of an ionic compound is <b>electrolysis</b>, which is defined as the <i>breakdown of an ionic compound, when molten or in solution, by the passage of an electric current</i>. The compound is broken down and <b>new substances are formed</b> at the electrodes (a new product at the cathode and a new product at the anode). Because new substances - different from compound A - are produced, a chemical change has taken place.",
+          "chapter_refs": [
+            "Movement of ions and charge transfer",
+            "Electrolysis of concentrated sodium chloride solution",
+            "Electrolysis: the breakdown of an ionic compound, when molten or in solution, by the passage of an electric current."
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "electrochem-q914-three-electrolytes",
+      "source_question_db_id": 914,
+      "type": "structured",
+      "max_marks": 8,
+      "stem": "Table 6.1 shows the products and observations at the electrodes in the electrolysis of three electrolytes: molten lead(II) bromide, concentrated aqueous sodium chloride, and dilute sulfuric acid. Use the table (with some blanks) to answer the questions.",
+      "figure_paths": [],
+      "parts": [
+        {
+          "id": "a",
+          "prompt": "Complete Table 6.1. (Row 1 molten lead(II) bromide: positive electrode product = ?; Row 3 dilute sulfuric acid: negative electrode product = ?, positive electrode product = ?.)",
+          "answer_type": "self_check",
+          "max_marks": 3,
+          "mcq_options": null,
+          "mcq_correct_label": null,
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [],
+          "required_working_concepts": [
+            {
+              "concept": "Molten lead(II) bromide, positive electrode: bromine (accept Br2)",
+              "marks": 1,
+              "hints": [
+                "bromine",
+                "Br2",
+                "red-brown gas at anode"
+              ]
+            },
+            {
+              "concept": "Dilute sulfuric acid, negative electrode: hydrogen (accept H2)",
+              "marks": 1,
+              "hints": [
+                "hydrogen",
+                "H2",
+                "colourless gas at cathode"
+              ]
+            },
+            {
+              "concept": "Dilute sulfuric acid, positive electrode: oxygen (accept O2)",
+              "marks": 1,
+              "hints": [
+                "oxygen",
+                "O2",
+                "colourless gas at anode"
+              ]
+            }
+          ],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "lead",
+                "magnitude": null
+              },
+              "feedback": "Lead is the product at the NEGATIVE electrode for molten lead(II) bromide, not the positive electrode. The metal always forms at the cathode and the non-metal at the anode, so the positive electrode product is bromine."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "chlorine",
+                "magnitude": null
+              },
+              "feedback": "Chlorine is only produced from chloride-containing electrolytes (like concentrated NaCl solution). For dilute sulfuric acid the positive electrode product is oxygen, because OH- ions from water are oxidised."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "sodium",
+                "magnitude": null
+              },
+              "feedback": "Sodium is never produced from aqueous solutions - hydrogen is discharged at the cathode in preference to sodium. For dilute sulfuric acid the negative-electrode product is hydrogen, not sodium."
+            },
+            {
+              "match": {
+                "kind": "keyword_absent",
+                "keyword": "bromine",
+                "magnitude": null
+              },
+              "feedback": "For molten lead(II) bromide the non-metal bromine is produced at the positive electrode - the red-brown gas in the observation column is the clue."
+            }
+          ],
+          "model_answer_html": "<b>Row 1 (molten lead(II) bromide), positive electrode product:</b> bromine.<br/><b>Row 3 (dilute sulfuric acid), negative electrode product:</b> hydrogen.<br/><b>Row 3 (dilute sulfuric acid), positive electrode product:</b> oxygen.",
+          "chapter_refs": [
+            "Electrolysis of molten binary ionic compounds",
             "Electrolysis of dilute sulfuric acid"
+          ]
+        },
+        {
+          "id": "b",
+          "prompt": "Explain why the mass of concentrated aqueous sodium chloride decreases during electrolysis.",
+          "answer_type": "free_text",
+          "max_marks": 1,
+          "mcq_options": null,
+          "mcq_correct_label": null,
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [],
+          "required_working_concepts": [
+            {
+              "concept": "Hydrogen and chlorine gases are produced at the electrodes and escape from the solution, so the mass of the solution falls.",
+              "marks": 1,
+              "hints": [
+                "hydrogen gas",
+                "chlorine gas",
+                "bubbles",
+                "escape",
+                "leave the solution",
+                "gases given off"
+              ]
+            }
+          ],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "evaporat",
+                "magnitude": null
+              },
+              "feedback": "The mass decrease is not because of evaporation. The key point is that hydrogen gas (at the cathode) and chlorine gas (at the anode) are formed by electrolysis and bubble out of the solution, so matter is lost."
+            },
+            {
+              "match": {
+                "kind": "keyword_absent",
+                "keyword": "gas",
+                "magnitude": null
+              },
+              "feedback": "You need to say that gases (hydrogen and chlorine) are formed and leave the solution. Any product that stays dissolved (like NaOH) does not reduce the mass."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "water",
+                "magnitude": null
+              },
+              "feedback": "It is not water that is leaving the solution - it is the hydrogen gas produced at the cathode and the chlorine gas produced at the anode that bubble off."
+            }
+          ],
+          "model_answer_html": "Hydrogen gas is produced at the cathode and chlorine gas is produced at the anode. Both are <b>gases</b> and bubble out of the solution, so the mass of the electrolyte decreases.",
+          "chapter_refs": [
+            "Electrolysis of concentrated sodium chloride solution"
+          ]
+        },
+        {
+          "id": "c",
+          "prompt": "Use Table 6.1 to explain why electrolysis is a chemical change.",
+          "answer_type": "free_text",
+          "max_marks": 1,
+          "mcq_options": null,
+          "mcq_correct_label": null,
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [],
+          "required_working_concepts": [
+            {
+              "concept": "New substances are formed at the electrodes that are different from the original electrolyte.",
+              "marks": 1,
+              "hints": [
+                "new substances",
+                "new products",
+                "different from starting",
+                "different from the electrolyte",
+                "new chemicals"
+              ]
+            }
+          ],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "electricity",
+                "magnitude": null
+              },
+              "feedback": "Just saying 'electricity is used' is not enough - that only shows energy is involved. The reason it is a chemical change is that new substances are formed at the electrodes (for example lead and bromine from lead(II) bromide)."
+            },
+            {
+              "match": {
+                "kind": "keyword_absent",
+                "keyword": "new",
+                "magnitude": null
+              },
+              "feedback": "A chemical change is identified by new substances being formed. Mention the new products in the table (e.g. lead, bromine, hydrogen, chlorine, oxygen) that were not there before."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "reversible",
+                "magnitude": null
+              },
+              "feedback": "Reversibility is not the key point here. The mark is for saying that new substances are made at the electrodes, and that is what makes it a chemical change."
+            }
+          ],
+          "model_answer_html": "At each electrode, <b>new substances</b> are formed that are different from the original electrolyte (for example lead and bromine from lead(II) bromide, hydrogen and oxygen from dilute sulfuric acid). Because new substances are made, electrolysis is a chemical change.",
+          "chapter_refs": [
+            "Electrolysis: the breakdown of an ionic compound, when molten or in solution, by the passage of an electric current."
+          ]
+        },
+        {
+          "id": "d",
+          "prompt": "Inert electrodes are used in each electrolysis. Name one substance used as inert electrodes.",
+          "answer_type": "short_text",
+          "max_marks": 1,
+          "mcq_options": null,
+          "mcq_correct_label": null,
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [
+            "graphite",
+            "carbon",
+            "platinum",
+            "Pt",
+            "graphite (carbon)"
+          ],
+          "required_working_concepts": [],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "copper",
+                "magnitude": null
+              },
+              "feedback": "Copper is NOT an inert electrode - a copper anode dissolves in copper(II) sulfate electrolysis. Use graphite (carbon) or platinum for inert electrodes."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "iron",
+                "magnitude": null
+              },
+              "feedback": "Iron is not used as an inert electrode because it can react with the electrolyte or the products. Graphite (carbon) and platinum are the standard inert electrode materials."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "diamond",
+                "magnitude": null
+              },
+              "feedback": "Although diamond is a form of carbon, it is an electrical insulator and is not used as an electrode. The carbon form used for inert electrodes is graphite."
+            }
+          ],
+          "model_answer_html": "<b>Graphite</b> (carbon). <i>Platinum</i> is also accepted.",
+          "chapter_refs": [
+            "Inert electrode: an electrode that does not react with the electrolyte or the products (e.g. graphite, platinum)."
+          ]
+        },
+        {
+          "id": "e",
+          "prompt": "State the name of the negative electrode.",
+          "answer_type": "short_text",
+          "max_marks": 1,
+          "mcq_options": null,
+          "mcq_correct_label": null,
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [
+            "cathode",
+            "the cathode",
+            "Cathode"
+          ],
+          "required_working_concepts": [],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "anode",
+                "magnitude": null
+              },
+              "feedback": "The anode is the POSITIVE electrode, not the negative one. The negative electrode is called the cathode."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "electrolyte",
+                "magnitude": null
+              },
+              "feedback": "The electrolyte is the liquid that carries the ions - it is not an electrode. The negative electrode itself is called the cathode."
+            }
+          ],
+          "model_answer_html": "The <b>cathode</b> (the negative electrode in an electrolytic cell).",
+          "chapter_refs": [
+            "Cathode: the negative electrode in an electrolytic cell; site of reduction; cations are discharged here."
+          ]
+        },
+        {
+          "id": "f",
+          "prompt": "Electrolysis is an endothermic process. State the meaning of endothermic.",
+          "answer_type": "short_text",
+          "max_marks": 1,
+          "mcq_options": null,
+          "mcq_correct_label": null,
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [
+            "takes in energy from the surroundings",
+            "absorbs energy from the surroundings",
+            "takes in heat from the surroundings",
+            "absorbs heat from the surroundings",
+            "takes in energy",
+            "absorbs energy",
+            "energy is taken in",
+            "heat energy is absorbed"
+          ],
+          "required_working_concepts": [],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "gives out",
+                "magnitude": null
+              },
+              "feedback": "A process that gives out energy is called EXOthermic, not endothermic. Endothermic means energy is taken IN from the surroundings."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "releases",
+                "magnitude": null
+              },
+              "feedback": "Releasing energy describes an exothermic process. For endothermic you need to say energy is absorbed or taken in from the surroundings."
+            },
+            {
+              "match": {
+                "kind": "keyword_absent",
+                "keyword": "energy",
+                "magnitude": null
+              },
+              "feedback": "Your answer must mention energy (or heat). Endothermic means a process that takes in / absorbs energy from the surroundings."
+            }
+          ],
+          "model_answer_html": "A process that <b>takes in (absorbs) energy</b> (heat / electrical energy) from the surroundings.",
+          "chapter_refs": [
+            "Electrolysis: the breakdown of an ionic compound, when molten or in solution, by the passage of an electric current."
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "db-649",
+      "source_question_db_id": 649,
+      "type": "structured",
+      "max_marks": 6,
+      "stem": "Fig. 5.2 shows part of the Periodic Table: Li, Be (Period 2 left) and B, C, N, O, F, Ne (Period 2 right).",
+      "figure_paths": [],
+      "parts": [
+        {
+          "id": "b(i)",
+          "prompt": "Circle the word that describes the part of the Periodic Table shown in Fig. 5.2: group / period / property / transition.",
+          "answer_type": "self_check",
+          "max_marks": 1,
+          "mcq_options": null,
+          "mcq_correct_label": null,
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [],
+          "required_working_concepts": [
+            {
+              "concept": "Identify whether a horizontal row of the Periodic Table is a group or a period.",
+              "marks": 1,
+              "hints": [
+                "group",
+                "period",
+                "row",
+                "column"
+              ]
+            }
+          ],
+          "common_mistakes": [],
+          "model_answer_html": "<b>This sub-part is outside this chapter (Electrochemistry); review with your teacher.</b><br/>It is about Periodic Table terminology (group vs period vs property vs transition), which is covered in the Periodic Table chapter.",
+          "chapter_refs": []
+        },
+        {
+          "id": "b(ii)",
+          "prompt": "Identify an element in Fig. 5.2 that matches each description (each element may be used once, more than once or not at all): (1) forms an ion with a charge of 1-; (2) has only two outer-shell electrons; (3) is used as an inert electrode in electrolysis; (4) reacts with oxygen to form a gas that leads to global warming.",
+          "answer_type": "self_check",
+          "max_marks": 4,
+          "mcq_options": null,
+          "mcq_correct_label": null,
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [],
+          "required_working_concepts": [
+            {
+              "concept": "Descriptor 1 (ion with charge 1-): outside this chapter; review with your teacher.",
+              "marks": 1,
+              "hints": [
+                "charge",
+                "1-",
+                "negative ion",
+                "anion",
+                "group 7"
+              ]
+            },
+            {
+              "concept": "Descriptor 2 (two outer-shell electrons): outside this chapter; review with your teacher.",
+              "marks": 1,
+              "hints": [
+                "outer shell",
+                "electron configuration",
+                "2,2",
+                "beryllium"
+              ]
+            },
+            {
+              "concept": "Descriptor 3 (inert electrode in electrolysis): IN SCOPE \u2014 answer is carbon (C), because graphite (a form of carbon) is the standard inert electrode used in electrolysis.",
+              "marks": 1,
+              "hints": [
+                "C",
+                "carbon",
+                "graphite",
+                "inert",
+                "electrode",
+                "does not react"
+              ]
+            },
+            {
+              "concept": "Descriptor 4 (oxide that causes global warming): outside this chapter; review with your teacher.",
+              "marks": 1,
+              "hints": [
+                "global warming",
+                "carbon dioxide",
+                "CO2",
+                "greenhouse"
+              ]
+            }
+          ],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "platinum",
+                "magnitude": null
+              },
+              "feedback": "Platinum is an inert electrode, but it is not one of the Period 2 elements shown in Fig. 5.2. You must pick an element from the figure. The element shown that is used as an inert electrode (as graphite) is carbon (C)."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "oxygen",
+                "magnitude": null
+              },
+              "feedback": "Oxygen is not used as an electrode \u2014 it is a gas. The inert electrode in the figure is carbon (C), which is used in the form of graphite."
+            },
+            {
+              "match": {
+                "kind": "keyword_absent",
+                "keyword": "carbon",
+                "magnitude": null
+              },
+              "feedback": "For 'used as an inert electrode in electrolysis' the answer is carbon (C). The chapter defines an inert electrode as one that does not react with the electrolyte or products, and graphite \u2014 a form of carbon \u2014 is one of the two standard examples (the other being platinum)."
+            }
+          ],
+          "model_answer_html": "<b>Only descriptor (3) is in this chapter.</b><br/><br/>(1) Forms an ion with a charge of 1-: <i>outside this chapter; review with your teacher.</i><br/>(2) Has only two outer-shell electrons: <i>outside this chapter; review with your teacher.</i><br/>(3) Is used as an inert electrode in electrolysis: <b>C (carbon)</b>. From your chapter: an inert electrode is one that does not react with the electrolyte or the products, and graphite (a form of carbon) is one of the standard inert electrodes (alongside platinum).<br/>(4) Reacts with oxygen to form a gas that leads to global warming: <i>outside this chapter; review with your teacher.</i>",
+          "chapter_refs": [
+            "Electrolytic cells and electrodes",
+            "Inert electrode: an electrode that does not react with the electrolyte or the products (e.g. graphite, platinum)."
+          ]
+        },
+        {
+          "id": "b(iii)",
+          "prompt": "State how the metallic character of the elements shown in Fig. 5.2 changes from Li to Ne.",
+          "answer_type": "self_check",
+          "max_marks": 1,
+          "mcq_options": null,
+          "mcq_correct_label": null,
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [],
+          "required_working_concepts": [
+            {
+              "concept": "Describe how metallic character changes across a period of the Periodic Table.",
+              "marks": 1,
+              "hints": [
+                "decreases",
+                "metal to non-metal",
+                "metallic character",
+                "across period"
+              ]
+            }
+          ],
+          "common_mistakes": [],
+          "model_answer_html": "<b>This sub-part is outside this chapter (Electrochemistry); review with your teacher.</b><br/>It asks about trends across a period of the Periodic Table, which is covered in the Periodic Table chapter, not here.",
+          "chapter_refs": []
+        }
+      ]
+    },
+    {
+      "question_id": "q537-chem-structured-mg-steam-redox",
+      "source_question_db_id": 537,
+      "type": "structured",
+      "max_marks": 6,
+      "stem": "Continuation of Question 4 on the reaction between magnesium and steam.",
+      "figure_paths": [],
+      "parts": [
+        {
+          "id": "a_iii_1",
+          "prompt": "During the reaction of magnesium with steam, magnesium atoms lose ____ to form positive ions. (choose from: anions, cations, covalent, electrons, ionic, neutrons, neutralisation, oxidation, protons, reduction)",
+          "answer_type": "short_text",
+          "max_marks": 1,
+          "mcq_options": null,
+          "mcq_correct_label": null,
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [
+            "electrons",
+            "electron"
+          ],
+          "required_working_concepts": [
+            {
+              "concept": "Losing electrons is what makes a neutral metal atom become a positive ion (Mg -> Mg2+).",
+              "marks": 1,
+              "hints": [
+                "lose electrons",
+                "lose 2 electrons",
+                "loss of electrons"
+              ]
+            }
+          ],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "protons",
+                "magnitude": null
+              },
+              "feedback": "Atoms don't lose protons in ordinary chemistry \u2014 protons are locked in the nucleus. It's the electrons in the outer shell that are lost when a metal atom becomes a positive ion."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "neutrons",
+                "magnitude": null
+              },
+              "feedback": "Neutrons sit in the nucleus and don't get lost in chemical reactions. The particles that move when a metal is oxidised are electrons."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "cations",
+                "magnitude": null
+              },
+              "feedback": "Cations is the NAME for the positive ions that are formed \u2014 it's not what the atom loses. The atom loses electrons, and becomes a cation as a result."
+            }
+          ],
+          "model_answer_html": "<b>electrons</b><br/>Each Mg atom loses 2 electrons to become Mg<sup>2+</sup>.",
+          "chapter_refs": [
+            "Movement of ions and charge transfer",
+            "Ionic half-equations"
+          ]
+        },
+        {
+          "id": "a_iii_2",
+          "prompt": "These positive ions are known as ____. (choose from: anions, cations, covalent, electrons, ionic, neutrons, neutralisation, oxidation, protons, reduction)",
+          "answer_type": "short_text",
+          "max_marks": 1,
+          "mcq_options": null,
+          "mcq_correct_label": null,
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [
+            "cations",
+            "cation"
+          ],
+          "required_working_concepts": [
+            {
+              "concept": "Positive ions are called cations (they move to the cathode in electrolysis).",
+              "marks": 1,
+              "hints": [
+                "cations",
+                "positive ions attract to cathode"
+              ]
+            }
+          ],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "anions",
+                "magnitude": null
+              },
+              "feedback": "You've swapped them round. Anions are NEGATIVE ions (they head to the anode). Positive ions are CATIONS (they head to the cathode). A useful memory aid: 'caT+ions' have a +, and 'aNions' are Negative."
+            }
+          ],
+          "model_answer_html": "<b>cations</b><br/>Positive ions are called cations; in electrolysis they move to the cathode.",
+          "chapter_refs": [
+            "Movement of ions and charge transfer",
+            "Cation: a positively charged ion that moves towards the cathode"
+          ]
+        },
+        {
+          "id": "a_iii_3",
+          "prompt": "Positive ions and negative ions attract each other and form ____ bonds. (choose from: anions, cations, covalent, electrons, ionic, neutrons, neutralisation, oxidation, protons, reduction)",
+          "answer_type": "short_text",
+          "max_marks": 1,
+          "mcq_options": null,
+          "mcq_correct_label": null,
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [
+            "ionic",
+            "ionic bond",
+            "ionic bonds"
+          ],
+          "required_working_concepts": [
+            {
+              "concept": "The electrostatic attraction between oppositely charged ions is called ionic bonding.",
+              "marks": 1,
+              "hints": [
+                "ionic bonding",
+                "opposite charges attract"
+              ]
+            }
+          ],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "covalent",
+                "magnitude": null
+              },
+              "feedback": "Covalent bonds are formed when atoms SHARE electrons (usually between two non-metals). Here we have a metal losing electrons and a non-metal gaining them, so the bond that forms is ionic, not covalent."
+            }
+          ],
+          "model_answer_html": "<b>ionic</b><br/>Oppositely charged ions attract electrostatically, forming an ionic bond (e.g. Mg<sup>2+</sup> with O<sup>2-</sup> in MgO).",
+          "chapter_refs": [
+            "Conductivity and electrolytes"
+          ]
+        },
+        {
+          "id": "a_iii_4",
+          "prompt": "During the reaction, magnesium atoms gain oxygen. This type of reaction is ____. (choose from: anions, cations, covalent, electrons, ionic, neutrons, neutralisation, oxidation, protons, reduction)",
+          "answer_type": "short_text",
+          "max_marks": 1,
+          "mcq_options": null,
+          "mcq_correct_label": null,
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [
+            "oxidation"
+          ],
+          "required_working_concepts": [
+            {
+              "concept": "Oxidation is defined as gain of oxygen OR loss of electrons \u2014 both apply here.",
+              "marks": 1,
+              "hints": [
+                "oxidation",
+                "loss of electrons",
+                "gain of oxygen"
+              ]
+            }
+          ],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "reduction",
+                "magnitude": null
+              },
+              "feedback": "You've flipped it. Reduction is the OPPOSITE \u2014 gain of electrons OR loss of oxygen. Here magnesium is losing electrons AND gaining oxygen, so it is being oxidised. A memory aid: OIL RIG (Oxidation Is Loss, Reduction Is Gain of electrons)."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "neutralisation",
+                "magnitude": null
+              },
+              "feedback": "Neutralisation is the reaction between an acid and a base to give a salt plus water. This reaction is between a metal and water, so it's a redox reaction \u2014 specifically oxidation of the magnesium."
+            }
+          ],
+          "model_answer_html": "<b>oxidation</b><br/>Magnesium loses electrons (and gains oxygen) \u2014 both definitions describe <b>oxidation</b>. Remember <b>OIL RIG</b>: Oxidation Is Loss, Reduction Is Gain (of electrons).",
+          "chapter_refs": [
+            "Movement of ions and charge transfer",
+            "Ionic half-equations"
+          ]
+        },
+        {
+          "id": "b",
+          "prompt": "The student repeats the experiment using copper instead of magnesium. Predict what the student observes during the reaction and explain your answer. (observation: 1 mark; explanation: 1 mark) NOTE: This sub-part relies on the reactivity series of metals, which is NOT covered in the Electrochemistry chapter \u2014 treat as self-check.",
+          "answer_type": "self_check",
+          "max_marks": 2,
+          "mcq_options": null,
+          "mcq_correct_label": null,
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [],
+          "required_working_concepts": [
+            {
+              "concept": "Observation: the student sees no (visible) reaction / no change when copper is heated in steam.",
+              "marks": 1,
+              "hints": [
+                "no reaction",
+                "no change",
+                "nothing happens",
+                "copper does not react"
+              ]
+            },
+            {
+              "concept": "Explanation: copper is less reactive than magnesium (and is below hydrogen in the reactivity series), so it does not react with water or steam. [This reasoning uses the reactivity series, which is outside the Electrochemistry chapter scope.]",
+              "marks": 1,
+              "hints": [
+                "less reactive",
+                "lower in reactivity series",
+                "below hydrogen",
+                "copper unreactive with steam"
+              ]
+            }
+          ],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "copper oxide",
+                "magnitude": null
+              },
+              "feedback": "Copper does form copper oxide if you heat it strongly in AIR (it reacts with oxygen gas). But with STEAM alone, copper is too unreactive to react \u2014 you would see no change. The reactivity series tells us metals below hydrogen don't react with water or steam."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "hydrogen",
+                "magnitude": null
+              },
+              "feedback": "Good instinct to mention hydrogen, but copper does NOT produce hydrogen with steam. Only metals MORE reactive than hydrogen (like magnesium) will displace hydrogen from water/steam. Copper is below hydrogen in the reactivity series, so no hydrogen is made."
+            },
+            {
+              "match": {
+                "kind": "keyword_absent",
+                "keyword": "reactiv",
+                "magnitude": null
+              },
+              "feedback": "Your answer is missing the key reason. To score the explanation mark the IGCSE marker wants to see the word 'reactivity' \u2014 say that copper is LESS REACTIVE than magnesium (or that copper is below hydrogen in the reactivity series)."
+            }
+          ],
+          "model_answer_html": "<b>Observation:</b> no (visible) reaction / no change \u2014 the copper does not react with the steam.<br/><br/><b>Explanation:</b> copper is less reactive than magnesium (it lies below hydrogen in the reactivity series), so it does not react with water or steam.<br/><br/><i>Chapter note:</i> the reactivity series and reaction of metals with water/steam are not part of this Electrochemistry chapter, so this sub-part is flagged as out-of-chapter-scope \u2014 the answer above is drawn from general IGCSE chemistry knowledge.",
+          "chapter_refs": []
+        }
+      ]
+    },
+    {
+      "question_id": "igcse-chem-paper32-q4-661",
+      "source_question_db_id": 661,
+      "type": "structured",
+      "max_marks": 6,
+      "stem": "Continuation of Question 4 on reaction between magnesium and steam.",
+      "figure_paths": [],
+      "parts": [
+        {
+          "id": "a_iii_1",
+          "prompt": "Complete the sentence using a word from the list (anions, cations, covalent, electrons, ionic, neutrons, neutralisation, oxidation, protons, reduction): 'During the reaction, magnesium atoms lose ____ to form positive ions.'",
+          "answer_type": "mcq",
+          "max_marks": 1,
+          "mcq_options": [
+            {
+              "label": "A",
+              "text": "anions"
+            },
+            {
+              "label": "B",
+              "text": "cations"
+            },
+            {
+              "label": "C",
+              "text": "covalent"
+            },
+            {
+              "label": "D",
+              "text": "electrons"
+            },
+            {
+              "label": "E",
+              "text": "ionic"
+            },
+            {
+              "label": "F",
+              "text": "neutrons"
+            },
+            {
+              "label": "G",
+              "text": "neutralisation"
+            },
+            {
+              "label": "H",
+              "text": "oxidation"
+            },
+            {
+              "label": "I",
+              "text": "protons"
+            },
+            {
+              "label": "J",
+              "text": "reduction"
+            }
+          ],
+          "mcq_correct_label": "D",
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [
+            "electrons"
+          ],
+          "required_working_concepts": [],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "protons",
+                "magnitude": null
+              },
+              "feedback": "Atoms do not lose protons in chemical reactions \u2014 protons stay locked in the nucleus. Atoms form positive ions by losing negatively charged particles. The chapter calls this electron transfer (e.g. Cu^2+ + 2e- -> Cu)."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "neutrons",
+                "magnitude": null
+              },
+              "feedback": "Neutrons have no charge, so losing them would not make the atom more positive. An atom becomes a positive ion by losing electrons, which carry the negative charge."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "anions",
+                "magnitude": null
+              },
+              "feedback": "Anions are negatively charged ions \u2014 they are a type of ion, not a particle an atom can lose. The particle the magnesium atom loses is the electron."
+            }
+          ],
+          "model_answer_html": "<b>electrons</b><br/>Magnesium atoms lose 2 electrons to form Mg<sup>2+</sup> ions: <b>Mg &rarr; Mg<sup>2+</sup> + 2e<sup>-</sup></b>.",
+          "chapter_refs": [
+            "Movement of ions and charge transfer",
+            "Ionic half-equations"
+          ]
+        },
+        {
+          "id": "a_iii_2",
+          "prompt": "Complete the sentence using a word from the list (anions, cations, covalent, electrons, ionic, neutrons, neutralisation, oxidation, protons, reduction): 'These positive ions are known as ____.'",
+          "answer_type": "mcq",
+          "max_marks": 1,
+          "mcq_options": [
+            {
+              "label": "A",
+              "text": "anions"
+            },
+            {
+              "label": "B",
+              "text": "cations"
+            },
+            {
+              "label": "C",
+              "text": "covalent"
+            },
+            {
+              "label": "D",
+              "text": "electrons"
+            },
+            {
+              "label": "E",
+              "text": "ionic"
+            },
+            {
+              "label": "F",
+              "text": "neutrons"
+            },
+            {
+              "label": "G",
+              "text": "neutralisation"
+            },
+            {
+              "label": "H",
+              "text": "oxidation"
+            },
+            {
+              "label": "I",
+              "text": "protons"
+            },
+            {
+              "label": "J",
+              "text": "reduction"
+            }
+          ],
+          "mcq_correct_label": "B",
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [
+            "cations"
+          ],
+          "required_working_concepts": [],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "anions",
+                "magnitude": null
+              },
+              "feedback": "Anions are NEGATIVE ions \u2014 they move to the anode. Positive ions are called CATIONS because they move to the CAthode (both start with 'ca')."
+            }
+          ],
+          "model_answer_html": "<b>cations</b><br/>Positive ions are called cations because they move to the cathode (the negative electrode).",
+          "chapter_refs": [
+            "Cation: a positively charged ion that moves towards the cathode."
+          ]
+        },
+        {
+          "id": "a_iii_3",
+          "prompt": "Complete the sentence using a word from the list (anions, cations, covalent, electrons, ionic, neutrons, neutralisation, oxidation, protons, reduction): 'Positive ions and negative ions attract each other and form ____ bonds.'",
+          "answer_type": "mcq",
+          "max_marks": 1,
+          "mcq_options": [
+            {
+              "label": "A",
+              "text": "anions"
+            },
+            {
+              "label": "B",
+              "text": "cations"
+            },
+            {
+              "label": "C",
+              "text": "covalent"
+            },
+            {
+              "label": "D",
+              "text": "electrons"
+            },
+            {
+              "label": "E",
+              "text": "ionic"
+            },
+            {
+              "label": "F",
+              "text": "neutrons"
+            },
+            {
+              "label": "G",
+              "text": "neutralisation"
+            },
+            {
+              "label": "H",
+              "text": "oxidation"
+            },
+            {
+              "label": "I",
+              "text": "protons"
+            },
+            {
+              "label": "J",
+              "text": "reduction"
+            }
+          ],
+          "mcq_correct_label": "E",
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [
+            "ionic"
+          ],
+          "required_working_concepts": [],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "covalent",
+                "magnitude": null
+              },
+              "feedback": "Covalent bonds form when atoms SHARE electrons \u2014 they do not involve separate positive and negative ions. When positive and negative ions attract each other, the bond is IONIC."
+            }
+          ],
+          "model_answer_html": "<b>ionic</b><br/>Ionic bonds are the electrostatic attraction between oppositely charged ions \u2014 for example Mg<sup>2+</sup> and O<sup>2-</sup> in MgO.",
+          "chapter_refs": [
+            "Conductivity and electrolytes"
+          ]
+        },
+        {
+          "id": "a_iii_4",
+          "prompt": "Complete the sentence using a word from the list (anions, cations, covalent, electrons, ionic, neutrons, neutralisation, oxidation, protons, reduction): 'During the reaction, magnesium atoms gain oxygen. This type of reaction is ____.'",
+          "answer_type": "mcq",
+          "max_marks": 1,
+          "mcq_options": [
+            {
+              "label": "A",
+              "text": "anions"
+            },
+            {
+              "label": "B",
+              "text": "cations"
+            },
+            {
+              "label": "C",
+              "text": "covalent"
+            },
+            {
+              "label": "D",
+              "text": "electrons"
+            },
+            {
+              "label": "E",
+              "text": "ionic"
+            },
+            {
+              "label": "F",
+              "text": "neutrons"
+            },
+            {
+              "label": "G",
+              "text": "neutralisation"
+            },
+            {
+              "label": "H",
+              "text": "oxidation"
+            },
+            {
+              "label": "I",
+              "text": "protons"
+            },
+            {
+              "label": "J",
+              "text": "reduction"
+            }
+          ],
+          "mcq_correct_label": "H",
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [
+            "oxidation"
+          ],
+          "required_working_concepts": [],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "reduction",
+                "magnitude": null
+              },
+              "feedback": "You flipped it. Reduction is when a substance GAINS electrons (or LOSES oxygen). Here magnesium LOSES electrons and GAINS oxygen, so this is OXIDATION. The chapter describes oxidation at the anode in the same way: 2Br<sup>-</sup> &rarr; Br<sub>2</sub> + 2e<sup>-</sup> (loss of electrons)."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "neutralisation",
+                "magnitude": null
+              },
+              "feedback": "Neutralisation is the acid + base reaction that makes a salt and water. Magnesium + steam is not an acid-base reaction. Gaining oxygen while losing electrons is called oxidation."
+            }
+          ],
+          "model_answer_html": "<b>oxidation</b><br/>Oxidation = loss of electrons OR gain of oxygen. Magnesium both loses electrons (Mg &rarr; Mg<sup>2+</sup> + 2e<sup>-</sup>) and gains oxygen, so the reaction is oxidation.",
+          "chapter_refs": [
+            "Ionic half-equations",
+            "Movement of ions and charge transfer"
+          ]
+        },
+        {
+          "id": "b",
+          "prompt": "The student repeats the experiment using copper instead of magnesium. Predict what the student observes during the reaction. Explain your answer. observation: .... explanation: ....",
+          "answer_type": "free_text",
+          "max_marks": 2,
+          "mcq_options": null,
+          "mcq_correct_label": null,
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [],
+          "required_working_concepts": [
+            {
+              "concept": "Observation: no reaction is seen (no hydrogen gas and no black solid forms on the copper).",
+              "marks": 1,
+              "hints": [
+                "no reaction",
+                "no change",
+                "no hydrogen",
+                "no gas",
+                "no bubbles",
+                "no black solid",
+                "no copper oxide",
+                "copper stays the same",
+                "copper does not react",
+                "nothing happens"
+              ]
+            },
+            {
+              "concept": "Explanation: copper is less reactive than magnesium (copper is below hydrogen in the reactivity series), so it cannot react with steam.",
+              "marks": 1,
+              "hints": [
+                "copper is less reactive",
+                "less reactive than magnesium",
+                "copper below hydrogen",
+                "copper is unreactive",
+                "copper cannot displace hydrogen",
+                "copper does not react with water",
+                "more reactive metals"
+              ]
+            }
+          ],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "bright",
+                "magnitude": null
+              },
+              "feedback": "You may be thinking of magnesium, which burns with a bright white flame in steam. Copper is much less reactive and does NOT react with steam, so there is no bright flame and no hydrogen gas."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "hydrogen",
+                "magnitude": null
+              },
+              "feedback": "Check your observation: for copper + steam NO hydrogen is produced, because copper is less reactive than magnesium and cannot displace hydrogen from water. The observation should be that nothing happens."
+            },
+            {
+              "match": {
+                "kind": "keyword_absent",
+                "keyword": "less reactive",
+                "magnitude": null
+              },
+              "feedback": "For full marks you need to compare copper to magnesium (or to hydrogen). Say: 'copper is less reactive than magnesium', because reactivity is why magnesium reacts with steam but copper does not."
+            },
+            {
+              "match": {
+                "kind": "keyword_absent",
+                "keyword": "no",
+                "magnitude": null
+              },
+              "feedback": "Make the observation clear and explicit \u2014 the examiner wants to see the word 'no' or 'does not react' in your observation, not just an explanation."
+            }
+          ],
+          "model_answer_html": "<b>Observation:</b> no reaction \u2014 no bubbles of hydrogen gas are given off and no black solid (copper(II) oxide) forms on the copper.<br/><b>Explanation:</b> copper is less reactive than magnesium (copper is below hydrogen in the reactivity series), so copper cannot take oxygen from water / cannot displace hydrogen from steam.<br/><i>Study tip:</i> this chapter mentions electrolysis is used for 'more reactive metals such as aluminium, sodium, magnesium' \u2014 copper is not in that group, which fits with copper being too unreactive to react with steam. The full reactivity series is covered more in the metals chapter.",
+          "chapter_refs": [
+            "Extraction of iron is by reduction in a blast furnace, NOT electrolysis. The chapter only mentions electrolysis is used for extracting more reactive metals such as aluminium, sodium, magnesium."
           ]
         }
       ]
     }
   ],
   "topic_index": {
-    "Conductivity and electrolytes": [
-      "0653-q19-conductivity"
+    "Electrolytic cells and electrodes": [
+      "chem-electrolysis-apparatus-q17",
+      "2025-cs-p11-q17",
+      "p10-q19-electrolysis-aqueous",
+      "electrochem-molten-pbbr2-electrolysis-apparatus-q174",
+      "2018-chem-p2-q27-cacl2-electrolysis",
+      "2025-combined-p42-q4-387",
+      "combined-sci-electrochem-q902-electrolysis-dilute-h2so4",
+      "db-649"
     ],
-    "Electrolytes vs non-electrolytes": [
-      "0653-q19-conductivity"
+    "Cathode: the negative electrode in an electrolytic cell; site of reduction; cations are discharged here.": [
+      "chem-electrolysis-apparatus-q17",
+      "2025-cs-p11-q17",
+      "electrochem-molten-pbbr2-electrolysis-apparatus-q174",
+      "ch2-electrolysis-molten-zncl2-q605",
+      "electrochem-q914-three-electrolytes"
     ],
-    "Electrolysis of molten binary ionic compounds (industrial extraction)": [
-      "0653-q23-iron-extraction"
+    "Anode: the positive electrode in an electrolytic cell; site of oxidation; anions are discharged here.": [
+      "chem-electrolysis-apparatus-q17",
+      "2025-cs-p11-q17",
+      "electrochem-molten-pbbr2-electrolysis-apparatus-q174",
+      "ch2-electrolysis-molten-zncl2-q605",
+      "combined-sci-electrochem-q902-electrolysis-dilute-h2so4"
+    ],
+    "Electrolyte: a liquid (molten ionic compound or aqueous solution of ions) that conducts electricity by the movement of ions and is decomposed in the process.": [
+      "chem-electrolysis-apparatus-q17",
+      "2018-combsci-p2-q19",
+      "electrochem-molten-pbbr2-electrolysis-apparatus-q174",
+      "combined-sci-electrochem-q902-electrolysis-dilute-h2so4"
+    ],
+    "Electrolytic cell: apparatus in which electrolysis is carried out; comprises a DC source, two electrodes (anode and cathode) and an electrolyte.": [
+      "chem-electrolysis-apparatus-q17"
     ],
     "Electrolysis of molten binary ionic compounds": [
-      "0653-q27-electrolysis-products"
+      "db-55-electrochem-al-extraction",
+      "chem-p8-q18-electrolysis-pbbr2-anode",
+      "paper-11-q27-electrolyte-products",
+      "q625-mcq-aluminium-extraction",
+      "igcse-combsci-ch2-q224",
+      "igcse-combsci-ch2-q224",
+      "igcse-combsci-ch2-q224",
+      "2018-chem-p2-q27-cacl2-electrolysis",
+      "q521-ch2-thermite-redox",
+      "2025-combined-p42-q4-387",
+      "2025-combined-p42-q4-387",
+      "ch2-electrolysis-molten-zncl2-q605",
+      "ch2-electrolysis-molten-zncl2-q605",
+      "db-915-p3-q6g",
+      "paper18-q4-struct",
+      "electrochem-q914-three-electrolytes"
+    ],
+    "Conductivity and electrolytes": [
+      "2018-combsci-p2-q19",
+      "electrochem-molten-pbbr2-electrolysis-apparatus-q174",
+      "2025-combined-p42-q4-387",
+      "paper18-q4-struct",
+      "q537-chem-structured-mg-steam-redox",
+      "igcse-chem-paper32-q4-661"
+    ],
+    "ionic bonding": [
+      "2018-combsci-p2-q19",
+      "db-915-p3-q6g"
+    ],
+    "Movement of ions and charge transfer": [
+      "chem-p8-q18-electrolysis-pbbr2-anode",
+      "p10-q19-electrolysis-aqueous",
+      "paper-11-q27-electrolyte-products",
+      "0653-q22-reduction-definition",
+      "igcse-combsci-ch2-q224",
+      "2018-chem-p2-q27-cacl2-electrolysis",
+      "q521-ch2-thermite-redox",
+      "q521-ch2-thermite-redox",
+      "q521-ch2-thermite-redox",
+      "2025-combined-p42-q4-387",
+      "ch2-electrolysis-molten-zncl2-q605",
+      "ch2-electrolysis-molten-zncl2-q605",
+      "paper18-q4-struct",
+      "q537-chem-structured-mg-steam-redox",
+      "q537-chem-structured-mg-steam-redox",
+      "q537-chem-structured-mg-steam-redox",
+      "igcse-chem-paper32-q4-661",
+      "igcse-chem-paper32-q4-661"
+    ],
+    "Ionic half-equations": [
+      "chem-p8-q18-electrolysis-pbbr2-anode",
+      "2018-chem-p2-q27-cacl2-electrolysis",
+      "q521-ch2-thermite-redox",
+      "q521-ch2-thermite-redox",
+      "2025-combined-p42-q4-387",
+      "ch2-electrolysis-molten-zncl2-q605",
+      "q537-chem-structured-mg-steam-redox",
+      "q537-chem-structured-mg-steam-redox",
+      "igcse-chem-paper32-q4-661",
+      "igcse-chem-paper32-q4-661"
+    ],
+    "2Br- -> Br2 + 2e-": [
+      "chem-p8-q18-electrolysis-pbbr2-anode"
+    ],
+    "PbBr2(l) -> Pb(l) + Br2(g)": [
+      "chem-p8-q18-electrolysis-pbbr2-anode",
+      "q521-ch2-thermite-redox",
+      "ch2-electrolysis-molten-zncl2-q605"
+    ],
+    "Electrolysis of aqueous copper(II) sulfate": [
+      "p10-q19-electrolysis-aqueous"
     ],
     "Electrolysis of concentrated sodium chloride solution": [
-      "0653-q27-electrolysis-products"
+      "p10-q19-electrolysis-aqueous",
+      "paper-11-q27-electrolyte-products",
+      "db-915-p3-q6g",
+      "paper18-q4-struct",
+      "electrochem-q914-three-electrolytes"
     ],
     "Electrolysis of dilute sulfuric acid": [
-      "0653-q27-electrolysis-products"
+      "paper-11-q27-electrolyte-products",
+      "igcse-q903-electrolysis-gas-volumes",
+      "igcse-q903-electrolysis-gas-volumes",
+      "db-915-p3-q6g",
+      "combined-sci-electrochem-q902-electrolysis-dilute-h2so4",
+      "combined-sci-electrochem-q902-electrolysis-dilute-h2so4",
+      "electrochem-q914-three-electrolytes"
+    ],
+    "aluminium extraction": [
+      "q625-mcq-aluminium-extraction"
+    ],
+    "cryolite": [
+      "q625-mcq-aluminium-extraction"
+    ],
+    "industrial extraction": [
+      "q625-mcq-aluminium-extraction"
+    ],
+    "reduction at cathode": [
+      "0653-q22-reduction-definition"
+    ],
+    "oxidation at anode": [
+      "0653-q22-reduction-definition"
+    ],
+    "out_of_scope_notes: Extraction of iron is by reduction in a blast furnace, NOT electrolysis.": [
+      "igcse-combsci-ch2-q224",
+      "igcse-combsci-ch2-q224"
+    ],
+    "Electrolysis: the breakdown of an ionic compound, when molten or in solution, by the passage of an electric current.": [
+      "igcse-combsci-ch2-q224",
+      "2025-combined-p42-q4-387",
+      "paper18-q4-struct",
+      "electrochem-q914-three-electrolytes",
+      "electrochem-q914-three-electrolytes"
+    ],
+    "out_of_scope_notes: electrolysis is used for extracting more reactive metals such as aluminium, sodium, magnesium": [
+      "igcse-combsci-ch2-q224",
+      "igcse-combsci-ch2-q224"
+    ],
+    "Cation: a positively charged ion that moves towards the cathode.": [
+      "q521-ch2-thermite-redox",
+      "igcse-chem-paper32-q4-661"
+    ],
+    "Cu^2+ + 2e- -> Cu": [
+      "q521-ch2-thermite-redox"
+    ],
+    "Binary compound": [
+      "2025-combined-p42-q4-387"
+    ],
+    "4H+ + 4e- -> 2H2": [
+      "igcse-q903-electrolysis-gas-volumes",
+      "combined-sci-electrochem-q902-electrolysis-dilute-h2so4"
+    ],
+    "2O^2- -> O2 + 4e-": [
+      "igcse-q903-electrolysis-gas-volumes"
+    ],
+    "Binary compound: a compound containing only two different elements (e.g. PbBr2, NaCl).": [
+      "db-915-p3-q6g"
+    ],
+    "Electrolyte": [
+      "combined-sci-electrochem-q902-electrolysis-dilute-h2so4",
+      "combined-sci-electrochem-q902-electrolysis-dilute-h2so4"
+    ],
+    "2H2O(l) -> 2H2(g) + O2(g)": [
+      "combined-sci-electrochem-q902-electrolysis-dilute-h2so4"
+    ],
+    "Inert electrode: an electrode that does not react with the electrolyte or the products (e.g. graphite, platinum).": [
+      "electrochem-q914-three-electrolytes",
+      "db-649"
+    ],
+    "Cation: a positively charged ion that moves towards the cathode": [
+      "q537-chem-structured-mg-steam-redox"
+    ],
+    "Extraction of iron is by reduction in a blast furnace, NOT electrolysis. The chapter only mentions electrolysis is used for extracting more reactive metals such as aluminium, sodium, magnesium.": [
+      "igcse-chem-paper32-q4-661"
     ]
   },
   "pdfs": {

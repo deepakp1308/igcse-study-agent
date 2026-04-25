@@ -1,22 +1,11 @@
 {
   "sets": [
     {
-      "file": "chemistry-the-mole.json",
-      "subject": "chemistry",
-      "chapter": "The Mole",
-      "question_count": 1,
-      "generated_at": "2026-04-25T19:48:42+00:00",
-      "pdfs": {
-        "practice": "papers/chemistry-the-mole/practice.pdf",
-        "solutions": "papers/chemistry-the-mole/solutions.pdf"
-      }
-    },
-    {
       "file": "combined-science-electrochemistry.json",
       "subject": "combined science",
       "chapter": "Electrochemistry",
-      "question_count": 3,
-      "generated_at": "2026-04-25T19:27:13+00:00",
+      "question_count": 23,
+      "generated_at": "2026-04-25T20:26:35+00:00",
       "pdfs": {
         "practice": "papers/combined-science-electrochemistry/practice.pdf",
         "solutions": "papers/combined-science-electrochemistry/solutions.pdf"
