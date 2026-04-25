@@ -88,7 +88,8 @@ def _styles() -> dict[str, ParagraphStyle]:
     }
 
 
-def _inline_image(path: Path, max_width_cm: float = 12.0) -> RLImage | None:
+def _inline_image(path: Path, max_width_cm: float = 16.0) -> RLImage | None:
+    """Render a figure crop inline, full text-width, preserving aspect ratio."""
     if not path.exists():
         return None
     try:
@@ -98,8 +99,11 @@ def _inline_image(path: Path, max_width_cm: float = 12.0) -> RLImage | None:
         return None
     if w == 0 or h == 0:
         return None
-    target_w = min(max_width_cm * cm, (w / h) * 10 * cm)
+    target_w = max_width_cm * cm
     target_h = target_w * (h / w)
+    if target_h > 22 * cm:
+        target_h = 22 * cm
+        target_w = target_h * (w / h)
     img = RLImage(str(path), width=target_w, height=target_h)
     img.hAlign = "LEFT"
     return img
@@ -157,18 +161,24 @@ def build_solutions_pdf(
     for entry in solutions:
         story.append(
             Paragraph(
-                f"<b>{entry.display_number}.</b> &nbsp;"
+                f"<b>Question {entry.display_number}.</b> &nbsp;"
                 f"<font color='grey' size='9'>[{entry.source_label}]</font>",
                 styles["qhead"],
             )
         )
-        if entry.stem:
+        valid_figs = [Path(f) for f in entry.figure_paths if Path(f).exists()]
+        if valid_figs:
+            # Figure crops show the original printed question (stem + diagrams +
+            # tables + options as in the past paper) so the student can see
+            # exactly which question this solution belongs to.
+            for fig in valid_figs:
+                img = _inline_image(fig)
+                if img is not None:
+                    story.append(img)
+                    story.append(Spacer(1, 3 * mm))
+        elif entry.stem:
+            # Fallback: paraphrased stem when no crop is attached.
             story.append(Paragraph(entry.stem, styles["stem"]))
-        for fig in entry.figure_paths:
-            img = _inline_image(Path(fig))
-            if img is not None:
-                story.append(img)
-                story.append(Spacer(1, 2 * mm))
 
         if entry.out_of_scope:
             missing_html = (

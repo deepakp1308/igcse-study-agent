@@ -117,7 +117,8 @@ def _answer_box(marks: int) -> Table:
     return t
 
 
-def _inline_image(path: Path, max_width_cm: float = 12.0) -> RLImage | None:
+def _inline_image(path: Path, max_width_cm: float = 16.0) -> RLImage | None:
+    """Render a figure crop inline; prefer keeping native aspect ratio, cap width."""
     if not path.exists():
         return None
     try:
@@ -127,8 +128,14 @@ def _inline_image(path: Path, max_width_cm: float = 12.0) -> RLImage | None:
         return None
     if w == 0 or h == 0:
         return None
-    target_w = min(max_width_cm * cm, (w / h) * 10 * cm)
+    # Use full available text width (16cm at A4 with 2cm margins) so figures
+    # look readable. Height scales to preserve aspect; cap at 22cm so nothing
+    # spills off the page in the worst case.
+    target_w = max_width_cm * cm
     target_h = target_w * (h / w)
+    if target_h > 22 * cm:
+        target_h = 22 * cm
+        target_w = target_h * (w / h)
     img = RLImage(str(path), width=target_w, height=target_h)
     img.hAlign = "LEFT"
     return img
@@ -189,62 +196,68 @@ def build_practice_paper(
         if not include_partial and q.fit == "partial":
             continue
         star = " *" if q.fit == "partial" else ""
+        # Header: question number + marks + source paper
         story.append(
             Paragraph(
-                f"<b>{q.display_number}.</b>{star} &nbsp;"
+                f"<b>Question {q.display_number}.</b>{star} &nbsp;"
                 f"<font color='grey' size='9'>[{q.marks} marks &nbsp;|&nbsp; {q.source_label}]</font>",
                 styles["qhead"],
             )
         )
-        if q.stem:
-            story.append(Paragraph(q.stem, styles["stem"]))
 
-        for fig in q.figure_paths:
-            img = _inline_image(Path(fig))
-            if img is not None:
-                story.append(img)
-                story.append(Spacer(1, 2 * mm))
+        valid_figs = [Path(f) for f in q.figure_paths if Path(f).exists()]
 
-        if q.options:
-            for opt in q.options:
-                if not isinstance(opt, dict):
-                    continue
-                label = opt.get("label", "")
-                text = opt.get("text", "")
-                story.append(
-                    Paragraph(
-                        f"<b>{label}.</b> &nbsp; {text}",
-                        styles["sub"],
-                    )
-                )
-            story.append(Spacer(1, 3 * mm))
-            story.append(
-                Paragraph(
-                    "Answer: __________",
-                    styles["sub"],
-                )
-            )
-        elif q.sub_parts:
-            for sp in q.sub_parts:
-                if not isinstance(sp, dict):
-                    continue
-                label = str(sp.get("label", ""))
-                prompt = str(sp.get("prompt", ""))
-                raw_marks = sp.get("marks", 0)
-                marks = int(raw_marks) if isinstance(raw_marks, int | float | str) else 0
-                story.append(
-                    Paragraph(
-                        f"<b>({label})</b> {prompt} "
-                        f"<font color='grey' size='9'>[{marks}]</font>",
-                        styles["sub"],
-                    )
-                )
-                story.append(_answer_box(marks if marks > 0 else 1))
-                story.append(Spacer(1, 2 * mm))
+        if valid_figs:
+            # Figure crops are the source of truth - they include the original
+            # stem text, diagrams, tables, and options exactly as printed in
+            # the past paper. Render them as the primary body.
+            for fig in valid_figs:
+                img = _inline_image(fig)
+                if img is not None:
+                    story.append(img)
+                    story.append(Spacer(1, 3 * mm))
+            # Followed by an answer space sized by total marks
+            story.append(_answer_box(q.marks if q.marks > 0 else 1))
         else:
-            story.append(_answer_box(q.marks))
+            # Fallback: no figure crop available - render the paraphrased
+            # stem + options/sub-parts as best we can.
+            if q.stem:
+                story.append(Paragraph(q.stem, styles["stem"]))
+            if q.options:
+                for opt in q.options:
+                    if not isinstance(opt, dict):
+                        continue
+                    label = opt.get("label", "")
+                    text = opt.get("text", "")
+                    story.append(
+                        Paragraph(
+                            f"<b>{label}.</b> &nbsp; {text}",
+                            styles["sub"],
+                        )
+                    )
+                story.append(Spacer(1, 3 * mm))
+                story.append(Paragraph("Answer: __________", styles["sub"]))
+            elif q.sub_parts:
+                for sp in q.sub_parts:
+                    if not isinstance(sp, dict):
+                        continue
+                    label = str(sp.get("label", ""))
+                    prompt = str(sp.get("prompt", ""))
+                    raw_marks = sp.get("marks", 0)
+                    marks = int(raw_marks) if isinstance(raw_marks, int | float | str) else 0
+                    story.append(
+                        Paragraph(
+                            f"<b>({label})</b> {prompt} "
+                            f"<font color='grey' size='9'>[{marks}]</font>",
+                            styles["sub"],
+                        )
+                    )
+                    story.append(_answer_box(marks if marks > 0 else 1))
+                    story.append(Spacer(1, 2 * mm))
+            else:
+                story.append(_answer_box(q.marks))
 
-        story.append(Spacer(1, 4 * mm))
+        story.append(Spacer(1, 6 * mm))
 
     story.append(PageBreak())
     story.append(

@@ -65,6 +65,7 @@ from agent.store.db import (
     session_scope,
 )
 from agent.store.schemas import (
+    BoundingBox,
     ChapterPriming,
     ChapterProfile,
     CriticOutput,
@@ -833,16 +834,19 @@ def cmd_save_critic(
 
 @app.command("show-question")
 def cmd_show_question(question_id: Annotated[int, typer.Argument()]) -> None:
-    """Print a question's stem, options, sub-parts, and figure paths as JSON."""
+    """Print a question's stem, options, sub-parts, source page, and figure paths."""
 
     init_db()
     with session_scope() as s:
         q = s.get(Question, question_id)
         if q is None:
             raise typer.BadParameter(f"No question with id {question_id}")
+        page = s.get(Page, q.page_id) if q.page_id else None
         data = {
             "id": q.id,
             "paper_id": q.paper_id,
+            "page_idx": page.idx if page else None,
+            "page_png_path": page.png_path if page else None,
             "number": q.number,
             "type": q.type,
             "marks": q.marks,
@@ -850,8 +854,82 @@ def cmd_show_question(question_id: Annotated[int, typer.Argument()]) -> None:
             "sub_parts": q.sub_parts_json,
             "options": q.options_json,
             "figure_paths": q.figure_paths_json,
+            "figure_bboxes": q.figure_bboxes_json,
         }
     console.print_json(data=data)
+
+
+@app.command("attach-figure-bbox")
+def cmd_attach_figure_bbox(
+    question_id: Annotated[int, typer.Option("--question-id")],
+    paper_id: Annotated[int, typer.Option("--paper-id")],
+    page_idx: Annotated[int, typer.Option("--page-idx")],
+    bbox: Annotated[
+        str,
+        typer.Option(
+            "--bbox",
+            help='JSON object with normalized 0..1 coords, e.g. \'{"x":0.05,"y":0.10,"w":0.90,"h":0.40}\'',
+        ),
+    ],
+    label: Annotated[
+        str | None,
+        typer.Option(
+            "--label",
+            help="Optional label for the crop file (e.g. 'main', 'continued'); appended to the filename",
+        ),
+    ] = None,
+) -> None:
+    """Crop a region of a paper's page PNG and attach it to the question's figures.
+
+    Use this to embed original diagrams/tables/apparatus from the source past paper
+    into the practice paper and solutions PDFs. Bbox is in normalized coords
+    (0..1) relative to the page PNG, origin top-left.
+
+    Multiple calls append additional crops to the same question (useful for
+    multi-page structured questions or questions with multiple distinct figures).
+    """
+
+    init_db()
+    try:
+        bbox_data = json.loads(bbox)
+        bb = BoundingBox.model_validate(bbox_data)
+    except (json.JSONDecodeError, ValidationError) as e:
+        raise typer.BadParameter(f"Invalid bbox: {e}") from e
+
+    with session_scope() as s:
+        page = s.execute(
+            select(Page).where(Page.paper_id == paper_id, Page.idx == page_idx)
+        ).scalar_one_or_none()
+        if page is None:
+            raise typer.BadParameter(
+                f"No page paper_id={paper_id} page_idx={page_idx}"
+            )
+        q = s.get(Question, question_id)
+        if q is None:
+            raise typer.BadParameter(f"No question id={question_id}")
+
+        existing_count = len(q.figure_paths_json or [])
+        out_dir = (
+            figures_cache_dir() / f"paper-{paper_id:06d}" / f"page-{page_idx:04d}"
+        )
+        suffix = f"-{label}" if label else ""
+        basename = f"q{question_id:06d}-attach{existing_count:02d}{suffix}"
+        crops = crop_bboxes_to_files(
+            Path(page.png_path),
+            [bb],
+            out_dir,
+            basename=basename,
+        )
+        if not crops:
+            console.print(f"[yellow]No crop produced (degenerate bbox?){suffix}[/]")
+            return
+        new_paths = list(q.figure_paths_json or []) + [str(p) for p in crops]
+        q.figure_paths_json = new_paths
+        msg = (
+            f"[green]Attached {len(crops)} crop to q={question_id} "
+            f"(now {len(new_paths)} figure(s) total)[/]"
+        )
+    console.print(msg)
 
 
 # ---------------------------------------------------------------------------
