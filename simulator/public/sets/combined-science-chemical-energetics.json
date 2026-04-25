@@ -1,0 +1,2322 @@
+{
+  "subject": "combined science",
+  "chapter": "Chemical Energetics",
+  "generated_at": "2026-04-25T22:24:07+00:00",
+  "questions": [
+    {
+      "question_id": "p11q17",
+      "source_question_db_id": 440,
+      "type": "mcq",
+      "max_marks": 1,
+      "stem": "Which statement explains why a reaction is exothermic?",
+      "figure_paths": [],
+      "parts": [
+        {
+          "id": "main",
+          "prompt": "Which statement explains why a reaction is exothermic?",
+          "answer_type": "mcq",
+          "max_marks": 1,
+          "mcq_options": [
+            {
+              "label": "A",
+              "text": "More thermal energy is absorbed by breaking bonds than is released by making bonds."
+            },
+            {
+              "label": "B",
+              "text": "More thermal energy is absorbed by making bonds than is released by breaking bonds."
+            },
+            {
+              "label": "C",
+              "text": "More thermal energy is released by breaking bonds than is absorbed by making bonds."
+            },
+            {
+              "label": "D",
+              "text": "More thermal energy is released by making bonds than is absorbed by breaking bonds."
+            }
+          ],
+          "mcq_correct_label": "D",
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [],
+          "required_working_concepts": [
+            {
+              "concept": "Bond breaking absorbs energy (endothermic); bond making releases energy (exothermic)",
+              "marks": 0,
+              "hints": [
+                "MEXOBENDO",
+                "bond breaking endothermic",
+                "bond making exothermic"
+              ]
+            },
+            {
+              "concept": "Reaction is exothermic when energy released from making new bonds exceeds energy absorbed to break old bonds",
+              "marks": 1,
+              "hints": [
+                "released by making > absorbed by breaking",
+                "net energy release"
+              ]
+            }
+          ],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "A",
+                "magnitude": null
+              },
+              "feedback": "You picked A. That answer says energy is 'absorbed by breaking' (true) but 'released by making' (also true) \u2014 however exothermic needs the OPPOSITE inequality. Remember MEXOBENDO: for the reaction to give out heat, the making side (release) must be GREATER than the breaking side (absorb). The correct answer is D."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "B",
+                "magnitude": null
+              },
+              "feedback": "You picked B. That option says bond MAKING absorbs energy \u2014 this breaks the MEXOBENDO rule. Making bonds RELEASES energy; breaking bonds ABSORBS energy. So B has the endo/exo labels flipped. The correct answer is D."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "C",
+                "magnitude": null
+              },
+              "feedback": "You picked C. You correctly linked 'released' to an exothermic feel, but you attached it to BREAKING bonds. Breaking bonds ABSORBS energy (endothermic); making bonds RELEASES energy (exothermic). Use MEXOBENDO: Making = EXO, Breaking = ENDO. The correct answer is D."
+            }
+          ],
+          "model_answer_html": "<p><strong>Answer: D.</strong> More thermal energy is released by making bonds than is absorbed by breaking bonds.</p><p><strong>MEXOBENDO:</strong> <em>Making</em> bonds is <em>EXO</em>thermic (releases energy); <em>Breaking</em> bonds is <em>ENDO</em>thermic (absorbs energy).</p><p><strong>Net energy change</strong> = energy released by making new bonds \u2212 energy absorbed by breaking old bonds.</p><p>For the reaction to be overall <strong>exothermic</strong> (gives out heat to the surroundings), the energy released by making must be <strong>greater than</strong> the energy absorbed by breaking \u2014 which is exactly what option D states.</p><ul><li><strong>A</strong> has the inequality the wrong way round \u2014 it describes an endothermic reaction.</li><li><strong>B</strong> inverts MEXOBENDO (says making absorbs).</li><li><strong>C</strong> inverts MEXOBENDO (says breaking releases).</li></ul>",
+          "chapter_refs": [
+            "MEXOBENDO \u2014 bond breaking endothermic / bond making exothermic",
+            "C5.01 net energy change = energy released (making) \u2212 energy absorbed (breaking)",
+            "C5.01 exothermic condition: released-by-making > absorbed-by-breaking"
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "q155",
+      "source_question_db_id": 155,
+      "type": "mcq",
+      "max_marks": 1,
+      "stem": "Which label represents the activation energy for an endothermic reaction? (energy vs progress of reaction graph with labelled points A, B, C, D)",
+      "figure_paths": [],
+      "parts": [
+        {
+          "id": "main",
+          "prompt": "Which label represents the activation energy for an endothermic reaction?",
+          "answer_type": "mcq",
+          "max_marks": 1,
+          "mcq_options": [
+            {
+              "label": "A",
+              "text": "A"
+            },
+            {
+              "label": "B",
+              "text": "B"
+            },
+            {
+              "label": "C",
+              "text": "C"
+            },
+            {
+              "label": "D",
+              "text": "D"
+            }
+          ],
+          "mcq_correct_label": "B",
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [],
+          "required_working_concepts": [
+            {
+              "concept": "endothermic profile",
+              "marks": 0,
+              "hints": [
+                "products higher than reactants",
+                "energy taken in",
+                "\u0394H positive"
+              ]
+            },
+            {
+              "concept": "activation energy definition",
+              "marks": 1,
+              "hints": [
+                "minimum energy",
+                "colliding particles",
+                "hump above reactants line",
+                "reactants to peak"
+              ]
+            }
+          ],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "C",
+                "magnitude": null
+              },
+              "feedback": "C shows the arrow from the baseline up to the peak \u2014 that's the overall energy change \u0394H (reactants to products) for the endothermic reaction, not the activation energy. Ea is measured only from the reactants line up to the peak."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "D",
+                "magnitude": null
+              },
+              "feedback": "D is the arrow from the peak down to the products line \u2014 that's the energy released as the activated complex relaxes to products. This drop only represents an activation energy for an exothermic reaction in reverse; for this endothermic profile it is NOT the activation energy."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "A",
+                "magnitude": null
+              },
+              "feedback": "A is a short arrow showing the energy of the reactants above the x-axis, not the extra energy needed to reach the activated complex. Don't confuse a diagram of an endothermic reaction with an exothermic one \u2014 here products are HIGHER than reactants, and Ea is the height of the hump above the reactants line."
+            }
+          ],
+          "model_answer_html": "<p><strong>Answer: B</strong></p><p>This is an <em>endothermic</em> energy profile because the products line is higher than the reactants line. The activation energy (E<sub>a</sub>) is the minimum energy colliding particles must have to react, shown on the diagram as the height of the hump measured <strong>from the reactants line up to the peak</strong>.</p><ul><li>A \u2014 energy of the reactants above the baseline (not E<sub>a</sub>).</li><li>B \u2014 arrow from the reactants dashed line up to the peak = activation energy. \u2713</li><li>C \u2014 arrow from the baseline up to the peak = overall energy change \u0394H (reactants \u2192 products).</li><li>D \u2014 arrow from the peak down to the products line = energy given out from the activated complex to the products.</li></ul>",
+          "chapter_refs": [
+            "C5.01 activation energy",
+            "C5.01 endothermic profile"
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "p28-q18",
+      "source_question_db_id": 499,
+      "type": "mcq",
+      "max_marks": 1,
+      "stem": "Which reaction pathway diagram shows the activation energy for an exothermic reaction?",
+      "figure_paths": [],
+      "parts": [
+        {
+          "id": "p28-q18-main",
+          "prompt": "Which reaction pathway diagram shows the activation energy for an exothermic reaction?",
+          "answer_type": "mcq",
+          "max_marks": 1,
+          "mcq_options": [
+            {
+              "label": "A",
+              "text": "Endothermic profile (products drawn higher than reactants); activation-energy arrow labelled near the top of the hump."
+            },
+            {
+              "label": "B",
+              "text": "Endothermic profile (products drawn higher than reactants); activation-energy arrow drawn from the reactants line up to the peak."
+            },
+            {
+              "label": "C",
+              "text": "Exothermic profile (products drawn lower than reactants); activation-energy arrow drawn from the reactants line up to the peak of the hump."
+            },
+            {
+              "label": "D",
+              "text": "Exothermic profile (products drawn lower than reactants); arrow labelled 'activation energy' drawn from the peak down to the products line."
+            }
+          ],
+          "mcq_correct_label": "C",
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [
+            "C"
+          ],
+          "required_working_concepts": [
+            {
+              "concept": "Exothermic profile: products lower than reactants (thermal energy released to surroundings, \u0394H negative)",
+              "marks": 0,
+              "hints": [
+                "products lower",
+                "products below reactants",
+                "exothermic",
+                "energy released",
+                "negative"
+              ]
+            },
+            {
+              "concept": "Activation energy is the height of the hump from the reactants line up to the peak (minimum energy colliding particles must have to react)",
+              "marks": 0,
+              "hints": [
+                "minimum energy",
+                "colliding particles",
+                "reactants to peak",
+                "height of hump",
+                "energy barrier"
+              ]
+            }
+          ],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "A",
+                "magnitude": null
+              },
+              "feedback": "A shows an endothermic profile \u2014 the products line is drawn HIGHER than the reactants line, so thermal energy is absorbed, not released. For an exothermic reaction the products must be LOWER than the reactants."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "B",
+                "magnitude": null
+              },
+              "feedback": "B also shows an endothermic profile (products above reactants). The activation-energy arrow in B is drawn correctly (reactants line up to the peak), but the reaction is not exothermic, so B fails the exothermic test."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "D",
+                "magnitude": null
+              },
+              "feedback": "D is exothermic, but the labelled arrow goes from the peak DOWN to the products line \u2014 that is the total thermal energy released (|\u0394H|), NOT the activation energy. The activation energy must be drawn from the reactants line UP to the peak of the hump."
+            }
+          ],
+          "model_answer_html": "<p><strong>Answer: C.</strong></p><p>Two conditions must both be satisfied:</p><ol><li><strong>Exothermic profile:</strong> exothermic reactions release thermal energy to the surroundings, so the <em>products</em> line must be drawn <em>lower</em> than the <em>reactants</em> line (\u0394H is negative). This eliminates diagrams A and B, where the products are higher than the reactants (endothermic).</li><li><strong>Activation energy labelled correctly:</strong> activation energy (E<sub>a</sub>) is the minimum energy that colliding particles must have to react, and on a reaction pathway diagram it is drawn as the vertical height from the <em>reactants</em> line <em>up</em> to the <em>peak</em> of the hump. In diagram D the arrow is drawn from the peak <em>down</em> to the products line \u2014 that is the energy released (|\u0394H|), not E<sub>a</sub>. In diagram C the arrow runs from the reactants line up to the top of the hump, which is exactly E<sub>a</sub>.</li></ol><p>Diagram C is the only one that satisfies both conditions, so <strong>C</strong> is correct.</p>",
+          "chapter_refs": [
+            "C5.01 activation energy",
+            "C5.01 exothermic reaction profile"
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "2025-cs-p21-q15-energy-change-X",
+      "source_question_db_id": 527,
+      "type": "mcq",
+      "max_marks": 1,
+      "stem": "A reaction pathway diagram for a reaction is shown (energy vs progress of reaction with marked energy change X from peak down to products). Which statement describes and explains energy change X?",
+      "figure_paths": [],
+      "parts": [
+        {
+          "id": "a",
+          "prompt": "Which statement describes AND explains energy change X (the downward arrow from the peak of the reaction pathway diagram to the products line)?",
+          "answer_type": "mcq",
+          "max_marks": 1,
+          "mcq_options": [
+            {
+              "label": "A",
+              "text": "Thermal energy is given out as bonds break."
+            },
+            {
+              "label": "B",
+              "text": "Thermal energy is given out as bonds form."
+            },
+            {
+              "label": "C",
+              "text": "Thermal energy is taken in as bonds break."
+            },
+            {
+              "label": "D",
+              "text": "Thermal energy is taken in as bonds form."
+            }
+          ],
+          "mcq_correct_label": "B",
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [],
+          "required_working_concepts": [
+            {
+              "concept": "X points downward, so the products are at lower energy than the peak and energy is released (given out)",
+              "marks": 0,
+              "hints": [
+                "given out",
+                "released",
+                "exothermic",
+                "arrow down",
+                "descent"
+              ]
+            },
+            {
+              "concept": "On the descent new product bonds are forming (bond making), which releases thermal energy",
+              "marks": 0,
+              "hints": [
+                "bonds form",
+                "bond making",
+                "make new bonds",
+                "form new bonds",
+                "MEXOBENDO"
+              ]
+            }
+          ],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "A",
+                "magnitude": null
+              },
+              "feedback": "You got the direction right (energy IS given out on the descent), but you flipped the bond step. Bond BREAKING takes energy IN (endothermic) &mdash; that is what happens on the UP part of the curve from reactants to the peak. On the way DOWN (arrow X), the free atoms are FORMING new product bonds, and making bonds releases energy. Remember MEXOBENDO: Making bonds = EXOthermic, Breaking bonds = ENDOthermic. Correct answer: B."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "C",
+                "magnitude": null
+              },
+              "feedback": "Two things went wrong. (1) X points DOWN, so energy is being given OUT, not taken in &mdash; the products sit lower than the peak. (2) On the descent, atoms are FORMING new product bonds (not breaking them); bond breaking already finished at the top of the hump. So both the energy direction and the bond step are the wrong way round. The correct answer is B: thermal energy is given out as bonds form."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "D",
+                "magnitude": null
+              },
+              "feedback": "You correctly spotted that new bonds are forming on the descent, but you flipped the energy direction. Bond MAKING releases energy to the surroundings (exothermic), so X, which points DOWNWARD from the peak to the products line, shows energy being given OUT, not taken in. Remember MEXOBENDO: Making bonds = EXOthermic. Correct answer: B."
+            }
+          ],
+          "model_answer_html": "<b>Answer: B</b> &mdash; thermal energy is given out as bonds form.<br/><br/><b>1. Read the diagram.</b> X is the arrow pointing DOWN from the peak of the curve to the products line. A downward arrow on an energy-vs-progress diagram means energy is being <b>given out</b> to the surroundings.<br/><br/><b>2. What is happening at the peak?</b> At the top of the hump the original reactant bonds have been fully broken &mdash; the atoms are momentarily free (the transition state). Breaking bonds is what took energy IN on the UP side of the curve (that is the activation energy), not what X represents.<br/><br/><b>3. What is happening on the descent (X)?</b> The free atoms rearrange and <b>form new product bonds</b>. Bond FORMING is exothermic &mdash; it releases thermal energy, which is why the curve drops down to the products line. So X shows thermal energy being given out as new bonds form.<br/><br/><b>Mnemonic &mdash; MEXOBENDO:</b> <b>M</b>aking bonds = <b>EXO</b>thermic (energy out), <b>B</b>reaking bonds = <b>ENDO</b>thermic (energy in). X is on the descent, energy goes out, so bonds must be forming. That matches only option <b>B</b>.",
+          "chapter_refs": [
+            "C5.01 reaction pathway diagrams (energy vs progress of reaction)",
+            "C5.01 bond making is exothermic (energy given out)",
+            "C5.01 bond breaking is endothermic (energy taken in)",
+            "MEXOBENDO mnemonic: Making bonds = EXOthermic, Breaking bonds = ENDOthermic"
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "db-767-chemenergetics-most-exothermic",
+      "source_question_db_id": 767,
+      "type": "mcq",
+      "max_marks": 1,
+      "stem": "The initial and final temperatures of four different reactions are recorded. Which reaction is the most exothermic?",
+      "figure_paths": [],
+      "parts": [
+        {
+          "id": "a",
+          "prompt": "Which reaction is the most exothermic? Compare the initial and final temperatures for each option and pick the one with the greatest temperature rise of the surroundings.",
+          "answer_type": "mcq",
+          "max_marks": 1,
+          "mcq_options": [
+            {
+              "label": "A",
+              "text": "initial temperature 19 \u00b0C; final temperature 16 \u00b0C"
+            },
+            {
+              "label": "B",
+              "text": "initial temperature 20 \u00b0C; final temperature 19 \u00b0C"
+            },
+            {
+              "label": "C",
+              "text": "initial temperature 22 \u00b0C; final temperature 24 \u00b0C"
+            },
+            {
+              "label": "D",
+              "text": "initial temperature 24 \u00b0C; final temperature 25 \u00b0C"
+            }
+          ],
+          "mcq_correct_label": "C",
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [],
+          "required_working_concepts": [],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "A",
+                "magnitude": null
+              },
+              "feedback": "A has the biggest temperature CHANGE in size (|\u22123| = 3), but look at the SIGN of \u0394T. The temperature FELL from 19 \u00b0C to 16 \u00b0C (\u0394T = \u22123 \u00b0C), so the surroundings got COLDER. When the surroundings cool down, the reaction took energy IN from them \u2014 that is ENDOTHERMIC, not exothermic. Remember: exothermic warms the surroundings, so \u0394T must be POSITIVE."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "B",
+                "magnitude": null
+              },
+              "feedback": "Same trap as A \u2014 you probably focused on the number of degrees changed and forgot the sign. B goes from 20 \u00b0C down to 19 \u00b0C (\u0394T = \u22121 \u00b0C), so the surroundings COOLED and the reaction is ENDOTHERMIC. Only options where the final temperature is HIGHER than the initial temperature can be exothermic."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "D",
+                "magnitude": null
+              },
+              "feedback": "Good \u2014 you correctly spotted that D is exothermic (temperature went up from 24 \u00b0C to 25 \u00b0C, \u0394T = +1 \u00b0C). But the question asks for the MOST exothermic, i.e. the BIGGEST temperature rise. Option C rises by +2 \u00b0C (22 \u00b0C \u2192 24 \u00b0C), which is a larger rise than D\u2019s +1 \u00b0C, so C released more energy to the surroundings. C is more exothermic than D."
+            }
+          ],
+          "model_answer_html": "<b>Answer: C</b><br/><br/>A reaction is <b>exothermic</b> when it transfers thermal energy from the chemicals to the surroundings. The surroundings (the water / solution) therefore <b>warm up</b>, so the measured temperature <b>rises</b> and \u0394T = T<sub>final</sub> \u2212 T<sub>initial</sub> is <b>positive</b>. The <i>more</i> exothermic the reaction, the <i>greater</i> the temperature rise.<br/><br/>Calculate \u0394T for each row:<br/><b>A:</b> 16 \u2212 19 = <b>\u22123 \u00b0C</b> \u2192 temperature fell \u2192 <b>endothermic</b> (reject).<br/><b>B:</b> 19 \u2212 20 = <b>\u22121 \u00b0C</b> \u2192 temperature fell \u2192 <b>endothermic</b> (reject).<br/><b>C:</b> 24 \u2212 22 = <b>+2 \u00b0C</b> \u2192 temperature rose \u2192 <b>exothermic</b>.<br/><b>D:</b> 25 \u2212 24 = <b>+1 \u00b0C</b> \u2192 temperature rose \u2192 <b>exothermic</b>.<br/><br/>C and D are both exothermic, so compare the size of the <b>rise</b>: C rises by +2 \u00b0C, D rises by only +1 \u00b0C. C gives the largest temperature increase, so C is the <b>most exothermic</b> reaction.<br/><br/><b>Watch out:</b> A has the biggest change in magnitude (3 \u00b0C), but the temperature <i>drops</i>, so A is the most <i>endothermic</i>, not the most exothermic. Always check the SIGN of \u0394T first.",
+          "chapter_refs": [
+            "C5.01 Exothermic reaction: transfers thermal energy to the surroundings; surroundings warm up (\u0394T positive).",
+            "C5.01 Endothermic reaction: takes thermal energy from the surroundings; surroundings cool down (\u0394T negative).",
+            "C5.02 Size of the temperature change indicates the amount of energy transferred; a bigger positive \u0394T means a more exothermic reaction."
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "q164",
+      "source_question_db_id": 164,
+      "type": "mcq",
+      "max_marks": 1,
+      "stem": "Which reaction is most endothermic? (four options give the initial and final temperatures of the reaction mixture)",
+      "figure_paths": [],
+      "parts": [
+        {
+          "id": "main",
+          "prompt": "Which reaction is most endothermic?",
+          "answer_type": "mcq",
+          "max_marks": 1,
+          "mcq_options": [
+            {
+              "label": "A",
+              "text": "initial 21 \u00b0C, final 19 \u00b0C"
+            },
+            {
+              "label": "B",
+              "text": "initial 20 \u00b0C, final 22 \u00b0C"
+            },
+            {
+              "label": "C",
+              "text": "initial 19 \u00b0C, final 18 \u00b0C"
+            },
+            {
+              "label": "D",
+              "text": "initial 18 \u00b0C, final 23 \u00b0C"
+            }
+          ],
+          "mcq_correct_label": "A",
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [],
+          "required_working_concepts": [
+            {
+              "concept": "endothermic \u2192 surroundings cool",
+              "marks": 0,
+              "hints": [
+                "takes in energy",
+                "surroundings cool",
+                "temperature decreases",
+                "\u0394T negative"
+              ]
+            },
+            {
+              "concept": "compare temperature drops",
+              "marks": 1,
+              "hints": [
+                "\u0394T = T_final \u2212 T_initial",
+                "largest drop",
+                "biggest decrease",
+                "most negative \u0394T"
+              ]
+            }
+          ],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "D",
+                "magnitude": null
+              },
+              "feedback": "D has the biggest temperature change in size (+5 \u00b0C), but look at the SIGN \u2014 the temperature went UP from 18 \u00b0C to 23 \u00b0C. A rise in temperature means the reaction gave OUT heat, so D is exothermic, not endothermic. Endothermic reactions cool the surroundings (temperature falls)."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "B",
+                "magnitude": null
+              },
+              "feedback": "B also warmed up (20 \u00b0C \u2192 22 \u00b0C, \u0394T = +2 \u00b0C), so B is exothermic as well. Remember: endothermic = surroundings lose heat to the reaction, so the thermometer reading DROPS."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "C",
+                "magnitude": null
+              },
+              "feedback": "C is endothermic \u2014 the temperature does drop (19 \u00b0C \u2192 18 \u00b0C) \u2014 but it only falls by 1 \u00b0C. A falls by 2 \u00b0C, so A takes in MORE heat from the surroundings and is the MOST endothermic."
+            }
+          ],
+          "model_answer_html": "<p><strong>Answer: A</strong></p><p>An <em>endothermic</em> reaction takes in thermal energy from the surroundings, so the surroundings (the reaction mixture) <strong>cool down</strong> and the thermometer reading <strong>falls</strong>. The MOST endothermic reaction is the one with the biggest temperature <em>drop</em>.</p><p>Calculate \u0394T = T<sub>final</sub> \u2212 T<sub>initial</sub> for each option:</p><ul><li>A: 19 \u2212 21 = <strong>\u22122 \u00b0C</strong> (temperature fell by 2 \u00b0C \u2192 endothermic) \u2713</li><li>B: 22 \u2212 20 = +2 \u00b0C (temperature rose \u2192 <em>exothermic</em>).</li><li>C: 18 \u2212 19 = \u22121 \u00b0C (temperature fell by only 1 \u00b0C \u2192 endothermic but smaller).</li><li>D: 23 \u2212 18 = +5 \u00b0C (temperature rose \u2192 <em>exothermic</em>, even though the change is largest in size).</li></ul><p>Only A and C are endothermic, and A has the biggest drop (2 \u00b0C vs 1 \u00b0C), so <strong>A is the most endothermic</strong>.</p>",
+          "chapter_refs": [
+            "C5.01 endothermic \u2192 surroundings cool",
+            "C5.01 temperature change sign",
+            "C5.01 comparing endothermic reactions"
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "db-772-chemenergetics-most-exothermic",
+      "source_question_db_id": 772,
+      "type": "mcq",
+      "max_marks": 1,
+      "stem": "The initial and final temperatures of four different reactions are recorded. Which reaction is the most exothermic?",
+      "figure_paths": [],
+      "parts": [
+        {
+          "id": "a",
+          "prompt": "Which reaction is the most exothermic? Compare the initial and final temperatures for each option and pick the one with the greatest temperature rise of the surroundings.",
+          "answer_type": "mcq",
+          "max_marks": 1,
+          "mcq_options": [
+            {
+              "label": "A",
+              "text": "initial 19 \u00b0C, final 16 \u00b0C"
+            },
+            {
+              "label": "B",
+              "text": "initial 20 \u00b0C, final 19 \u00b0C"
+            },
+            {
+              "label": "C",
+              "text": "initial 22 \u00b0C, final 24 \u00b0C"
+            },
+            {
+              "label": "D",
+              "text": "initial 24 \u00b0C, final 25 \u00b0C"
+            }
+          ],
+          "mcq_correct_label": "C",
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [],
+          "required_working_concepts": [],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "A",
+                "magnitude": null
+              },
+              "feedback": "A has the biggest temperature CHANGE in size (|\u22123| = 3), but look at the SIGN of \u0394T. The temperature FELL from 19 \u00b0C to 16 \u00b0C (\u0394T = \u22123 \u00b0C), so the surroundings got COLDER. When the surroundings cool down, the reaction took energy IN from them \u2014 that is ENDOTHERMIC, not exothermic. Remember: exothermic warms the surroundings, so \u0394T must be POSITIVE."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "B",
+                "magnitude": null
+              },
+              "feedback": "Same trap as A \u2014 you probably focused on the number of degrees changed and forgot the sign. B goes from 20 \u00b0C down to 19 \u00b0C (\u0394T = \u22121 \u00b0C), so the surroundings COOLED and the reaction is ENDOTHERMIC. Only options where the final temperature is HIGHER than the initial temperature can be exothermic."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "D",
+                "magnitude": null
+              },
+              "feedback": "Good \u2014 you correctly spotted that D is exothermic (temperature went up from 24 \u00b0C to 25 \u00b0C, \u0394T = +1 \u00b0C). But the question asks for the MOST exothermic, i.e. the BIGGEST temperature rise. Option C rises by +2 \u00b0C (22 \u00b0C \u2192 24 \u00b0C), which is a larger rise than D\u2019s +1 \u00b0C, so C released more energy to the surroundings. C is more exothermic than D."
+            }
+          ],
+          "model_answer_html": "<b>Answer: C</b><br/><br/>A reaction is <b>exothermic</b> when it transfers thermal energy from the chemicals to the surroundings. The surroundings (the water / solution) therefore <b>warm up</b>, so the measured temperature <b>rises</b> and \u0394T = T<sub>final</sub> \u2212 T<sub>initial</sub> is <b>positive</b>. The <i>more</i> exothermic the reaction, the <i>greater</i> the temperature rise.<br/><br/>Calculate \u0394T for each row:<br/><b>A:</b> 16 \u2212 19 = <b>\u22123 \u00b0C</b> \u2192 temperature fell \u2192 <b>endothermic</b> (reject).<br/><b>B:</b> 19 \u2212 20 = <b>\u22121 \u00b0C</b> \u2192 temperature fell \u2192 <b>endothermic</b> (reject).<br/><b>C:</b> 24 \u2212 22 = <b>+2 \u00b0C</b> \u2192 temperature rose \u2192 <b>exothermic</b>.<br/><b>D:</b> 25 \u2212 24 = <b>+1 \u00b0C</b> \u2192 temperature rose \u2192 <b>exothermic</b>.<br/><br/>C and D are both exothermic, so compare the size of the <b>rise</b>: C rises by +2 \u00b0C, D rises by only +1 \u00b0C. C gives the largest temperature increase, so C is the <b>most exothermic</b> reaction.<br/><br/><b>Watch out:</b> A has the biggest change in magnitude (3 \u00b0C), but the temperature <i>drops</i>, so A is the most <i>endothermic</i>, not the most exothermic. Always check the SIGN of \u0394T first.",
+          "chapter_refs": [
+            "C5.01 Exothermic reaction: transfers thermal energy to the surroundings; surroundings warm up (\u0394T positive).",
+            "C5.01 Endothermic reaction: takes thermal energy from the surroundings; surroundings cool down (\u0394T negative).",
+            "C5.02 Size of the temperature change indicates the amount of energy transferred; a bigger positive \u0394T means a more exothermic reaction."
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "combined-science-chemical-energetics-257",
+      "source_question_db_id": 257,
+      "type": "mcq",
+      "max_marks": 1,
+      "stem": "The reaction pathway diagrams for reaction X and for reaction Y are shown. Which statement about the reactions is correct? (Reaction X: reactants are higher than products. Reaction Y: products are higher than reactants.)",
+      "figure_paths": [],
+      "parts": [
+        {
+          "id": "main",
+          "prompt": "Which statement about the reactions is correct?",
+          "answer_type": "mcq",
+          "max_marks": 1,
+          "mcq_options": [
+            {
+              "label": "A",
+              "text": "Reaction X has a greater activation energy than reaction Y."
+            },
+            {
+              "label": "B",
+              "text": "Reaction X is endothermic and reaction Y is exothermic."
+            },
+            {
+              "label": "C",
+              "text": "The overall energy change in reaction X is much greater than in reaction Y."
+            },
+            {
+              "label": "D",
+              "text": "The temperature increases during reaction X and decreases during reaction Y."
+            }
+          ],
+          "mcq_correct_label": "D",
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [],
+          "required_working_concepts": [
+            {
+              "concept": "Read exothermic vs endothermic from pathway heights",
+              "marks": 0,
+              "hints": [
+                "reactants higher",
+                "products higher",
+                "exothermic",
+                "endothermic"
+              ]
+            },
+            {
+              "concept": "Link exothermic/endothermic to surroundings temperature",
+              "marks": 1,
+              "hints": [
+                "temperature increases",
+                "temperature decreases",
+                "surroundings warm",
+                "surroundings cool"
+              ]
+            }
+          ],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "B",
+                "magnitude": null
+              },
+              "feedback": "You picked B, but that has it flipped. Reaction X shows reactants HIGHER than products, so X releases energy \u2014 it is EXOTHERMIC. Reaction Y shows products HIGHER than reactants, so Y takes in energy \u2014 it is ENDOTHERMIC. B says the opposite."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "A",
+                "magnitude": null
+              },
+              "feedback": "You picked A. Activation energy is the height of the HUMP measured above the reactants, not the vertical gap between reactants and products. In this diagram the two humps look about the same size, so you cannot claim X has a greater activation energy than Y."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "C",
+                "magnitude": null
+              },
+              "feedback": "You picked C. 'Much greater' is a quantitative claim, but the diagrams do not give any numerical energy values, and the overall energy gaps for X and Y look similar. Without numbers you cannot say one is much greater than the other."
+            }
+          ],
+          "model_answer_html": "<p><strong>Answer: D</strong></p><ol><li>In reaction <strong>X</strong> the reactants are higher than the products, so energy is <em>released</em> to the surroundings \u2014 X is <strong>exothermic</strong>, and the surroundings <strong>warm up</strong>.</li><li>In reaction <strong>Y</strong> the products are higher than the reactants, so energy is <em>absorbed</em> from the surroundings \u2014 Y is <strong>endothermic</strong>, and the surroundings <strong>cool down</strong>.</li><li>So the temperature increases during X and decreases during Y \u2014 this is statement <strong>D</strong>.</li></ol><p><em>Why not the others?</em> A: activation energy is the hump above the reactants, not the reactant\u2013product gap, and the humps look similar here. B: has X and Y swapped. C: 'much greater' needs numbers, and the diagrams do not give any.</p>",
+          "chapter_refs": [
+            "exothermic_endothermic_from_pathway_diagram",
+            "surroundings_temperature_change",
+            "activation_energy_vs_overall_energy_change"
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "p4_q5c",
+      "source_question_db_id": 723,
+      "type": "structured",
+      "max_marks": 3,
+      "stem": "The reaction between aluminium and iron(III) oxide is exothermic. A flame is used to provide the activation energy to start the reaction. Fig. 5.1 shows the incomplete reaction pathway diagram for this reaction. Complete Fig. 5.1. Include: the energy level of the products; a labelled arrow to show the activation energy, Ea; a labelled arrow to show the overall energy change of the reaction. [3]",
+      "figure_paths": [],
+      "parts": [
+        {
+          "id": "c",
+          "prompt": "Complete Fig. 5.1 by adding the products energy level, a labelled activation-energy arrow (Ea), and a labelled arrow for the overall energy change of the reaction.",
+          "answer_type": "self_check",
+          "max_marks": 3,
+          "mcq_options": null,
+          "mcq_correct_label": null,
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [
+            "products line drawn below reactants line",
+            "hump / peak drawn above reactants line",
+            "Ea arrow from reactants line up to the peak",
+            "overall energy change arrow from reactants line down to products line",
+            "energy released / exothermic / \u0394H negative"
+          ],
+          "required_working_concepts": [
+            {
+              "concept": "Products line drawn below reactants line (exothermic profile)",
+              "marks": 1,
+              "hints": [
+                "below",
+                "lower than reactants",
+                "products lower",
+                "exothermic shape"
+              ]
+            },
+            {
+              "concept": "Activation energy labelled as height from reactants line to peak (Ea)",
+              "marks": 1,
+              "hints": [
+                "activation energy",
+                "Ea",
+                "from reactants to peak",
+                "reactants line up to top of hump"
+              ]
+            },
+            {
+              "concept": "Overall enthalpy change shown as downward arrow from reactants to products labelled energy released / \u0394H",
+              "marks": 1,
+              "hints": [
+                "energy released",
+                "\u0394H",
+                "negative",
+                "exothermic",
+                "reactants down to products"
+              ]
+            }
+          ],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "products above",
+                "magnitude": null
+              },
+              "feedback": "The products line should be drawn BELOW the reactants line, not above \u2013 this reaction is exothermic, so energy decreases from reactants to products."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "Ea reactants to products",
+                "magnitude": null
+              },
+              "feedback": "Ea is the height from the reactants line up to the peak of the hump, not the gap between reactants and products. The reactants-to-products gap is the overall energy change (\u0394H), not the activation energy."
+            },
+            {
+              "match": {
+                "kind": "keyword_absent",
+                "keyword": "Ea",
+                "magnitude": null
+              },
+              "feedback": "You must label the activation-energy arrow (e.g. 'Ea' or 'activation energy'). An unlabelled arrow does not score the activation-energy mark."
+            },
+            {
+              "match": {
+                "kind": "keyword_absent",
+                "keyword": "energy change",
+                "magnitude": null
+              },
+              "feedback": "Label the downward arrow from reactants to products with the overall energy change (accept '\u0394H', 'energy released', 'enthalpy change of reaction'). Without the label you lose the third mark."
+            }
+          ],
+          "model_answer_html": "<p>On Fig. 5.1 you must add <strong>three</strong> things to score all 3 marks:</p><ol><li><strong>Products energy level (1 mark).</strong> Draw a horizontal line labelled <em>products</em> clearly <strong>below</strong> the reactants line, and join the two lines with a smooth hump whose peak sits <strong>above</strong> the reactants line. The reaction is exothermic, so products must be lower than reactants.</li><li><strong>Activation energy, E<sub>a</sub> (1 mark).</strong> Draw a vertical arrow from the <em>reactants</em> line up to the <em>top of the hump</em> and label it <strong>E<sub>a</sub></strong> (or 'activation energy'). This is the energy the flame supplies to start the reaction.</li><li><strong>Overall energy change of the reaction (1 mark).</strong> Draw a vertical arrow from the <em>reactants</em> line <strong>down</strong> to the <em>products</em> line and label it <strong>overall energy change</strong> (accept '\u0394H', 'energy released', 'enthalpy change'). Because the reaction is exothermic, \u0394H is negative and energy is released to the surroundings.</li></ol><p><em>Common traps:</em> drawing products above reactants (that would be endothermic); labelling the reactants-to-products gap as E<sub>a</sub> (that gap is \u0394H, not E<sub>a</sub>); leaving arrows unlabelled.</p>",
+          "chapter_refs": [
+            "C5.01 reaction pathway diagram (exothermic profile)",
+            "C5.01 activation energy Ea",
+            "C5.01 overall energy change \u0394H (exothermic = negative)"
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "q175",
+      "source_question_db_id": 175,
+      "type": "mcq",
+      "max_marks": 1,
+      "stem": "The reaction pathway diagram for a reaction is shown (energy axis with levels X at reactants, Y above reactants at the products line, Z at the peak). Which statement about the reaction is correct?",
+      "figure_paths": [],
+      "parts": [
+        {
+          "id": "main",
+          "prompt": "Select the correct statement about the reaction shown in the pathway diagram.",
+          "answer_type": "mcq",
+          "max_marks": 1,
+          "mcq_options": [
+            {
+              "label": "A",
+              "text": "The activation energy for this reaction is equal to the value of (Z \u2212 Y)."
+            },
+            {
+              "label": "B",
+              "text": "The energy released by this reaction is equal to the value of (Y \u2212 X)."
+            },
+            {
+              "label": "C",
+              "text": "The energy used to break bonds is more than the energy released in forming bonds."
+            },
+            {
+              "label": "D",
+              "text": "The overall energy change for this reaction is equal to the value of (Z \u2212 X)."
+            }
+          ],
+          "mcq_correct_label": "C",
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [],
+          "required_working_concepts": [
+            {
+              "concept": "Identify reaction as endothermic from pathway diagram (products above reactants).",
+              "marks": 0,
+              "hints": [
+                "products above reactants",
+                "endothermic",
+                "energy absorbed",
+                "Y above X"
+              ]
+            },
+            {
+              "concept": "Endothermic bond-energy rule: energy to break bonds > energy released making bonds.",
+              "marks": 1,
+              "hints": [
+                "break bonds",
+                "form bonds",
+                "more than",
+                "endothermic"
+              ]
+            }
+          ],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "Z \u2212 Y",
+                "magnitude": null
+              },
+              "feedback": "Option A uses the wrong formula. Activation energy is the peak height above the REACTANTS line, so Ea = Z \u2212 X, not Z \u2212 Y. The reactants sit at X, not Y."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "released",
+                "magnitude": null
+              },
+              "feedback": "Option B is wrong because the reaction is endothermic \u2014 the products line is above the reactants line, so energy is ABSORBED, not released. (Y \u2212 X) is the energy taken IN, not given out."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "Z \u2212 X",
+                "magnitude": null
+              },
+              "feedback": "Option D confuses two different things. (Z \u2212 X) is the activation energy (peak minus reactants), not the overall energy change. The overall energy change is products minus reactants, i.e. (Y \u2212 X)."
+            }
+          ],
+          "model_answer_html": "<p><strong>Answer: C</strong></p><p>The diagram shows reactants at level X, a peak at Z, and the products line at level Y, with Y above X. Because products are higher than reactants, the reaction is <em>endothermic</em>.</p><ul><li><strong>A is wrong:</strong> activation energy = peak \u2212 reactants = (Z \u2212 X), not (Z \u2212 Y).</li><li><strong>B is wrong:</strong> the reaction is endothermic, so energy is absorbed, not released. (Y \u2212 X) is the energy taken in.</li><li><strong>D is wrong:</strong> (Z \u2212 X) is the activation energy, not the overall energy change. The overall energy change is (Y \u2212 X).</li><li><strong>C is correct:</strong> in an endothermic reaction the energy needed to break bonds is greater than the energy released when new bonds form \u2014 this matches the diagram.</li></ul>",
+          "chapter_refs": [
+            "Slide 4: reaction pathway diagrams",
+            "Slide 5: endothermic bond-energy rule",
+            "Slide 6: activation energy definition"
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "p33-q574-c",
+      "source_question_db_id": 574,
+      "type": "structured",
+      "max_marks": 7,
+      "stem": "Reaction of copper with oxygen. Fig. 4.2 is a reaction pathway diagram for a reaction catalysed by copper. On the diagram, the reactants are on a LOWER energy level than the products and there is an activation-energy hump between them. Answer parts (c)(i)\u2013(c)(iv).",
+      "figure_paths": [],
+      "parts": [
+        {
+          "id": "c.i",
+          "prompt": "Identify the type of chemical reaction shown in Fig. 4.2 and explain your answer. [2]",
+          "answer_type": "short_text",
+          "max_marks": 2,
+          "mcq_options": null,
+          "mcq_correct_label": null,
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [
+            "endothermic because products are higher in energy than reactants",
+            "endothermic; energy is absorbed / taken in from the surroundings",
+            "endothermic \u2014 the product energy level is above the reactant energy level"
+          ],
+          "required_working_concepts": [
+            {
+              "concept": "Correct reaction type",
+              "marks": 1,
+              "hints": [
+                "endothermic",
+                "endo-thermic",
+                "endo thermic"
+              ]
+            },
+            {
+              "concept": "Justification from the diagram",
+              "marks": 1,
+              "hints": [
+                "products higher than reactants",
+                "products at a higher energy",
+                "energy is absorbed",
+                "energy taken in",
+                "energy gained from surroundings"
+              ]
+            }
+          ],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "exothermic",
+                "magnitude": null
+              },
+              "feedback": "You wrote 'exothermic'. Look at Fig. 4.2 again: the products are drawn HIGHER than the reactants. When products are higher than reactants, energy is ABSORBED, so the reaction is ENDOTHERMIC. (Even though in real life copper + oxygen is exothermic, you must answer from the diagram as drawn.)"
+            },
+            {
+              "match": {
+                "kind": "keyword_absent",
+                "keyword": "higher",
+                "magnitude": null
+              },
+              "feedback": "Your explanation needs to compare the two energy levels. Say that the products are at a HIGHER energy level than the reactants on the diagram (or that energy is absorbed from the surroundings)."
+            }
+          ],
+          "model_answer_html": "<p><strong>Endothermic</strong> [1]. The products are at a <em>higher</em> energy level than the reactants on Fig. 4.2, so energy is absorbed (taken in) from the surroundings [1].</p>",
+          "chapter_refs": [
+            "Chemical Energetics \u2014 endothermic vs exothermic from a reaction pathway diagram"
+          ]
+        },
+        {
+          "id": "c.ii",
+          "prompt": "Draw an arrow on Fig. 4.2 to show the activation energy for this reaction. [1]",
+          "answer_type": "self_check",
+          "max_marks": 1,
+          "mcq_options": null,
+          "mcq_correct_label": null,
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [
+            "arrow from reactants energy level up to peak",
+            "vertical arrow from the reactants line to the top of the hump"
+          ],
+          "required_working_concepts": [
+            {
+              "concept": "Arrow starts at reactants' energy level and ends at the top of the activation-energy peak",
+              "marks": 1,
+              "hints": [
+                "reactants to peak",
+                "bottom of left line to top of hump",
+                "vertical arrow reactants to peak"
+              ]
+            }
+          ],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "products",
+                "magnitude": null
+              },
+              "feedback": "The activation energy arrow does NOT start at the product line. It starts at the REACTANTS' energy level and goes up to the top of the hump. An arrow from reactants to products would be \u0394H, not Ea."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "delta h",
+                "magnitude": null
+              },
+              "feedback": "\u0394H (enthalpy change) is the reactant-to-product energy gap. Activation energy is just the reactants-to-peak height. Draw the arrow only up to the top of the hump."
+            }
+          ],
+          "model_answer_html": "<p>A single vertical arrow that <strong>starts on the reactants' energy line</strong> (the flat line on the left) and <strong>ends at the very top of the hump</strong> is correct [1]. Label it <em>Ea</em> if space allows.</p>",
+          "chapter_refs": [
+            "Chemical Energetics \u2014 representing activation energy on a reaction pathway diagram"
+          ]
+        },
+        {
+          "id": "c.iii",
+          "prompt": "Define activation energy. [2]",
+          "answer_type": "free_text",
+          "max_marks": 2,
+          "mcq_options": null,
+          "mcq_correct_label": null,
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [
+            "the minimum energy colliding particles must have for a reaction to occur",
+            "the minimum energy needed to start a reaction",
+            "the minimum energy reactant particles need to react"
+          ],
+          "required_working_concepts": [
+            {
+              "concept": "'Minimum' (or equivalent: 'least') amount of energy",
+              "marks": 1,
+              "hints": [
+                "minimum",
+                "least",
+                "smallest"
+              ]
+            },
+            {
+              "concept": "For a reaction to occur / for particles to react on collision",
+              "marks": 1,
+              "hints": [
+                "for a reaction to occur",
+                "to start the reaction",
+                "for particles to react",
+                "on collision",
+                "to begin breaking bonds"
+              ]
+            }
+          ],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_absent",
+                "keyword": "minimum",
+                "magnitude": null
+              },
+              "feedback": "You need the word 'minimum' (or 'least'). Activation energy is the MINIMUM energy required \u2014 not just 'the energy needed'."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "heat",
+                "magnitude": null
+              },
+              "feedback": "Activation energy is about the energy of PARTICLES (usually kinetic energy), not heat specifically. Say 'minimum energy particles must have to react', not 'the heat needed'."
+            }
+          ],
+          "model_answer_html": "<p>The <strong>minimum</strong> amount of energy [1] that colliding reactant particles must have in order for a reaction to occur (to start bonds breaking) [1].</p>",
+          "chapter_refs": [
+            "Chemical Energetics \u2014 definition of activation energy"
+          ]
+        },
+        {
+          "id": "c.iv",
+          "prompt": "Describe what is meant by a catalyst. [2]",
+          "answer_type": "free_text",
+          "max_marks": 2,
+          "mcq_options": null,
+          "mcq_correct_label": null,
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [
+            "a substance that increases the rate of a reaction and is not used up",
+            "speeds up a reaction; chemically unchanged at the end",
+            "increases the rate of reaction; can be recovered unchanged"
+          ],
+          "required_working_concepts": [
+            {
+              "concept": "Increases the rate of reaction / speeds up the reaction",
+              "marks": 1,
+              "hints": [
+                "increases the rate",
+                "speeds up",
+                "makes the reaction faster",
+                "faster"
+              ]
+            },
+            {
+              "concept": "Not used up / chemically unchanged at the end",
+              "marks": 1,
+              "hints": [
+                "not used up",
+                "is not used up",
+                "chemically unchanged",
+                "unchanged at the end",
+                "can be recovered",
+                "same mass at the end"
+              ]
+            }
+          ],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_absent",
+                "keyword": "not used up",
+                "magnitude": null
+              },
+              "feedback": "You only scored the 'speeds up' mark. A catalyst also has to be NOT USED UP (chemically unchanged / recoverable) at the end of the reaction. Add this second idea for the second mark."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "helps",
+                "magnitude": null
+              },
+              "feedback": "'Helps the reaction' is too vague. Say it INCREASES THE RATE (or speeds up) the reaction."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "changes the reaction",
+                "magnitude": null
+              },
+              "feedback": "A catalyst does NOT change the reaction or its products \u2014 it only changes how fast it happens. Say 'speeds up the reaction without being used up'."
+            }
+          ],
+          "model_answer_html": "<p>A catalyst is a substance that <strong>increases the rate of a chemical reaction</strong> [1] and is <strong>not used up</strong> (is chemically unchanged) at the end of the reaction [1].</p><p><em>Optional extension:</em> it does this by providing an alternative pathway with a lower activation energy.</p>",
+          "chapter_refs": [
+            "Chemical Energetics \u2014 catalysts lower the activation-energy hump on a reaction pathway diagram and are not used up"
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "q690",
+      "source_question_db_id": 690,
+      "type": "structured",
+      "max_marks": 6,
+      "stem": "Question 4 (continued). The reaction between aqueous sodium hydroxide and dilute hydrochloric acid transfers thermal energy to the surroundings.",
+      "figure_paths": [],
+      "parts": [
+        {
+          "id": "a.iii",
+          "prompt": "Tick (\u2713) all the statements that are true for aqueous sodium hydroxide: (1) It is a covalent substance. (2) It turns universal indicator purple. (3) It reacts with dilute sulfuric acid to form sodium sulfate. (4) It is a base but not an alkali.",
+          "answer_type": "self_check",
+          "max_marks": 2,
+          "mcq_options": null,
+          "mcq_correct_label": null,
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [],
+          "required_working_concepts": [
+            {
+              "concept": "Tick statement 2 \u2014 aqueous NaOH is a strong alkali (pH ~13\u201314) so universal indicator turns purple/dark blue.",
+              "marks": 1,
+              "hints": [
+                "purple",
+                "alkali",
+                "universal indicator",
+                "pH 13",
+                "pH 14"
+              ]
+            },
+            {
+              "concept": "Tick statement 3 \u2014 NaOH neutralises dilute sulfuric acid: 2NaOH + H2SO4 \u2192 Na2SO4 + 2H2O.",
+              "marks": 1,
+              "hints": [
+                "sodium sulfate",
+                "Na2SO4",
+                "sulfuric acid",
+                "neutralisation",
+                "salt and water"
+              ]
+            }
+          ],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "covalent",
+                "magnitude": null
+              },
+              "feedback": "NaOH is IONIC (Na+ and OH- ions), not covalent \u2014 do not tick statement 1."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "not an alkali",
+                "magnitude": null
+              },
+              "feedback": "NaOH IS an alkali. An alkali is a base that dissolves in water, and NaOH is very soluble \u2014 do not tick statement 4."
+            }
+          ],
+          "model_answer_html": "<p>Tick <strong>statement 2</strong> and <strong>statement 3</strong> only.</p><ul><li><strong>Statement 1</strong> \u2014 FALSE. NaOH is ionic (Na\u207a OH\u207b), not covalent.</li><li><strong>Statement 2</strong> \u2014 TRUE. Aqueous NaOH is a strong alkali (pH \u2248 13\u201314), so universal indicator turns dark blue / purple.</li><li><strong>Statement 3</strong> \u2014 TRUE. 2NaOH + H\u2082SO\u2084 \u2192 Na\u2082SO\u2084 + 2H\u2082O (acid + alkali \u2192 salt + water).</li><li><strong>Statement 4</strong> \u2014 FALSE. NaOH is a soluble base, and a soluble base <em>is</em> an alkali.</li></ul>",
+          "chapter_refs": [
+            "C5.01 properties of alkalis"
+          ]
+        },
+        {
+          "id": "b.i",
+          "prompt": "Give one conclusion about the energy involved in bond breaking and bond making in this reaction.",
+          "answer_type": "short_text",
+          "max_marks": 1,
+          "mcq_options": null,
+          "mcq_correct_label": null,
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [
+            "more energy is released in bond making than is absorbed in bond breaking",
+            "more energy is released when bonds are made than is absorbed when bonds are broken",
+            "bond making releases more energy than bond breaking absorbs",
+            "the energy given out when bonds form is greater than the energy taken in to break bonds",
+            "energy released from forming bonds is greater than energy needed to break bonds",
+            "bond forming releases more energy than bond breaking takes in",
+            "exothermic because bond making releases more energy than bond breaking absorbs"
+          ],
+          "required_working_concepts": [],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "all bonds give out",
+                "magnitude": null
+              },
+              "feedback": "Breaking bonds ABSORBS energy (endothermic); only MAKING bonds releases energy. Remember MEXOBENDO \u2014 Making=EXO, Breaking=ENDO."
+            },
+            {
+              "match": {
+                "kind": "keyword_absent",
+                "keyword": "more",
+                "magnitude": null
+              },
+              "feedback": "You must compare the two quantities \u2014 say which process releases or absorbs MORE energy (bond making releases more than bond breaking absorbs)."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "bond breaking releases",
+                "magnitude": null
+              },
+              "feedback": "Bond breaking does NOT release energy \u2014 it absorbs it. You've got MEXOBENDO the wrong way round."
+            }
+          ],
+          "model_answer_html": "<p>More energy is <strong>released</strong> when bonds are <strong>made</strong> (in the products) than is <strong>absorbed</strong> when bonds are <strong>broken</strong> (in the reactants). That is why the reaction transfers thermal energy to the surroundings \u2014 it is exothermic.</p><p><em>Slide 6 \u2014 MEXOBENDO:</em> <strong>M</strong>aking bonds = <strong>EXO</strong>thermic, <strong>B</strong>reaking bonds = <strong>ENDO</strong>thermic.</p>",
+          "chapter_refs": [
+            "MEXOBENDO",
+            "C5.01 bond making exothermic"
+          ]
+        },
+        {
+          "id": "b.ii",
+          "prompt": "Complete Fig. 4.2 to show the reaction pathway diagram for this reaction. Label the reactants and products, and show the overall energy change using an arrow.",
+          "answer_type": "self_check",
+          "max_marks": 3,
+          "mcq_options": null,
+          "mcq_correct_label": null,
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [],
+          "required_working_concepts": [
+            {
+              "concept": "Reactants line drawn HIGHER than the products line (exothermic profile \u2014 products are lower in energy than reactants).",
+              "marks": 1,
+              "hints": [
+                "reactants above products",
+                "products below reactants",
+                "exothermic shape",
+                "products lower"
+              ]
+            },
+            {
+              "concept": "Both levels correctly labelled: upper line = reactants (NaOH + HCl); lower line = products (NaCl + H2O).",
+              "marks": 1,
+              "hints": [
+                "NaOH + HCl",
+                "NaCl + H2O",
+                "reactants label",
+                "products label",
+                "reactants and products"
+              ]
+            },
+            {
+              "concept": "A vertical arrow drawn between the two levels pointing DOWN from reactants to products, labelled 'overall energy change' (or \u0394H, or 'energy given out' / 'energy released').",
+              "marks": 1,
+              "hints": [
+                "arrow",
+                "downwards",
+                "overall energy change",
+                "\u0394H",
+                "delta H",
+                "energy given out",
+                "energy released"
+              ]
+            }
+          ],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "products above",
+                "magnitude": null
+              },
+              "feedback": "This reaction is exothermic, so products are BELOW reactants, not above. Products-above is the endothermic profile \u2014 wrong direction for MEXOBENDO here."
+            },
+            {
+              "match": {
+                "kind": "keyword_absent",
+                "keyword": "arrow",
+                "magnitude": null
+              },
+              "feedback": "You must draw an arrow showing the overall energy change and label it (\u0394H or 'energy given out'). Missing the arrow loses 1 mark."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "arrow up",
+                "magnitude": null
+              },
+              "feedback": "For an exothermic reaction the overall-energy-change arrow points DOWN (from reactants down to products), because energy is released to the surroundings."
+            },
+            {
+              "match": {
+                "kind": "keyword_absent",
+                "keyword": "label",
+                "magnitude": null
+              },
+              "feedback": "Every line and arrow needs a label \u2014 reactants, products, and overall energy change. Unlabelled diagrams don't score."
+            }
+          ],
+          "model_answer_html": "<p>Because the reaction transfers thermal energy to the surroundings, it is <strong>exothermic</strong>, so the products line must end <strong>below</strong> the reactants line.</p><ol><li>Draw a short horizontal line at the top-left of the axes \u2014 label it <em>reactants: NaOH + HCl</em>.</li><li>Draw a short horizontal line at a LOWER energy on the right \u2014 label it <em>products: NaCl + H\u2082O</em>.</li><li>Between the two levels draw a vertical arrow pointing <strong>downwards</strong> from the reactants level to the products level, and label it <em>overall energy change</em> (or \u0394H, or 'energy given out').</li></ol><p>The arrow points down because energy leaves the system \u2014 <strong>MEXOBENDO</strong> (slide 6): Making bonds gives out more energy than Breaking bonds absorbs, so the net change is negative.</p>",
+          "chapter_refs": [
+            "C5.01 exothermic profile",
+            "MEXOBENDO"
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "q651",
+      "source_question_db_id": 651,
+      "type": "structured",
+      "max_marks": 3,
+      "stem": "Fig. 6.1 shows the combustion of magnesium ribbon in air held by tongs; a white powder of magnesium oxide is formed.",
+      "figure_paths": [],
+      "parts": [
+        {
+          "id": "a.i",
+          "prompt": "Name the gas that reacts with the magnesium.",
+          "answer_type": "short_text",
+          "max_marks": 1,
+          "mcq_options": null,
+          "mcq_correct_label": null,
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [
+            "oxygen",
+            "O2",
+            "O\u2082",
+            "oxygen gas",
+            "dioxygen"
+          ],
+          "required_working_concepts": [],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "nitrogen",
+                "magnitude": null
+              },
+              "feedback": "Air is mostly nitrogen, but nitrogen is very unreactive at this temperature. Magnesium burns by reacting with oxygen (about 21% of air) to form magnesium oxide (MgO)."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "carbon dioxide",
+                "magnitude": null
+              },
+              "feedback": "Carbon dioxide does not form MgO. The product is a metal-oxygen compound, so the reactant gas must contain only oxygen \u2014 it is O2."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "air",
+                "magnitude": null
+              },
+              "feedback": "'Air' is a mixture. The question asks for the specific gas in air that reacts \u2014 name oxygen."
+            }
+          ],
+          "model_answer_html": "<p><strong>oxygen</strong> (O<sub>2</sub>).</p><p>Magnesium is a metal and it combines with oxygen from the air to form magnesium oxide: <em>2Mg + O<sub>2</sub> &rarr; 2MgO</em>. In Worked Example C5.01 this same combustion is used as the exothermic reaction for the energy-level diagram.</p>",
+          "chapter_refs": [
+            "C5.01 Worked Example: Mg + O2 combustion"
+          ]
+        },
+        {
+          "id": "a.ii",
+          "prompt": "Magnesium oxide is a metallic oxide. Circle the term that describes this type of oxide: acidic / aqueous / basic / carbonate / solvent.",
+          "answer_type": "mcq",
+          "max_marks": 1,
+          "mcq_options": [
+            {
+              "label": "A",
+              "text": "acidic"
+            },
+            {
+              "label": "B",
+              "text": "aqueous"
+            },
+            {
+              "label": "C",
+              "text": "basic"
+            },
+            {
+              "label": "D",
+              "text": "carbonate"
+            },
+            {
+              "label": "E",
+              "text": "solvent"
+            }
+          ],
+          "mcq_correct_label": "C",
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [
+            "basic"
+          ],
+          "required_working_concepts": [],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "acidic",
+                "magnitude": null
+              },
+              "feedback": "That's reversed \u2014 acidic oxides are non-metal oxides such as CO2 or SO2. Metal oxides like MgO are BASIC (they react with acids to make a salt + water)."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "aqueous",
+                "magnitude": null
+              },
+              "feedback": "'Aqueous' means dissolved in water \u2014 it describes a solution, not a class of oxide. The correct category is 'basic'."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "carbonate",
+                "magnitude": null
+              },
+              "feedback": "A carbonate must contain the CO3^2- ion (e.g. CaCO3). MgO has no carbon \u2014 it is a basic oxide."
+            }
+          ],
+          "model_answer_html": "<p><strong>basic</strong>.</p><p>Magnesium is a metal, and metal oxides are basic \u2014 they neutralise acids (e.g. <em>MgO + 2HCl &rarr; MgCl<sub>2</sub> + H<sub>2</sub>O</em>). Non-metal oxides like CO<sub>2</sub> and SO<sub>2</sub> are acidic.</p><p><em>Note: this sub-part is acid-base chemistry, not chemical energetics \u2014 it is outside the C5 chapter.</em></p>",
+          "chapter_refs": [
+            "out-of-scope for C5 Chemical Energetics (acid/base oxide classification)"
+          ]
+        },
+        {
+          "id": "a.iii",
+          "prompt": "This reaction is exothermic. Describe what is meant by exothermic.",
+          "answer_type": "free_text",
+          "max_marks": 1,
+          "mcq_options": null,
+          "mcq_correct_label": null,
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [
+            "energy/heat is released to the surroundings",
+            "heat is given out to the surroundings",
+            "thermal energy is transferred to the surroundings so the surroundings get hotter",
+            "a reaction that gives out heat (and causes the temperature of the surroundings to rise)"
+          ],
+          "required_working_concepts": [
+            {
+              "concept": "reaction transfers (thermal) energy / heat OUT to the surroundings (surroundings warm up)",
+              "marks": 1,
+              "hints": [
+                "heat",
+                "thermal energy",
+                "energy",
+                "released",
+                "given out",
+                "gives out",
+                "transferred to the surroundings",
+                "surroundings get hotter",
+                "temperature rises",
+                "heat and light"
+              ]
+            }
+          ],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "endothermic",
+                "magnitude": null
+              },
+              "feedback": "That's the opposite! Endothermic = energy taken IN from the surroundings (surroundings get colder). Exothermic = energy given OUT to the surroundings (surroundings get hotter). Remember: 'exo' = out."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "absorb",
+                "magnitude": null
+              },
+              "feedback": "Careful \u2014 absorbing/taking-in energy describes ENDOthermic reactions. An EXOthermic reaction RELEASES energy to the surroundings."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "taken in",
+                "magnitude": null
+              },
+              "feedback": "Energy 'taken in' from the surroundings is endothermic. Exothermic is energy 'given out' to the surroundings."
+            },
+            {
+              "match": {
+                "kind": "keyword_absent",
+                "keyword": "surroundings",
+                "magnitude": null
+              },
+              "feedback": "Mention WHERE the energy goes. For full marks say the heat/energy is released to the SURROUNDINGS (so the surroundings get hotter)."
+            }
+          ],
+          "model_answer_html": "<p><strong>Exothermic</strong> means the reaction <em>releases (thermal) energy \u2014 heat \u2014 to the surroundings</em>, so the surroundings get hotter (the temperature of the surroundings rises).</p><p>In this experiment you can see and feel the energy leaving the system: the burning magnesium gives out a bright white light and heat. On an energy-level diagram the products (MgO) sit <em>below</em> the reactants (Mg + O<sub>2</sub>); the difference is the energy released to the surroundings.</p>",
+          "chapter_refs": [
+            "C5.01 Worked Example: 2Mg + O2 -> 2MgO releases heat and light (exothermic)",
+            "C5 definition: exothermic = energy given out to surroundings; surroundings warm up"
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "2025-combined-p12-q20",
+      "source_question_db_id": 165,
+      "type": "mcq",
+      "max_marks": 1,
+      "stem": "Which statement indicates that a chemical change occurs?",
+      "figure_paths": [],
+      "parts": [
+        {
+          "id": "main",
+          "prompt": "Which statement indicates that a chemical change occurs?",
+          "answer_type": "mcq",
+          "max_marks": 1,
+          "mcq_options": [
+            {
+              "label": "A",
+              "text": "Energy is absorbed."
+            },
+            {
+              "label": "B",
+              "text": "There is a change in colour."
+            },
+            {
+              "label": "C",
+              "text": "There is a change of state."
+            },
+            {
+              "label": "D",
+              "text": "There is no change in mass."
+            }
+          ],
+          "mcq_correct_label": "B",
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [],
+          "required_working_concepts": [],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "A",
+                "magnitude": null
+              },
+              "feedback": "You probably remembered that endothermic reactions absorb energy, so 'energy absorbed' felt like a chemical-change clue. But chapter slide 11 (point 2) reminds us that <b>both</b> physical and chemical changes involve energy changes - melting ice absorbs energy without making any new substance. So 'energy is absorbed' alone does not prove a chemical change."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "C",
+                "magnitude": null
+              },
+              "feedback": "A change of state (solid &harr; liquid &harr; gas) is a <b>physical</b> change - the substance itself is unchanged, only the arrangement of its particles. No new chemical has formed, so this cannot be the indicator of a chemical change."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "D",
+                "magnitude": null
+              },
+              "feedback": "Mass is conserved in essentially every closed-system reaction, chemical or physical, so 'no change in mass' cannot tell the two apart. The question asks for an <b>indicator</b> that something new has formed, not for a conservation law."
+            }
+          ],
+          "model_answer_html": "<b>B. There is a change in colour.</b><br/>A new colour means a new substance has been formed - for example copper turning black as it reacts with oxygen to form copper(II) oxide. Forming a new substance is the defining feature of a <i>chemical</i> change.<br/>The other options do not uniquely indicate a chemical change: A (energy absorbed) and D (no change in mass) happen in physical changes too, and C (change of state) is itself a physical change.",
+          "chapter_refs": [
+            "C5.01 Exothermic and endothermic reactions",
+            "C5.01 physical-and-chemical changes both involve energy changes"
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "2025-combined-p22-q18",
+      "source_question_db_id": 441,
+      "type": "mcq",
+      "max_marks": 1,
+      "stem": "Which statement explains why the rate of a reaction is greater at a higher temperature?",
+      "figure_paths": [],
+      "parts": [
+        {
+          "id": "main",
+          "prompt": "Which statement explains why the rate of a reaction is greater at a higher temperature?",
+          "answer_type": "mcq",
+          "max_marks": 1,
+          "mcq_options": [
+            {
+              "label": "A",
+              "text": "The activation energy is higher."
+            },
+            {
+              "label": "B",
+              "text": "More colliding particles have the minimum energy to react."
+            },
+            {
+              "label": "C",
+              "text": "The frequency of collisions between reacting particles decreases."
+            },
+            {
+              "label": "D",
+              "text": "There are more reacting particles per unit volume."
+            }
+          ],
+          "mcq_correct_label": "B",
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [],
+          "required_working_concepts": [],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "A",
+                "magnitude": null
+              },
+              "feedback": "Careful - activation energy (E<sub>a</sub>) is a <b>fixed</b> property of the reaction, set by the bonds that must be broken. Temperature does NOT raise E<sub>a</sub>; it only changes how many particles have enough energy to reach it. From your chapter: 'Activation energy is the minimum energy required for colliding particles to react successfully.'"
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "C",
+                "magnitude": null
+              },
+              "feedback": "This is backwards. Higher temperature &rarr; faster particles &rarr; <b>more</b> collisions per second, not fewer. Rate goes up for two linked reasons: collisions are more frequent, AND a greater fraction of collisions now clear the activation-energy barrier (which is the primary reason the exam wants)."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "D",
+                "magnitude": null
+              },
+              "feedback": "Changing temperature does not change how many particles are in the container - that would describe a change in <i>concentration</i>, not temperature. Raising T raises the <b>energy</b> of the particles you already have, not their number."
+            }
+          ],
+          "model_answer_html": "<b>B. More colliding particles have the minimum energy to react.</b><br/>Activation energy (E<sub>a</sub>) is the minimum energy colliding particles need in order to react successfully. When the temperature rises, the average kinetic energy of the particles rises, so a greater fraction of collisions now have energy &ge; E<sub>a</sub> and succeed - which is why the reaction rate increases.<br/>A is wrong because E<sub>a</sub> is a property of the reaction and is not changed by temperature. C is the wrong direction (collisions get MORE frequent). D describes concentration, not temperature.",
+          "chapter_refs": [
+            "C5.01 activation energy",
+            "C5.01 KEY WORDS activation energy definition"
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "p17-q5-a-i-ii",
+      "source_question_db_id": 383,
+      "type": "structured",
+      "max_marks": 5,
+      "stem": "Calcium oxide, CaO, is used to make cement. Calcium oxide is formed by the decomposition of calcium carbonate, CaCO3, at a very high temperature. The equation is: CaCO3(s) \u2192 CaO(s) + CO2(g). Answer parts (a)(i) and (a)(ii).",
+      "figure_paths": [],
+      "parts": [
+        {
+          "id": "a.i",
+          "prompt": "Suggest why making cement contributes to global warming. [2]",
+          "answer_type": "free_text",
+          "max_marks": 2,
+          "mcq_options": null,
+          "mcq_correct_label": null,
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [
+            "decomposing calcium carbonate releases carbon dioxide; CO2 is a greenhouse gas so more of it causes global warming",
+            "the reaction produces CO2; CO2 traps heat / is a greenhouse gas / enhances the greenhouse effect",
+            "burning fossil fuels to reach the high temperature releases CO2 which is a greenhouse gas, causing global warming"
+          ],
+          "required_working_concepts": [
+            {
+              "concept": "Identifies that CO2 is released (either from the decomposition itself or from the fossil fuels burnt to reach the high temperature)",
+              "marks": 1,
+              "hints": [
+                "carbon dioxide",
+                "CO2",
+                "releases CO2",
+                "produces carbon dioxide",
+                "decomposition produces CO2",
+                "burning fuel / fossil fuels"
+              ]
+            },
+            {
+              "concept": "Links CO2 to the greenhouse effect / global warming (CO2 is a greenhouse gas that traps heat)",
+              "marks": 1,
+              "hints": [
+                "greenhouse gas",
+                "greenhouse effect",
+                "traps heat",
+                "absorbs infrared",
+                "causes global warming",
+                "enhances the greenhouse effect"
+              ]
+            }
+          ],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_absent",
+                "keyword": "CO2",
+                "magnitude": null
+              },
+              "feedback": "You did not mention carbon dioxide. The equation tells you that decomposing CaCO3 produces CO2; also, the very high temperature is normally reached by burning fossil fuels, which releases more CO2. Name CO2 explicitly to score the first mark."
+            },
+            {
+              "match": {
+                "kind": "keyword_absent",
+                "keyword": "greenhouse",
+                "magnitude": null
+              },
+              "feedback": "You named the gas but did not explain WHY CO2 causes global warming. Say that CO2 is a greenhouse gas \u2014 it absorbs thermal (infrared) radiation and traps heat in the atmosphere \u2014 to score the second mark."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "ozone",
+                "magnitude": null
+              },
+              "feedback": "Global warming is NOT caused by damage to the ozone layer \u2014 that is a different environmental issue. The link here is CO2 \u2192 greenhouse gas \u2192 global warming."
+            }
+          ],
+          "model_answer_html": "<p><strong>Two mark points, any one from each row:</strong></p><ol><li><strong>Source of CO2 [1]:</strong> the thermal decomposition of CaCO3 releases CO2 directly (from the equation), <em>and/or</em> the very high temperature is reached by burning fossil fuels, which also releases CO2.</li><li><strong>Greenhouse link [1]:</strong> CO2 is a greenhouse gas \u2014 it absorbs infrared radiation re-emitted by the Earth and traps heat in the atmosphere, which causes global warming.</li></ol><p><em>Cross-chapter note:</em> the greenhouse effect is covered in more detail in C13 Atmosphere; here we only need to know CO2 is a greenhouse gas.</p>",
+          "chapter_refs": [
+            "C5.01 endothermic thermal decomposition of CaCO3 produces CO2",
+            "C5.01 endothermic reactions need a continuous supply of thermal energy",
+            "Cross-chapter: C13 Atmosphere \u2014 CO2 as a greenhouse gas"
+          ]
+        },
+        {
+          "id": "a.ii",
+          "prompt": "The reaction is endothermic. Explain what is meant by an endothermic reaction. Use ideas about making bonds and breaking bonds in your answer. [3]",
+          "answer_type": "free_text",
+          "max_marks": 3,
+          "mcq_options": null,
+          "mcq_correct_label": null,
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [
+            "an endothermic reaction takes in thermal energy from the surroundings; breaking bonds absorbs energy; making bonds releases energy; energy absorbed when breaking bonds is greater than energy released when making bonds",
+            "endothermic = absorbs energy from surroundings; bond breaking is endothermic, bond making is exothermic; overall bond-breaking energy > bond-making energy",
+            "takes in heat; more energy is needed to break the bonds in the reactants than is given out when new bonds are formed in the products"
+          ],
+          "required_working_concepts": [
+            {
+              "concept": "Endothermic = takes in / absorbs thermal energy from the surroundings (\u0394H positive; surroundings get colder)",
+              "marks": 1,
+              "hints": [
+                "takes in energy",
+                "absorbs energy",
+                "absorbs heat",
+                "from the surroundings",
+                "surroundings cool",
+                "delta H positive",
+                "\u0394H positive"
+              ]
+            },
+            {
+              "concept": "Bond breaking is endothermic (absorbs energy) AND bond making is exothermic (releases energy) \u2014 MEXOBENDO",
+              "marks": 1,
+              "hints": [
+                "breaking bonds absorbs",
+                "breaking bonds requires energy",
+                "making bonds releases",
+                "making bonds gives out",
+                "MEXOBENDO",
+                "bond breaking endothermic",
+                "bond making exothermic"
+              ]
+            },
+            {
+              "concept": "For endothermic reactions the energy absorbed to break the reactant bonds is GREATER than the energy released when new product bonds are made (net energy is taken in)",
+              "marks": 1,
+              "hints": [
+                "energy absorbed > energy released",
+                "more energy to break than released by making",
+                "net energy absorbed",
+                "breaking greater than making",
+                "net intake of energy"
+              ]
+            }
+          ],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "exothermic",
+                "magnitude": null
+              },
+              "feedback": "The reaction is endothermic, not exothermic. In an exothermic reaction energy is GIVEN OUT to the surroundings (\u0394H negative). Flip the direction: endothermic = energy TAKEN IN from the surroundings."
+            },
+            {
+              "match": {
+                "kind": "keyword_absent",
+                "keyword": "break",
+                "magnitude": null
+              },
+              "feedback": "The question explicitly asks you to use ideas about bond BREAKING and bond MAKING. You need to say that breaking bonds ABSORBS energy and making bonds RELEASES energy, and that for an endothermic reaction the breaking total is GREATER than the making total."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "making bonds absorbs",
+                "magnitude": null
+              },
+              "feedback": "You have MEXOBENDO inverted. Making bonds RELEASES energy (exothermic); breaking bonds ABSORBS energy (endothermic). Try again with the correct direction."
+            }
+          ],
+          "model_answer_html": "<p><strong>Three mark points:</strong></p><ol><li><strong>Energy direction [1]:</strong> an endothermic reaction TAKES IN (absorbs) thermal energy from the surroundings, so the surroundings get colder and \u0394H is positive.</li><li><strong>Bond energies \u2014 MEXOBENDO [1]:</strong> <em>Breaking</em> the bonds in the reactants <em>absorbs</em> energy (endothermic); <em>making</em> the new bonds in the products <em>releases</em> energy (exothermic).</li><li><strong>Net balance [1]:</strong> in an endothermic reaction the energy needed to break the reactant bonds is GREATER than the energy released when the new product bonds form, so net energy has to be supplied from the surroundings.</li></ol><p>For CaCO3 \u2192 CaO + CO2 that net intake is why a very high temperature has to be maintained for the reaction to continue.</p>",
+          "chapter_refs": [
+            "C5.01 endothermic reaction definition (takes in thermal energy, \u0394H positive)",
+            "C5.01 MEXOBENDO \u2014 bond breaking endothermic, bond making exothermic",
+            "C5.01 overall \u0394H = energy absorbed (breaking) \u2212 energy released (making); endothermic when breaking > making"
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "p17-q5-a-iii-b",
+      "source_question_db_id": 392,
+      "type": "structured",
+      "max_marks": 5,
+      "stem": "Continuation of Question 5 about the endothermic decomposition of CaCO3 and related calcium compounds. (a)(iii) uses Fig. 5.1 \u2014 the incomplete reaction pathway diagram for the endothermic reaction; only the reactants line and the start of the activation-energy hump are drawn. (b) is about calcium hydroxide, Ca(OH)2, as an alkali. Answer parts (a)(iii), (b)(i) and (b)(ii).",
+      "figure_paths": [],
+      "parts": [
+        {
+          "id": "a.iii",
+          "prompt": "Fig. 5.1 shows the incomplete reaction pathway diagram for the endothermic reaction CaCO3 \u2192 CaO + CO2. Complete Fig. 5.1 by including: (1) the energy level of the products, (2) a labelled arrow showing the activation energy Ea, and (3) a labelled arrow showing the overall energy change of the reaction. [3]",
+          "answer_type": "self_check",
+          "max_marks": 3,
+          "mcq_options": null,
+          "mcq_correct_label": null,
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [
+            "products line drawn above reactants; Ea arrow from reactants line to peak; overall energy change arrow from reactants line up to products line",
+            "products above reactants (endothermic); Ea labelled from reactants to peak of hump; \u0394H labelled upward from reactants to products",
+            "products higher; activation energy = reactants to peak; overall energy change = reactants to products (upward, positive)"
+          ],
+          "required_working_concepts": [
+            {
+              "concept": "Products energy level drawn ABOVE the reactants line (endothermic profile)",
+              "marks": 1,
+              "hints": [
+                "products above reactants",
+                "products higher",
+                "products line above",
+                "endothermic profile"
+              ]
+            },
+            {
+              "concept": "Activation energy Ea labelled with an arrow from the REACTANTS line UP to the PEAK of the hump",
+              "marks": 1,
+              "hints": [
+                "Ea",
+                "activation energy",
+                "reactants to peak",
+                "reactants line to top of hump",
+                "height of hump above reactants"
+              ]
+            },
+            {
+              "concept": "Overall energy change (\u0394H) labelled with an UPWARD arrow from the REACTANTS line to the PRODUCTS line (endothermic \u21d2 positive)",
+              "marks": 1,
+              "hints": [
+                "overall energy change",
+                "\u0394H",
+                "delta H",
+                "enthalpy change",
+                "energy taken in",
+                "reactants to products",
+                "upward arrow products higher"
+              ]
+            }
+          ],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "products below",
+                "magnitude": null
+              },
+              "feedback": "You drew the products LOWER than the reactants \u2014 that is the EXOTHERMIC profile. This reaction is endothermic (takes in heat), so the products line must sit ABOVE the reactants line."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "peak to products",
+                "magnitude": null
+              },
+              "feedback": "The activation-energy arrow does NOT go from the peak down to the products line \u2014 that is the energy released as the activated complex falls to the product level. Ea is the arrow from the REACTANTS line UP to the peak of the hump."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "downward",
+                "magnitude": null
+              },
+              "feedback": "A downward \u0394H arrow shows energy RELEASED (exothermic). This reaction is endothermic, so the overall energy change arrow must point UP from the reactants line to the (higher) products line."
+            },
+            {
+              "match": {
+                "kind": "keyword_absent",
+                "keyword": "Ea",
+                "magnitude": null
+              },
+              "feedback": "Remember to LABEL the activation-energy arrow as Ea (or 'activation energy'). Unlabelled arrows do not score the Ea mark."
+            }
+          ],
+          "model_answer_html": "<p><strong>Three mark points \u2014 each arrow/line has to be drawn AND labelled on Fig. 5.1:</strong></p><ol><li><strong>Products line [1]:</strong> a horizontal line labelled <em>products</em> drawn ABOVE the reactants line (because the reaction is endothermic). The peak of the existing hump must still sit above this new products line.</li><li><strong>Activation energy arrow [1]:</strong> an upward arrow that STARTS on the reactants line and ENDS at the very top of the hump, labelled <em>Ea</em> (or <em>activation energy</em>).</li><li><strong>Overall energy change arrow [1]:</strong> an upward arrow that STARTS on the reactants line and ENDS on the products line, labelled <em>overall energy change</em> (accept <em>\u0394H</em>, <em>enthalpy change</em>, <em>energy taken in</em>). Because the reaction is endothermic the arrow points UP and \u0394H is positive.</li></ol><pre>          \u2571\u2572   &lt;\u2014 peak (activated complex)\n         \u2571  \u2572\n   Ea \u2191 \u2571    \u2572\n       \u2571      \u2500\u2500\u2500\u2500\u2500\u2500 products  \u2191\n   \u2500\u2500\u2500\u256f                         \u2502 overall energy change (\u0394H &gt; 0)\n   reactants                    \u2193\n</pre><p><em>Common pitfall:</em> drawing the \u0394H arrow from the peak down to the products (that is just the drop of the activated complex), or starting Ea from the products line. Ea is always measured from the <strong>reactants line</strong> up to the <strong>peak</strong>.</p>",
+          "chapter_refs": [
+            "C5.01 endothermic reaction pathway diagram",
+            "C5.01 activation energy Ea \u2014 height from reactants line to the peak",
+            "C5.01 overall energy change \u0394H \u2014 reactants line to products line; endothermic \u21d2 upward, \u0394H positive"
+          ]
+        },
+        {
+          "id": "b.i",
+          "prompt": "The ions in calcium hydroxide are Ca\u00b2\u207a and OH\u207b. Deduce the formula for calcium hydroxide. [1]",
+          "answer_type": "self_check",
+          "max_marks": 1,
+          "mcq_options": null,
+          "mcq_correct_label": null,
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [
+            "Ca(OH)2",
+            "Ca(OH)\u2082"
+          ],
+          "required_working_concepts": [
+            {
+              "concept": "OUT OF C5 SCOPE \u2014 this part tests Acids & Bases / Bonding (C8 / C2). Refer to that chapter when you encounter it. For a quick walk-through: balance the ionic charges (one Ca\u00b2\u207a needs two OH\u207b) and keep the OH inside brackets because it is a single ion \u21d2 Ca(OH)2.",
+              "marks": 1,
+              "hints": [
+                "Ca(OH)2",
+                "Ca(OH)\u2082",
+                "CaOH2",
+                "one Ca two OH",
+                "balance charges 2 plus equals 2 times 1 minus"
+              ]
+            }
+          ],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "CaOH",
+                "magnitude": null
+              },
+              "feedback": "CaOH has total charge +1 (not neutral). You need TWO OH\u207b ions to balance the 2+ charge on Ca\u00b2\u207a, and the OH must stay bracketed because it is a single ion \u2014 so Ca(OH)2, not CaOH."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "CaOH2",
+                "magnitude": null
+              },
+              "feedback": "The '2' only applies if the OH stays inside brackets. Write Ca(OH)2 \u2014 without the brackets, CaOH2 implies only the H is doubled."
+            }
+          ],
+          "model_answer_html": "<p><strong>Answer:</strong> Ca(OH)<sub>2</sub> [1].</p><p>Ca\u00b2\u207a has a +2 charge; OH\u207b has a \u22121 charge. To get a neutral compound you need two OH\u207b ions per one Ca\u00b2\u207a, so the formula is Ca(OH)<sub>2</sub>. The OH stays inside brackets because it is one ion.</p><p><strong>\u26a0\ufe0f OUT OF C5 SCOPE:</strong> this part tests <em>Acids & Bases / Bonding</em> (C8 / C2). Revisit that chapter when you cover it \u2014 you will see the same ionic crossing-over rule applied to lots of salts.</p>",
+          "chapter_refs": [
+            "OUT OF C5 SCOPE \u2014 C8 Acids, Bases & Salts (also C2 Bonding)"
+          ]
+        },
+        {
+          "id": "b.ii",
+          "prompt": "Aqueous calcium hydroxide is an alkali. State the colour of methyl orange indicator in aqueous calcium hydroxide. [1]",
+          "answer_type": "self_check",
+          "max_marks": 1,
+          "mcq_options": null,
+          "mcq_correct_label": null,
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [
+            "yellow"
+          ],
+          "required_working_concepts": [
+            {
+              "concept": "OUT OF C5 SCOPE \u2014 this part tests Acids & Bases (C8). Refer to that chapter when you encounter it. Quick recap: methyl orange is red in acid, yellow in alkali; aqueous Ca(OH)\u2082 is an alkali (pH ~12) \u21d2 the indicator is yellow.",
+              "marks": 1,
+              "hints": [
+                "yellow",
+                "methyl orange yellow in alkali",
+                "alkali yellow"
+              ]
+            }
+          ],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "red",
+                "magnitude": null
+              },
+              "feedback": "Methyl orange is RED in acid, not in alkali. Aqueous Ca(OH)\u2082 is an alkali, so methyl orange is YELLOW."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "orange",
+                "magnitude": null
+              },
+              "feedback": "Orange is the midpoint colour of methyl orange (neutral-ish). In a clear alkali like aqueous Ca(OH)\u2082 it goes fully YELLOW."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "purple",
+                "magnitude": null
+              },
+              "feedback": "Purple is the alkali colour of litmus / phenolphthalein (pink), not methyl orange. Methyl orange is YELLOW in an alkali."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "pink",
+                "magnitude": null
+              },
+              "feedback": "Pink is phenolphthalein's alkali colour, not methyl orange's. Methyl orange is YELLOW in an alkali."
+            }
+          ],
+          "model_answer_html": "<p><strong>Answer:</strong> <em>yellow</em> [1].</p><p>Methyl orange is <strong>red</strong> in acidic solutions and <strong>yellow</strong> in alkaline solutions (orange at the midpoint). Aqueous calcium hydroxide is an alkali (pH ~12), so methyl orange turns <strong>yellow</strong>.</p><p><strong>\u26a0\ufe0f OUT OF C5 SCOPE:</strong> indicator colours are covered in <em>Acids, Bases & Salts</em> (C8). Refer to that chapter for the full indicator table (litmus, methyl orange, thymolphthalein, phenolphthalein, universal indicator).</p>",
+          "chapter_refs": [
+            "OUT OF C5 SCOPE \u2014 C8 Acids, Bases & Salts (indicator colours)"
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "2025-cs-p23-q19",
+      "source_question_db_id": 707,
+      "type": "mcq",
+      "max_marks": 1,
+      "stem": "Which arrow on the reaction pathway diagram represents the overall energy change for the reaction?",
+      "figure_paths": [],
+      "parts": [
+        {
+          "id": "main",
+          "prompt": "Which arrow on the reaction pathway diagram represents the overall energy change for the reaction?",
+          "answer_type": "mcq",
+          "max_marks": 1,
+          "mcq_options": [
+            {
+              "label": "A",
+              "text": "Arrow A (reactants line up to the peak)"
+            },
+            {
+              "label": "B",
+              "text": "Arrow B (small section near peak)"
+            },
+            {
+              "label": "C",
+              "text": "Arrow C (peak down to products line)"
+            },
+            {
+              "label": "D",
+              "text": "Arrow D (reactants line straight to products line)"
+            }
+          ],
+          "mcq_correct_label": "D",
+          "numeric_answer": null,
+          "numeric_unit": null,
+          "numeric_tolerance_pct": null,
+          "accepted_phrasings": [],
+          "required_working_concepts": [],
+          "common_mistakes": [
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "A",
+                "magnitude": null
+              },
+              "feedback": "Arrow A goes from reactants up to the peak \u2014 that is the activation energy (Ea), not the overall energy change. The overall energy change is the gap between reactants and products lines."
+            },
+            {
+              "match": {
+                "kind": "keyword_present",
+                "keyword": "C",
+                "magnitude": null
+              },
+              "feedback": "Arrow C goes from the peak down to the products line \u2014 that shows the energy released as new bonds form (after Ea has been overcome), not the overall energy change. Look for the arrow that connects reactants directly to products."
+            }
+          ],
+          "model_answer_html": "The <b>overall energy change</b> for a reaction is the vertical distance between the <b>reactants</b> line and the <b>products</b> line on a reaction pathway diagram. It is <i>not</i> the activation energy (reactants up to peak) and it is <i>not</i> the energy released going from the peak down to the products line. Arrow <b>D</b> goes straight from the reactants line to the products line, so it represents the overall energy change.",
+          "chapter_refs": [
+            "C5.01 enthalpy change",
+            "C5.01 reaction pathway diagram",
+            "C5.01 activation energy"
+          ]
+        }
+      ]
+    }
+  ],
+  "topic_index": {
+    "MEXOBENDO \u2014 bond breaking endothermic / bond making exothermic": [
+      "p11q17"
+    ],
+    "C5.01 net energy change = energy released (making) \u2212 energy absorbed (breaking)": [
+      "p11q17"
+    ],
+    "C5.01 exothermic condition: released-by-making > absorbed-by-breaking": [
+      "p11q17"
+    ],
+    "C5.01 activation energy": [
+      "q155",
+      "p28-q18",
+      "2025-combined-p22-q18",
+      "2025-cs-p23-q19"
+    ],
+    "C5.01 endothermic profile": [
+      "q155"
+    ],
+    "C5.01 exothermic reaction profile": [
+      "p28-q18"
+    ],
+    "C5.01 reaction pathway diagrams (energy vs progress of reaction)": [
+      "2025-cs-p21-q15-energy-change-X"
+    ],
+    "C5.01 bond making is exothermic (energy given out)": [
+      "2025-cs-p21-q15-energy-change-X"
+    ],
+    "C5.01 bond breaking is endothermic (energy taken in)": [
+      "2025-cs-p21-q15-energy-change-X"
+    ],
+    "MEXOBENDO mnemonic: Making bonds = EXOthermic, Breaking bonds = ENDOthermic": [
+      "2025-cs-p21-q15-energy-change-X"
+    ],
+    "C5.01 Exothermic reaction: transfers thermal energy to the surroundings; surroundings warm up (\u0394T positive).": [
+      "db-767-chemenergetics-most-exothermic",
+      "db-772-chemenergetics-most-exothermic"
+    ],
+    "C5.01 Endothermic reaction: takes thermal energy from the surroundings; surroundings cool down (\u0394T negative).": [
+      "db-767-chemenergetics-most-exothermic",
+      "db-772-chemenergetics-most-exothermic"
+    ],
+    "C5.02 Size of the temperature change indicates the amount of energy transferred; a bigger positive \u0394T means a more exothermic reaction.": [
+      "db-767-chemenergetics-most-exothermic",
+      "db-772-chemenergetics-most-exothermic"
+    ],
+    "C5.01 endothermic \u2192 surroundings cool": [
+      "q164"
+    ],
+    "C5.01 temperature change sign": [
+      "q164"
+    ],
+    "C5.01 comparing endothermic reactions": [
+      "q164"
+    ],
+    "exothermic_endothermic_from_pathway_diagram": [
+      "combined-science-chemical-energetics-257"
+    ],
+    "surroundings_temperature_change": [
+      "combined-science-chemical-energetics-257"
+    ],
+    "activation_energy_vs_overall_energy_change": [
+      "combined-science-chemical-energetics-257"
+    ],
+    "C5.01 reaction pathway diagram (exothermic profile)": [
+      "p4_q5c"
+    ],
+    "C5.01 activation energy Ea": [
+      "p4_q5c"
+    ],
+    "C5.01 overall energy change \u0394H (exothermic = negative)": [
+      "p4_q5c"
+    ],
+    "Slide 4: reaction pathway diagrams": [
+      "q175"
+    ],
+    "Slide 5: endothermic bond-energy rule": [
+      "q175"
+    ],
+    "Slide 6: activation energy definition": [
+      "q175"
+    ],
+    "Chemical Energetics \u2014 endothermic vs exothermic from a reaction pathway diagram": [
+      "p33-q574-c"
+    ],
+    "Chemical Energetics \u2014 representing activation energy on a reaction pathway diagram": [
+      "p33-q574-c"
+    ],
+    "Chemical Energetics \u2014 definition of activation energy": [
+      "p33-q574-c"
+    ],
+    "Chemical Energetics \u2014 catalysts lower the activation-energy hump on a reaction pathway diagram and are not used up": [
+      "p33-q574-c"
+    ],
+    "C5.01 properties of alkalis": [
+      "q690"
+    ],
+    "MEXOBENDO": [
+      "q690",
+      "q690"
+    ],
+    "C5.01 bond making exothermic": [
+      "q690"
+    ],
+    "C5.01 exothermic profile": [
+      "q690"
+    ],
+    "C5.01 Worked Example: Mg + O2 combustion": [
+      "q651"
+    ],
+    "out-of-scope for C5 Chemical Energetics (acid/base oxide classification)": [
+      "q651"
+    ],
+    "C5.01 Worked Example: 2Mg + O2 -> 2MgO releases heat and light (exothermic)": [
+      "q651"
+    ],
+    "C5 definition: exothermic = energy given out to surroundings; surroundings warm up": [
+      "q651"
+    ],
+    "C5.01 Exothermic and endothermic reactions": [
+      "2025-combined-p12-q20"
+    ],
+    "C5.01 physical-and-chemical changes both involve energy changes": [
+      "2025-combined-p12-q20"
+    ],
+    "C5.01 KEY WORDS activation energy definition": [
+      "2025-combined-p22-q18"
+    ],
+    "C5.01 endothermic thermal decomposition of CaCO3 produces CO2": [
+      "p17-q5-a-i-ii"
+    ],
+    "C5.01 endothermic reactions need a continuous supply of thermal energy": [
+      "p17-q5-a-i-ii"
+    ],
+    "Cross-chapter: C13 Atmosphere \u2014 CO2 as a greenhouse gas": [
+      "p17-q5-a-i-ii"
+    ],
+    "C5.01 endothermic reaction definition (takes in thermal energy, \u0394H positive)": [
+      "p17-q5-a-i-ii"
+    ],
+    "C5.01 MEXOBENDO \u2014 bond breaking endothermic, bond making exothermic": [
+      "p17-q5-a-i-ii"
+    ],
+    "C5.01 overall \u0394H = energy absorbed (breaking) \u2212 energy released (making); endothermic when breaking > making": [
+      "p17-q5-a-i-ii"
+    ],
+    "C5.01 endothermic reaction pathway diagram": [
+      "p17-q5-a-iii-b"
+    ],
+    "C5.01 activation energy Ea \u2014 height from reactants line to the peak": [
+      "p17-q5-a-iii-b"
+    ],
+    "C5.01 overall energy change \u0394H \u2014 reactants line to products line; endothermic \u21d2 upward, \u0394H positive": [
+      "p17-q5-a-iii-b"
+    ],
+    "OUT OF C5 SCOPE \u2014 C8 Acids, Bases & Salts (also C2 Bonding)": [
+      "p17-q5-a-iii-b"
+    ],
+    "OUT OF C5 SCOPE \u2014 C8 Acids, Bases & Salts (indicator colours)": [
+      "p17-q5-a-iii-b"
+    ],
+    "C5.01 enthalpy change": [
+      "2025-cs-p23-q19"
+    ],
+    "C5.01 reaction pathway diagram": [
+      "2025-cs-p23-q19"
+    ]
+  },
+  "pdfs": {
+    "practice": "papers/combined-science-chemical-energetics/practice.pdf",
+    "solutions": "papers/combined-science-chemical-energetics/solutions.pdf"
+  }
+}
